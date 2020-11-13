@@ -1,0 +1,22 @@
+<? xml version = "1.0" encoding = "UTF-8"?>
+<users>
+<user>
+<id> 0 </ id>
+<login> admin </ login>
+<password> blah </ password>
+<firstname> Vasya </ firstname>
+</ user>
+<user>
+<id> 1 </ id>
+<login> user </ login>
+<password> 123 </ password>
+<firstname> LOL </ firstname>
+</ user>
+<user>
+<id> 2 </ id>
+<login> foo </ login>
+<password> bar </ password>
+<firstname> FOOBAR </ firstname>
+</ user>
+</ users>
+</xml>
