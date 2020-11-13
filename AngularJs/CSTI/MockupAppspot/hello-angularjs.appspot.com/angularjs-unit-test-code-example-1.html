@@ -1,0 +1,241 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- AppName goes here -->
+<html ng-app="helloApp">
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-unit-test-code-example-1 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello AngularJS - Unit Test Code Example</title>
+<link rel="stylesheet"
+	href="../netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="assets/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+<script>
+var helloApp = angular.module("helloApp", ['ui.bootstrap']);
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37706354-1', 'hello-angularjs.appspot.com');
+  ga('send', 'pageview');
+</script>
+</head>
+<!-- Controller name goes here -->
+<body>
+	<header class="navbar navbar-static-top" id="top" role="banner">
+	<div class="container">
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AngularJS Tutorials</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AngularJS Demos <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="helloworld.html">Hello World</a></li>
+			<li><a href="addtablerow.html">Add Table Row Dynamically</a></li>
+			<li><a href="removetablerow.html">Remove Table Row Dynamically</a></li>
+			<li><a href="searchtable.html">Search Table</a></li>
+			<li><a href="sorttablecolumn.html">Sorting Table Columns</a></li>
+			<li><a href="spa.html">Routing & Single Page Application (SPA)</a></li>
+			<li><a href="angularjs-unit-test-code-example-1.html">Unit Test
+					Code Example 1</a></li>
+			<li><a href="angularjs-filters-examples.html">Filters Examples</a></li>
+			<li><a href="angularjs-http-service-ajax-get-code-example.html">AJAX
+					GET &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-http-service-ajax-post-code-example.html">AJAX
+					POST &amp; Spring MVC Example</a></li>
+			<li><a
+				href="angularjs-http-service-ajax-post-json-data-code-example.html">AJAX
+					POST JSON Data &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-restful-apis-get-method-code-example.html">Consuming
+					RESTful APIs with ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-restful-apis-post-method-code-example.html">Post
+					with RESTful APIs, ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-single-page-app-restful-apis.html">Single
+					Page App with RESTful APIs</a></li>
+			<li><a href="angularjs-create-custom-services.html">How to
+					Create Custom Service</a></li>
+			<li><a href="angularjs-directives-hello-world.html">Custom Directives Hello World</a></li>
+			<li><a href="angularjs-how-create-custom-directives.html">How to
+					Create Custom Directives</a></li>
+			<li><a href="angularjs-create-custom-filter.html">How to Create A Custom Filter</a></li>
+			<li><a href="angularjs-non-nested-directives-directives-communication-code-example.html">Non-nested Directives-Directives Communication</a></li>
+                        </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KendoUI-AngularJS Demos <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                            <li><a href="kendoui-helloworld.html">Hello World</a></li>
+			            </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interview Questions <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="angularjs-interview-questions-set-1.html">Questions Set 1</a></li>
+                            <li><a href="angularjs-interview-questions-set-2.html">Questions Set 2</a></li>
+			            </ul>
+              </li>
+            </ul>
+            <!-- 
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+             -->
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</div>
+	</header>
+	<div class="container">
+	<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		<div class="page-header" style="margin: 0">
+			<h1>
+				<!-- Heading goes here -->
+				Unit Test Code Example 1
+			</h1>
+		</div>
+		<div style="padding-top: 15px;padding-bottom:30px">
+			<!-- Summary goes here -->
+			Following is the sample unit test code for following methods
+			<ul>
+				<li><a href="addtablerow.html">Add Table Row Dynamically</a></li>
+				<li><a href="removetablerow.html">Remove Table Row Dynamically</a></li>
+			</ul>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Notes</h3>
+			</div>
+			<div class="panel-body">
+				<!-- Notes goes here -->
+				<ul>
+					<li>Out of all different ways to test controllers, one of the
+						most recommended manner is to inject $rootScope and $controller</li>
+					<li>$scope variable is defined outside of different functions
+						for it to be accessed across the functions</li>
+					<li>beforeEach function defines the module and inject
+						$rootScope and $controller</li>
+				</ul>
+			</div>
+		</div>
+		<div style="padding-top: 30px">
+			<div style="font-weight: bold">Unit Tests Code Example for CompanyCtrl Controller</div>
+			<pre>
+			<code>
+describe( "CompanyCtrl", function(){
+	// Define the $scope variable that shall be accessed in different unit tests functions
+	var scopeMock;
+	// Define the module, helloApp before each unit tests start executing
+	beforeEach(module('helloApp'));	
+	// Inject the $rootScope and $controller 
+	// Read $rootScope on this page: https://docs.angularjs.org/api/ng/service/$rootScope
+	// Read about $controller on this page: https://docs.angularjs.org/api/ng/service/$controller
+	beforeEach(
+			inject(
+					function( $rootScope, $controller ){		
+						scopeMock = $rootScope.$new();		
+						$controller( 'CompanyCtrl', {$scope: scopeMock} );
+					}					
+			)
+	);
+	// Tests the length of the default $scope.companies model object
+	it( "should create model \"companies\" with 4 companies", function() {		
+		expect( scopeMock.companies.length ).toBe( 4 );
+	});
+	// Test the addRow behavior on the $scope object. 
+	it( "should add an entry to the model \"companies\"", function() {		
+		scopeMock.name = "Prokarma Technologies";
+		scopeMock.employees = 2500;
+		scopeMock.headoffice = "Hyderabad";
+		scopeMock.addRow();
+		expect( scopeMock.companies.length ).toBe( 5 );
+		expect( scopeMock.name ).toEqual( '' );
+		expect( scopeMock.employees ).toEqual( '' );
+		expect( scopeMock.headoffice ).toEqual( '' );
+	});
+	// Test the removeRow behavior of the $scope object
+	it( "should remove an entry from the model \"companies\"", function() {		
+		var name = "Infosys Technologies";		
+		scopeMock.removeRow( name );
+		expect( scopeMock.companies.length ).toBe( 3 );
+	});		
+
+});
+
+			</code>
+			</pre>
+		</div>
+		 <div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'vitalflux-angularjs'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+		<noscript>
+			Please enable JavaScript to view the <a
+				href="http://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
+		<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+			<span class="logo-disqus">Disqus</span>
+		</a>
+		
+	</div>
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-unit-test-code-example-1 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:08 GMT -->
+</html>

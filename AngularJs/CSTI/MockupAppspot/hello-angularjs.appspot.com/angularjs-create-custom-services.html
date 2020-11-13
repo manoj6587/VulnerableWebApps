@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+ 
+<html ng-app="helloApp">
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-create-custom-services by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AngularJS - Create Custom Service Demo</title>
+  <link rel="stylesheet" href="../netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script
+	src="assets/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+
+  <script>
+     var helloApp = angular.module( "helloApp", ['ui.bootstrap'] );
+     helloApp.controller( "CalculatorCtrl", [ '$scope','calculator', function($scope, calculator ) {
+      
+         $scope.types = [
+    									{	name : 'Add',	value : '+'	},
+    									{	name : 'Subtract',	value : '-'	},
+    									{	name : 'Multiply',	value : '*'	},
+    									{	name : 'Divide',	value : '/'	},
+    									];
+    		 $scope.type = $scope.types[0];
+         
+         $scope.calculate = function() {
+             $scope.result = calculator.calculate( $scope.no1, $scope.no2, $scope.type.value );
+         }
+
+    }]);
+    
+    
+    helloApp.factory('calculator', function() {
+      return new Calculator();
+    });
+    
+    function Calculator() {
+      
+      this.calculate = function( no1, no2, optype ) {
+          var result = 0;
+          switch( optype ) {
+            case '+':
+              result = add( no1, no2);
+              break;
+            case '-':
+              result = subtract( no1, no2);
+              break;
+            case '*':
+              result = multiply(  no1, no2);
+              break;
+            case '/':
+              result = divide(  no1, no2);
+              break;
+            default:
+          }
+          return result;
+      }
+      var add = function( no1, no2 ) {
+          return no1 + no2;
+      }
+      var subtract = function( no1, no2 ) {
+          return no1 - no2;
+      }
+      var multiply = function( no1, no2 ) {
+          return no1 * no2;
+      }
+      var divide = function( no1, no2 ) {
+          return no1 / no2;
+      }
+      
+    }
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37706354-1', 'hello-angularjs.appspot.com');
+  ga('send', 'pageview');
+</script>
+</head>
+ 
+<body ng-controller="CalculatorCtrl">
+	<header class="navbar navbar-static-top" id="top" role="banner">
+	<div class="container">
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AngularJS Tutorials</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AngularJS Demos <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="helloworld.html">Hello World</a></li>
+			<li><a href="addtablerow.html">Add Table Row Dynamically</a></li>
+			<li><a href="removetablerow.html">Remove Table Row Dynamically</a></li>
+			<li><a href="searchtable.html">Search Table</a></li>
+			<li><a href="sorttablecolumn.html">Sorting Table Columns</a></li>
+			<li><a href="spa.html">Routing & Single Page Application (SPA)</a></li>
+			<li><a href="angularjs-unit-test-code-example-1.html">Unit Test
+					Code Example 1</a></li>
+			<li><a href="angularjs-filters-examples.html">Filters Examples</a></li>
+			<li><a href="angularjs-http-service-ajax-get-code-example.html">AJAX
+					GET &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-http-service-ajax-post-code-example.html">AJAX
+					POST &amp; Spring MVC Example</a></li>
+			<li><a
+				href="angularjs-http-service-ajax-post-json-data-code-example.html">AJAX
+					POST JSON Data &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-restful-apis-get-method-code-example.html">Consuming
+					RESTful APIs with ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-restful-apis-post-method-code-example.html">Post
+					with RESTful APIs, ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-single-page-app-restful-apis.html">Single
+					Page App with RESTful APIs</a></li>
+			<li><a href="angularjs-create-custom-services.html">How to
+					Create Custom Service</a></li>
+			<li><a href="angularjs-directives-hello-world.html">Custom Directives Hello World</a></li>
+			<li><a href="angularjs-how-create-custom-directives.html">How to
+					Create Custom Directives</a></li>
+			<li><a href="angularjs-create-custom-filter.html">How to Create A Custom Filter</a></li>
+			<li><a href="angularjs-non-nested-directives-directives-communication-code-example.html">Non-nested Directives-Directives Communication</a></li>
+                        </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KendoUI-AngularJS Demos <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                            <li><a href="kendoui-helloworld.html">Hello World</a></li>
+			            </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interview Questions <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="angularjs-interview-questions-set-1.html">Questions Set 1</a></li>
+                            <li><a href="angularjs-interview-questions-set-2.html">Questions Set 2</a></li>
+			            </ul>
+              </li>
+            </ul>
+            <!-- 
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+             -->
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</div>
+	</header>
+  <div class="container">
+  <div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  <div class="page-header">
+    <h1>AngularJS Service Example - Calculator Service</h1>
+  </div>
+  <div style="padding-top: 15px;padding-bottom:0px">
+			<!-- Summary goes here -->
+			<p>The demo below is created using a Calculator service with an API, calculate. The service is injected into a Controller and then the API, calculate is invoked on that service. </p>			  
+		</div>
+  <div style="padding:50px">
+    <form role="form" ng-submit="calculate()">
+      
+        <table class="table" style="width:70%">
+        <div class="form-group">
+        <tr>
+          <td>
+            <div class="input-group input-group-lg">
+              <input type="number" class="form-control col-md-3" name="no1" ng-model="no1" id="no1" required placeholder="enter a number"/>
+            </div>
+          </td>
+         <td>
+            <div class="input-group input-group-lg">
+              <select class="form-control" ng-model="type" ng-options="type.value for type in types"></select>
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-lg">
+              <input type="number" class="form-control col-md-3" name="no2" ng-model="no2" id="no2" required placeholder="enter another number"/>
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-lg">
+              <input type="submit" value=" = "	class="btn btn-primary" />
+            </div>
+          </td>
+          <td style="vertical-align:top">
+            <h3>{{result}}</h3>
+          </td>
+          </tr>
+          </div>
+        </table>
+      
+    </form>
+  </div>
+  <div style="padding-top: 10px">
+			<div style="font-weight:bold">
+				Calculator Service with calculate API
+			</div>
+			<pre>
+			<code>
+function Calculator() {
+      
+      this.calculate = function( no1, no2, optype ) {
+          var result = 0;
+          switch( optype ) {
+            case '+':
+              result = add( no1, no2);
+              break;
+            case '-':
+              result = subtract( no1, no2);
+              break;
+            case '*':
+              result = multiply(  no1, no2);
+              break;
+            case '/':
+              result = divide(  no1, no2);
+              break;
+            default:
+          }
+          return result;
+      }
+      var add = function( no1, no2 ) {
+          return no1 + no2;
+      }
+      var subtract = function( no1, no2 ) {
+          return no1 - no2;
+      }
+      var multiply = function( no1, no2 ) {
+          return no1 * no2;
+      }
+      var divide = function( no1, no2 ) {
+          return no1 / no2;
+      }
+      
+    }
+			</code>
+			</pre>
+		</div>
+		<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  </div>   
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-create-custom-services by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:10 GMT -->
+</html>

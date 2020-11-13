@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="helloKendo">
+
+<!-- Mirrored from hello-angularjs.appspot.com/kendoui-helloworld by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HelloKendo</title>
+  <link rel="stylesheet" href="../netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="../cdn.kendostatic.com/2014.2.716/styles/kendo.common.min.css" rel="stylesheet" />
+  <link href="../cdn.kendostatic.com/2014.2.716/styles/kendo.flat.min.css" rel="stylesheet" />
+  <script src="../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../cdn.kendostatic.com/2014.2.716/js/kendo.all.min.js"></script>
+  <script src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+  <script src="../cdn.kendostatic.com/2014.2.716/js/kendo.angular.min.js"></script>
+  <script
+	src="assets/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+  <script>
+    var helloKendo = angular.module( "helloKendo", ["kendo.directives", "ui.bootstrap"] );
+    helloKendo.controller( "HelloCtrl", ['$scope', function( $scope ){
+      $scope.firstname = "Calvin Hobbes";
+      $scope.countries = {
+        dataSource: new kendo.data.DataSource({
+          data: [ "Afganistan", "India", "Ireland", "Nepal", "Pakistan", "Sri Lanka", "UK", "USA" ]
+        }),
+        optionLabel: "Select A Country"
+      };
+    }]);
+  </script>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37706354-1', 'hello-angularjs.appspot.com');
+  ga('send', 'pageview');
+</script>
+</head>
+<body ng-controller="HelloCtrl">
+<header class="navbar navbar-static-top" id="top" role="banner">
+<div class="container">
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AngularJS Tutorials</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AngularJS Demos <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="helloworld.html">Hello World</a></li>
+			<li><a href="addtablerow.html">Add Table Row Dynamically</a></li>
+			<li><a href="removetablerow.html">Remove Table Row Dynamically</a></li>
+			<li><a href="searchtable.html">Search Table</a></li>
+			<li><a href="sorttablecolumn.html">Sorting Table Columns</a></li>
+			<li><a href="spa.html">Routing & Single Page Application (SPA)</a></li>
+			<li><a href="angularjs-unit-test-code-example-1.html">Unit Test
+					Code Example 1</a></li>
+			<li><a href="angularjs-filters-examples.html">Filters Examples</a></li>
+			<li><a href="angularjs-http-service-ajax-get-code-example.html">AJAX
+					GET &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-http-service-ajax-post-code-example.html">AJAX
+					POST &amp; Spring MVC Example</a></li>
+			<li><a
+				href="angularjs-http-service-ajax-post-json-data-code-example.html">AJAX
+					POST JSON Data &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-restful-apis-get-method-code-example.html">Consuming
+					RESTful APIs with ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-restful-apis-post-method-code-example.html">Post
+					with RESTful APIs, ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-single-page-app-restful-apis.html">Single
+					Page App with RESTful APIs</a></li>
+			<li><a href="angularjs-create-custom-services.html">How to
+					Create Custom Service</a></li>
+			<li><a href="angularjs-directives-hello-world.html">Custom Directives Hello World</a></li>
+			<li><a href="angularjs-how-create-custom-directives.html">How to
+					Create Custom Directives</a></li>
+			<li><a href="angularjs-create-custom-filter.html">How to Create A Custom Filter</a></li>
+			<li><a href="angularjs-non-nested-directives-directives-communication-code-example.html">Non-nested Directives-Directives Communication</a></li>
+                        </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KendoUI-AngularJS Demos <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                            <li><a href="kendoui-helloworld.html">Hello World</a></li>
+			            </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interview Questions <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="angularjs-interview-questions-set-1.html">Questions Set 1</a></li>
+                            <li><a href="angularjs-interview-questions-set-2.html">Questions Set 2</a></li>
+			            </ul>
+              </li>
+            </ul>
+            <!-- 
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+             -->
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</div>
+</header>
+<div class="container">
+<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  <div class="page-header" style="margin: 0">
+			<h1>
+				<!-- Heading goes here -->
+				<h1>Hello, {{firstname }}</h1>
+			</h1>
+		</div>
+  <div class="k-content" style="padding:20px">
+    <form class="form-horizontal">
+      <div class="form-group">
+          <label for="firstname"  class="col-md-2 control-label">Type your name:</label>
+          <div class="col-md-4">
+            <input id="firstname" name="firstname" class="k-textbox col-md-6" ng-model="firstname" required/>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="country" class="col-md-2 control-label">Your Country:</label>
+        <div class="col-md-4">
+          <select id="country" kendo-drop-down-list k-options="countries"></select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Notes</h3>
+			</div>
+			<div class="panel-body">
+				<!-- Notes goes here -->
+				<ul>
+					<li>Demonstrates the <b>KendoUI DropdownList widget</b> displaying the countries</li>
+					<li>Pay attention to inclusion of "kendo.directives" module while instantiating kendoApp. This is very important part.</li>
+					<li>Pay attention to kendo.angular.min.js which defines various different kendo directives</li>
+					<li>Pay attention to <b>k-options directive</b> in select element</li>					
+				</ul>
+			</div>
+		</div>
+  <div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+  <div style="padding-top: 30px">
+			<div style="font-weight:bold">
+				Copy & Paste Code for Hello World
+			</div>
+			<div>
+				<p>
+				As all the files are retrieved from CDNs, you could copy and paste the code and get started with KendoUI and AngularJS in no time.
+				</p>
+			</div>
+			<pre>
+			<code><!-- Code goes here -->
+&lt;!DOCTYPE html&gt;<br/><br/>&lt;html ng-app=&quot;helloKendo&quot;&gt;<br/>&lt;head&gt;<br/>  &lt;title&gt;HelloKendo&lt;/title&gt;<br/>  &lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;&gt;<br/>  &lt;link href=&quot;//cdn.kendostatic.com/2014.2.716/styles/kendo.common.min.css&quot; rel=&quot;stylesheet&quot; /&gt;<br/>  &lt;link href=&quot;//cdn.kendostatic.com/2014.2.716/styles/kendo.flat.min.css&quot; rel=&quot;stylesheet&quot; /&gt;<br/>  &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;<br/>  &lt;script src=&quot;//cdn.kendostatic.com/2014.2.716/js/kendo.all.min.js&quot;&gt;&lt;/script&gt;<br/>  &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js&quot;&gt;&lt;/script&gt;<br/>  &lt;script src=&quot;//cdn.kendostatic.com/2014.2.716/js/kendo.angular.min.js&quot;&gt;&lt;/script&gt;<br/>  &lt;script&gt;<br/>    var helloKendo = angular.module( &quot;helloKendo&quot;, [&quot;kendo.directives&quot;] );<br/>    helloKendo.controller( &quot;HelloCtrl&quot;, ['$scope', function( $scope ){<br/>      $scope.firstname = &quot;Calvin Hobbes&quot;;<br/>      $scope.countries = {<br/>        dataSource: new kendo.data.DataSource({<br/>          data: [ &quot;Afganistan&quot;, &quot;India&quot;, &quot;Ireland&quot;, &quot;Nepal&quot;, &quot;Pakistan&quot;, &quot;Sri Lanka&quot;, &quot;UK&quot;, &quot;USA&quot; ]<br/>        }),<br/>        optionLabel: &quot;Select A Country&quot;,<br/>        change: function(e) {<br/>          console.log(e.sender.text());<br/>        }<br/>      };<br/>    }]);<br/>  &lt;/script&gt;<br/>&lt;/head&gt;<br/>&lt;body ng-controller=&quot;HelloCtrl&quot;&gt;<br/>&lt;div class=&quot;container&quot;&gt;<br/>  &lt;div class=&quot;page-header&quot; style=&quot;margin: 0&quot;&gt;<br/>				&lt;!--  Remove two backslash in front of { --&gt;<br/>				&lt;h1&gt;Hello, \{\{firstname }}&lt;/h1&gt;<br/>		&lt;/div&gt;<br/>  &lt;div class=&quot;k-content&quot; style=&quot;padding:20px&quot;&gt;<br/>    &lt;form class=&quot;form-horizontal&quot;&gt;<br/>      &lt;div class=&quot;form-group&quot;&gt;<br/>          &lt;label for=&quot;firstname&quot;  class=&quot;col-md-2 control-label&quot;&gt;Type your name:&lt;/label&gt;<br/>          &lt;div class=&quot;col-md-4&quot;&gt;<br/>            &lt;input id=&quot;firstname&quot; name=&quot;firstname&quot; class=&quot;k-textbox col-md-6&quot; ng-model=&quot;firstname&quot; required/&gt;<br/>          &lt;/div&gt;<br/>      &lt;/div&gt;<br/>      &lt;div class=&quot;form-group&quot;&gt;<br/>        &lt;label for=&quot;country&quot; class=&quot;col-md-2 control-label&quot;&gt;Your Country:&lt;/label&gt;<br/>        &lt;div class=&quot;col-md-4&quot;&gt;<br/>          &lt;select id=&quot;country&quot; kendo-drop-down-list k-options=&quot;countries&quot;&gt;&lt;/select&gt;<br/>        &lt;/div&gt;<br/>      &lt;/div&gt;<br/>    &lt;/form&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/>
+			</code>
+			</pre>
+		</div>
+</div>
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+<!-- Mirrored from hello-angularjs.appspot.com/kendoui-helloworld by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:37 GMT -->
+</html>

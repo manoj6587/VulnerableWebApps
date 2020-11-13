@@ -1,0 +1,38 @@
+HTTrack3.48-22+htsswf+htsjava launched on Tue, 03 Jan 2017 16:13:33 at https://hello-angularjs.appspot.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://hello-angularjs.appspot.com/ -O1 "C:\My Web Sites\AngularJS" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/accordion/accordion.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/alert/alert.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/carousel/carousel.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/carousel/slide.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/datepicker/datepicker.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/datepicker/popup.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/modal/backdrop.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/modal/window.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/pagination/pager.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/pagination/pagination.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/tooltip/tooltip-html-unsafe-popup.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/tooltip/tooltip-popup.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/popover/popover.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/progressbar/bar.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/progressbar/progress.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/progressbar/progressbar.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/rating/rating.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/tabs/tab.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/tabs/tabset.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/timepicker/timepicker.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/typeahead/typeahead-match.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/accordion/accordion-group.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/tabs/tabset-titles.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:14:48	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/template/typeahead/typeahead-popup.html (from https://hello-angularjs.appspot.com/assets/js/ui-bootstrap-tpls-0.9.0.min.js)
+16:15:02	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/Popover requires tooltip.js (from https://hello-angularjs.appspot.com/bootstrap/js/bootstrap.min.js)
+16:15:02	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/n (from cdn.kendostatic.com/2014.2.716/js/kendo.all.min.js)
+16:15:02	Error: 	"Not Found" (404) at link https://hello-angularjs.appspot.com/POST (from cdn.kendostatic.com/2014.2.716/js/kendo.all.min.js)
+
+HTTrack Website Copier/3.48-22 mirror complete in 1 minutes 29 seconds : 91 links scanned, 63 files written (3641239 bytes overall) [2006629 bytes received at 22546 bytes/sec], 2481458 bytes transferred using HTTP compression in 57 files, ratio 32%, 1.1 requests per connection
+(27 errors, 0 warnings, 0 messages)

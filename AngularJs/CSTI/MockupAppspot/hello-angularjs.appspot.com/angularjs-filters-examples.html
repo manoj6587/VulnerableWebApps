@@ -1,0 +1,266 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="helloApp">
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-filters-examples by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello AngularJS - Filter Examples & Code Samples</title>
+<link rel="stylesheet"
+	href="../netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script
+	src="assets/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+<script
+	src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
+
+<script>
+	var helloApp = angular.module("helloApp", ['ngSanitize', 'ui.bootstrap']);
+	helloApp.controller("HelloCtrl", function($scope) {
+		$scope.firstname = "Calvin";
+		$scope.lastname = "Hobbes";
+		$scope.salary = 80000;
+		$scope.dob = 2134564534233;
+		$scope.cities = [{ "name":"Hyderabad"},{ "name":"Bangalore"},{ "name":"Delhi"},{ "name":"Mumbai"},{ "name":"Pune"},
+						{ "name":"Gurgaon"},{ "name":"Noida"},{ "name":"Ahmedabad"},{ "name":"Chennai"},,{ "name":"Kolkata"},];
+		$scope.sometext = "Google can be accessed at http://www.google.com. Facebook can be accessed at http://www.facebook.com.";
+	});
+</script>
+</head>
+<body ng-controller="HelloCtrl">
+	<header class="navbar navbar-static-top" id="top" role="banner">
+	<div class="container">
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AngularJS Tutorials</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AngularJS Demos <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="helloworld.html">Hello World</a></li>
+			<li><a href="addtablerow.html">Add Table Row Dynamically</a></li>
+			<li><a href="removetablerow.html">Remove Table Row Dynamically</a></li>
+			<li><a href="searchtable.html">Search Table</a></li>
+			<li><a href="sorttablecolumn.html">Sorting Table Columns</a></li>
+			<li><a href="spa.html">Routing & Single Page Application (SPA)</a></li>
+			<li><a href="angularjs-unit-test-code-example-1.html">Unit Test
+					Code Example 1</a></li>
+			<li><a href="angularjs-filters-examples.html">Filters Examples</a></li>
+			<li><a href="angularjs-http-service-ajax-get-code-example.html">AJAX
+					GET &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-http-service-ajax-post-code-example.html">AJAX
+					POST &amp; Spring MVC Example</a></li>
+			<li><a
+				href="angularjs-http-service-ajax-post-json-data-code-example.html">AJAX
+					POST JSON Data &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-restful-apis-get-method-code-example.html">Consuming
+					RESTful APIs with ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-restful-apis-post-method-code-example.html">Post
+					with RESTful APIs, ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-single-page-app-restful-apis.html">Single
+					Page App with RESTful APIs</a></li>
+			<li><a href="angularjs-create-custom-services.html">How to
+					Create Custom Service</a></li>
+			<li><a href="angularjs-directives-hello-world.html">Custom Directives Hello World</a></li>
+			<li><a href="angularjs-how-create-custom-directives.html">How to
+					Create Custom Directives</a></li>
+			<li><a href="angularjs-create-custom-filter.html">How to Create A Custom Filter</a></li>
+			<li><a href="angularjs-non-nested-directives-directives-communication-code-example.html">Non-nested Directives-Directives Communication</a></li>
+                        </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KendoUI-AngularJS Demos <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                            <li><a href="kendoui-helloworld.html">Hello World</a></li>
+			            </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interview Questions <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="angularjs-interview-questions-set-1.html">Questions Set 1</a></li>
+                            <li><a href="angularjs-interview-questions-set-2.html">Questions Set 2</a></li>
+			            </ul>
+              </li>
+            </ul>
+            <!-- 
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+             -->
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</div>
+	</header>
+	<div class="container">
+	<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		<div class="page-header" style="margin: 0">
+			<h1>AngularJS Filter Examples & Code Samples</h1>
+		</div>
+		<div style="padding-top: 15px">This example demonstrates various different filter options in Angular such as following:
+			<ul>
+				<li>Uppercase</li>
+				<li>Lowercase</li>
+				<li>Currency</li>
+				<li>Date</li>
+				<li>Filter</li>
+				<li>OrderBy</li>
+				<li>Linky</li>
+			</ul>
+		</div>
+		<div style="padding-top: 10px">
+			<div style="padding: 0px 0px 20px 30px">
+			<form class="form-horizontal" role="form" method="post" action="#">
+				<div class="form-group page-header">
+					<h4 style="padding-left:25px"><a href="https://docs.angularjs.org/api/ng/filter/uppercase" target="_blank">Uppercase</a> Demo</h4>
+					<div class="col-md-3">
+						<table style="width:500px">
+						<tr><td style="padding:10px"><input type="text" class="form-control" name="firstname"
+							ng-model="firstname" placeholder="{{firstname}}"></td><td style="padding:10px;font-weight:bold">{{firstname|uppercase}}</td>
+						</tr>
+						<tr><td  style="padding-left:10px" colspan="2"><span class="help-block">Type & Watch the text being written with UPPERCASE.</span></td></tr>
+						<tr><td  style="padding-left:10px" colspan="2"  ng-non-bindable>Code: <b>{{firstname|uppercase}}</b>. firstname is the model name and <a href="https://docs.angularjs.org/api/ng/filter/uppercase" target="_blank">uppercase</a> is the filter</td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="form-group page-header">
+					<h4 style="padding-left:25px"><a href="https://docs.angularjs.org/api/ng/filter/lowercase" target="_blank">Lowercase</a> Demo</h4>
+					<div class="col-md-3">
+						<table style="width:500px">
+						<tr><td style="padding:10px"><input type="text" class="form-control" name="lastname"
+							ng-model="lastname" placeholder="{{lastname}}"></td><td style="padding:10px;font-weight:bold">{{lastname|lowercase}}</td>
+						</tr>
+						<tr><td  style="padding-left:10px" colspan="2"><span class="help-block">Type & Watch the text being written with LOWERCASE.</span></td></tr>
+						<tr><td  style="padding-left:10px" colspan="2"  ng-non-bindable>Code: <b>{{lastname|lowercase}}</b>. lastname is the model name and <a href="https://docs.angularjs.org/api/ng/filter/lowercase" target="_blank">lowercase</a> is the filter</td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="form-group page-header">
+					<h4 style="padding-left:25px"><a href="https://docs.angularjs.org/api/ng/filter/currency" target="_blank">Currency</a> Demo</h4>
+					<div class="col-md-3">
+						<table style="width:500px">
+						<tr><td style="padding:10px"><input type="text" class="form-control" name="salary"
+							ng-model="salary" placeholder="{{salary}}"></td><td style="padding:10px;font-weight:bold">{{salary|  currency }}</td>
+						</tr>
+						<tr><td  style="padding-left:10px" colspan="2"><span class="help-block">Type & Watch the text being written with default currency (USD).</span></td></tr>
+						<tr><td  style="padding-left:10px" colspan="2"  ng-non-bindable>Code: <b>{{salary|  currency }}</b>. salary is the model name and <a href="https://docs.angularjs.org/api/ng/filter/currency" target="_blank">currency</a> is the filter</td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="form-group page-header">
+					<h4 style="padding-left:25px"><a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">Date</a> Demo</h4>
+					<div class="col-md-3">
+						<table style="width:500px">
+						<tr><td style="padding:10px"><input type="text" class="form-control" name="dob"
+							ng-model="dob" placeholder="{{dob}}"></td><td style="padding:10px;font-weight:bold">{{dob| date:'medium' }}</td>
+						</tr>
+						<tr><td  style="padding-left:10px" colspan="2"><span class="help-block">Type & Watch the date being written in en_US locale.</span></td></tr>
+						<tr><td  style="padding-left:10px" colspan="2"  ng-non-bindable>Code: <b>{{ dob| date:'medium' }}</b>. dob is the model name and <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">date</a> is the filter with 'medium' representing the en_US locale</td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="form-group page-header">
+					<h4 style="padding-left:25px"><a href="https://docs.angularjs.org/api/ng/filter/filter" target="_blank">Filter</a> Demo</h4>
+					<div class="col-md-5">
+						<div style="padding:10px">
+							<input type="text" class="form-control" name="city" ng-model="city" placeholder="Type in a City Name from following List">
+						</div>
+						<div>
+							<table style="width:500px">
+								<tr ng-repeat="cityObj in cities | filter: city">
+									<td  style="padding-left:10px">
+										{{cityObj.name}}
+									</td>
+								</tr>
+								<tr><td  style="padding:20px 0px 0px 10px" colspan="2" ng-non-bindable>Code: <b>cityObj in cities | filter: city</b>. cities is the model name and <a href="https://docs.angularjs.org/api/ng/filter/filter" target="_blank">filter</a> is the filter</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="form-group page-header">
+					<h4 style="padding-left:15px"><a href="https://docs.angularjs.org/api/ng/filter/orderby" target="_blank">OrderBy</a> Demo</h4>
+					<div class="col-md-5">
+						<div>
+							<table style="width:500px">
+								<tr>
+									<td style="font-weight:bold;text-decoration:underline"><a href="#" ng-click="orderByField='name';reverse = !reverse">City Name</a></td>
+								</tr>
+								<tr ng-repeat="cityObj in cities | orderBy:orderByField:reverse">
+									<td  style="padding-left:10px">
+										{{cityObj.name}}
+									</td>
+								</tr>
+								<tr>
+									<td  style="padding:20px 0px 0px 10px" colspan="2" ng-non-bindable>
+									<pre>
+&lt;table&gt;<br/>	&lt;tr&gt;<br/>		&lt;td&gt;&lt;a href=&quot;&quot; ng-click=&quot;orderByField='name';reverse = !reverse&quot;&gt;City Name&lt;/a&gt;&lt;/td&gt;<br/>	&lt;/tr&gt;<br/>	&lt;tr ng-repeat=&quot;cityObj in cities | orderBy:orderByField:reverse&quot;&gt;<br/>		&lt;td&gt;<br/>			{{cityObj.name}}<br/>		&lt;/td&gt;<br/>	&lt;/tr&gt;								<br/>&lt;/table&gt;
+									</pre>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="form-group page-header">
+					<h4 style="padding-left:15px"><a href="https://docs.angularjs.org/api/ngSanitize/filter/linky" target="_blank">Linky</a> Demo</h4>
+					<div class="col-md-5">
+						<div>
+							<table style="width:500px">
+								<tr>
+									<td ng-bind-html="sometext|linky:'_blank'">
+									</td>
+								</tr>
+
+							</table>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	</div>
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-filters-examples by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:09 GMT -->
+</html>

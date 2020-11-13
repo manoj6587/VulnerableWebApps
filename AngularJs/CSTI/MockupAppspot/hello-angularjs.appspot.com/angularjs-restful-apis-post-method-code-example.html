@@ -1,0 +1,433 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- AppName goes here -->
+<html ng-app="helloApp">
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-restful-apis-post-method-code-example by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hello AngularJS - How To Post with Restful APIs, ngResource &amp; Spring MVC</title>
+<link rel="stylesheet"
+	href="../netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script
+	src="assets/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+<script
+	src="../ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.js"></script>
+<script>
+	var helloApp = angular.module("helloApp", ['ui.bootstrap', 'ngResource' ]);
+	helloApp.controller("HttpController", [ '$scope', '$resource',
+			function($scope, $resource) {
+				$scope.users = [
+		                    { 'firstname':'Ajitesh',
+		                    	'lastname':'Shukla',
+		                    	'address':'Hyderbad',
+		                    	'email':'ajitesh101@gmail.com'},
+		                    	{ 'firstname':'Sumit',
+			                    	'lastname':'Jha',
+			                    	'address':'Muzaffarpur',
+			                    	'email':'sumitjha2011@yahoo.com'},			                    				                    	
+		                    ];
+				
+				$scope.saveUser = function(){
+					$scope.users.push({ 'firstname':$scope.firstname, 'lastname': $scope.lastname, 'address':$scope.address, 'email':$scope.email });		
+					
+					var User = $resource('/user/new');
+					User.save({firstname:$scope.firstname,lastname:$scope.lastname,address:$scope.address,email:$scope.email}, function(response){
+						$scope.message = response.message;
+					});
+					
+					$scope.firstname='';
+					$scope.lastname='';
+					$scope.address='';
+					$scope.email='';
+				}
+				
+				$scope.updateUser = function(){							
+					// Create a resource class object
+					//
+					var User = $resource('/user/:userId', {userId:'@id'});
+					// Create an instance of User resource
+					var user = User.get({userId:25});
+					// Update the new values entered in the form fields
+					//
+					user.id = 25;
+					user.firstname = $scope.firstname;
+					user.lastname = $scope.lastname;
+					user.address = $scope.address;
+					user.email = $scope.email;
+					// Call '$' prefixed action menthod to post ("save" )
+					//
+					user.$save(function(response){
+						$scope.message = response.message;
+					});
+					// Push the new objects in the $scope.users 					
+					//
+					$scope.users.push({ 'firstname':$scope.firstname, 'lastname': $scope.lastname, 'address':$scope.address, 'email':$scope.email });
+					$scope.firstname='';
+					$scope.lastname='';
+					$scope.address='';
+					$scope.email='';
+				}				
+			} ]);
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37706354-1', 'hello-angularjs.appspot.com');
+  ga('send', 'pageview');
+</script>
+</head>
+<!-- Controller name goes here -->
+<body ng-controller="HttpController">
+	<header class="navbar navbar-static-top" id="top" role="banner">
+	<div class="container">
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AngularJS Tutorials</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AngularJS Demos <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="helloworld.html">Hello World</a></li>
+			<li><a href="addtablerow.html">Add Table Row Dynamically</a></li>
+			<li><a href="removetablerow.html">Remove Table Row Dynamically</a></li>
+			<li><a href="searchtable.html">Search Table</a></li>
+			<li><a href="sorttablecolumn.html">Sorting Table Columns</a></li>
+			<li><a href="spa.html">Routing & Single Page Application (SPA)</a></li>
+			<li><a href="angularjs-unit-test-code-example-1.html">Unit Test
+					Code Example 1</a></li>
+			<li><a href="angularjs-filters-examples.html">Filters Examples</a></li>
+			<li><a href="angularjs-http-service-ajax-get-code-example.html">AJAX
+					GET &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-http-service-ajax-post-code-example.html">AJAX
+					POST &amp; Spring MVC Example</a></li>
+			<li><a
+				href="angularjs-http-service-ajax-post-json-data-code-example.html">AJAX
+					POST JSON Data &amp; Spring MVC Example</a></li>
+			<li><a href="angularjs-restful-apis-get-method-code-example.html">Consuming
+					RESTful APIs with ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-restful-apis-post-method-code-example.html">Post
+					with RESTful APIs, ngResource and Spring MVC</a></li>
+			<li><a href="angularjs-single-page-app-restful-apis.html">Single
+					Page App with RESTful APIs</a></li>
+			<li><a href="angularjs-create-custom-services.html">How to
+					Create Custom Service</a></li>
+			<li><a href="angularjs-directives-hello-world.html">Custom Directives Hello World</a></li>
+			<li><a href="angularjs-how-create-custom-directives.html">How to
+					Create Custom Directives</a></li>
+			<li><a href="angularjs-create-custom-filter.html">How to Create A Custom Filter</a></li>
+			<li><a href="angularjs-non-nested-directives-directives-communication-code-example.html">Non-nested Directives-Directives Communication</a></li>
+                        </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KendoUI-AngularJS Demos <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                            <li><a href="kendoui-helloworld.html">Hello World</a></li>
+			            </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interview Questions <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                            <li><a href="angularjs-interview-questions-set-1.html">Questions Set 1</a></li>
+                            <li><a href="angularjs-interview-questions-set-2.html">Questions Set 2</a></li>
+			            </ul>
+              </li>
+            </ul>
+            <!-- 
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+             -->
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</div>
+	</header>
+	<div class="container">
+	<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		<div class="page-header" style="margin: 0">
+			<h1>
+				<!-- Heading goes here -->
+				How To Post with ngResource, Restful APIs &amp; Spring MVC 
+			</h1>
+		</div>
+		<div style="padding-top: 15px;padding-bottom:30px">
+			<!-- Summary goes here -->
+			<p>This example demonstrates the code that is used to post to RESTful APIs using AngularJS $resource service with POST methods (save).
+			It also demonstrates the capability of AngularJS dependency injection which is used to inject $resource service to the controller as it is initiated.</p>
+			<p>
+			As per <a href="https://docs.angularjs.org/api/ngResource/service/$resource" target="_blank">AngularJS webpage on $resource</a>, the $resource service is A factory which creates a resource object that lets you interact with RESTful server-side data sources.			
+			</p> 			
+		</div>
+		<div style="padding-bottom:50px">
+			<table style="width:100%">
+				<tr>
+					<td colspan="2" style="width:100%;padding:10px;">					
+					<div class="alert alert-info" role="alert">{{message}}</div>
+					</td>
+				</tr>
+				<tr>					
+					<td style="width:45%;padding-left:40px;vertical-align: top">
+						<div style="padding-bottom:20px">
+							<h3>Add a User</h3>
+						</div>
+						<form class="form-horizontal" role="form" ng-submit="saveUser()">
+							<div class="form-group">
+								<label class="col-md-4 control-label">First Name</label>
+								<div class="col-md-5">
+									<input type="text" class="form-control" name="firstname"
+										ng-model="firstname" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label">Last Name</label>
+								<div class="col-md-5">
+									<input type="text" class="form-control" name="lastname"
+										ng-model="lastname" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label">Address</label>
+								<div class="col-md-5">
+									<input type="text" class="form-control" name="address"
+										ng-model="address" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label">Email</label>
+								<div class="col-md-5">
+									<input type="text" class="form-control" name="email"
+										ng-model="email" />
+								</div>
+							</div>
+							<div class="form-group">								
+								<div style="padding-left:200px">
+									<input type="submit" value="Submit" class="btn btn-primary"/>
+								</div>
+							</div>
+						</form>
+					</td>
+					<td style="vertical-align: top">
+						<table class="table">
+							<tr>
+								<th>First Name
+								</th>
+								<th>Last Name
+								</th>
+								<th>Address
+								</th>
+								<th>Email
+								</th>
+							</tr>
+							<tr ng-repeat="user in users">
+								<td>{{user.firstname}}
+								</td>
+								<td>{{user.lastname}}
+								</td>
+								<td>{{user.address}}
+								</td>
+								<td>{{user.email}}
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Notes</h3>
+				</div>
+				<div class="panel-body">
+					<ul>						
+						<li>The page demonstrates the Angular and Spring MVC code for saving and editing a data object.</li>
+					</ul>
+				</div>
+			</div>						
+		</div>
+		<div class="container">
+		<div style="padding-top: 30px">
+			<div style="font-weight:bold">
+				$ngResource Service & Related Code
+			</div>
+			<pre>
+			<code>
+var helloApp = angular.module("helloApp", [ 'ngResource' ]);
+	helloApp.controller("HttpController", [ '$scope', '$resource',
+			function($scope, $resource) {
+				$scope.users = [
+		                    { 'firstname':'Ajitesh',
+		                    	'lastname':'Shukla',
+		                    	'address':'Hyderbad',
+		                    	'email':'ajitesh101@gmail.com'},
+		                    	{ 'firstname':'Sumit',
+			                    	'lastname':'Jha',
+			                    	'address':'Muzaffarpur',
+			                    	'email':'sumitjha2011@yahoo.com'},			                    				                    	
+		                    ];
+				
+				$scope.saveUser = function(){
+					$scope.users.push({ 'firstname':$scope.firstname, 'lastname': $scope.lastname, 'address':$scope.address, 'email':$scope.email });		
+					// Create a resource class object
+					//
+					var User = $resource('/user/new');
+					// Call action method (save) on the class 
+					//
+					User.save({firstname:$scope.firstname,lastname:$scope.lastname,address:$scope.address,email:$scope.email}, function(response){
+						$scope.message = response.message;
+					});
+					
+					$scope.firstname='';
+					$scope.lastname='';
+					$scope.address='';
+					$scope.email='';
+				}
+				
+				$scope.updateUser = function(){							
+					// Create a resource class object
+					//
+					var User = $resource('/user/:userId', {userId:'@id'});
+					// Create an instance of User resource
+					var user = User.get({userId:25});
+					// Update the new values entered in the form fields
+					//
+					user.id = 25;
+					user.firstname = $scope.firstname;
+					user.lastname = $scope.lastname;
+					user.address = $scope.address;
+					user.email = $scope.email;
+					// Call '$' prefixed action menthod to post ("save" )
+					//
+					user.$save(function(response){
+						$scope.message = response.message;
+					});
+					// Push the new objects in the $scope.users 					
+					//
+					$scope.users.push({ 'firstname':$scope.firstname, 'lastname': $scope.lastname, 'address':$scope.address, 'email':$scope.email });
+					$scope.firstname='';
+					$scope.lastname='';
+					$scope.address='';
+					$scope.email='';
+				}				
+			} ]);
+			</code>
+			</pre>
+		</div>
+		
+		<div style="padding: 30px 0px 20px 0px">
+			<div style="font-weight:bold">
+				Java Controller Code
+			</div>
+			<div>
+				<p>
+				Pay attention to getUserProfileById method which is called as a result of REST API call. Also, notice the usage of @PathVariable to retrieve the userId value.
+				</p>
+			</div>
+			<pre>
+			<code>
+// Create a new user
+//
+@RequestMapping(value = "/user/new", method = RequestMethod.POST)	
+		public  @ResponseBody String saveUserRestful( @RequestBody User user )   {		
+			//
+			// Code processing the input parameters
+			//	
+		 	String response = "{\"message\":\"Post With ngResource: The user firstname: " + user.getFirstname() + ", lastname: " + user.getLastname() + ", address: " + user.getAddress() + ", email: " + user.getEmail()+"\"}";
+			return response;
+		}
+// Get the existing user	
+@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)	
+	public  @ResponseBody String getUserProfileById( @PathVariable("id") long userId )   {		
+		//
+		// Code processing the input parameters
+		//	
+		String response = "{\"id\":\""+ userId + "\",\"firstname\":\"Aiyana\",\"lastname\":\"Shukla\",\"address\":\"Hyderabad, India\",\"age\":\"8\",\"email\":\"aiyana123@gmail.com\"}";
+		return response;
+	}
+// Update the user
+//	
+@RequestMapping(value = "/user/{id}", method = RequestMethod.POST)	
+	public  @ResponseBody String updateUserProfile( @PathVariable("id") long userId,  @RequestBody User user  )   {		
+		//
+		// Code processing the input parameters
+		//	
+		String response = "{\"message\":\"Post With ngResource - id: " + String.valueOf( userId ) + ",firstname: " + user.getFirstname() + ", lastname: " + user.getLastname() + ", address: " + user.getAddress() + ", email: " + user.getEmail() +"\"}";
+		return response;
+	}
+			</code>
+			</pre>
+		</div> 
+		<div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- resp_leaderboard_1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0620165865439255"
+     data-ad-slot="8501270821"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'vitalflux-angularjs'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+		<noscript>
+			Please enable JavaScript to view the <a
+				href="http://disqus.com/?ref_noscript">comments powered by
+				Disqus.</a>
+		</noscript>
+		<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+			<span class="logo-disqus">Disqus</span>
+		</a>
+	</div>
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+<!-- Mirrored from hello-angularjs.appspot.com/angularjs-restful-apis-post-method-code-example by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 10:44:09 GMT -->
+</html>
