@@ -1,0 +1,456 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<title>List of available certificate site</title>
+	<!-- Mirror and index made by HTTrack Website Copier/3.48-21 [XR&CO'2014] -->
+
+	<style type="text/css">
+	<!--
+
+body {
+	margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 8px;
+	background: #77b;
+}
+body, td {
+	font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+
+#subTitle {
+	background: #000;  color: #fff;  padding: 4px;  font-weight: bold; 
+	}
+
+#siteNavigation a, #siteNavigation .current {
+	font-weight: bold;  color: #448;
+	}
+#siteNavigation a:link    { text-decoration: none; }
+#siteNavigation a:visited { text-decoration: none; }
+
+#siteNavigation .current { background-color: #ccd; }
+
+#siteNavigation a:hover   { text-decoration: none;  background-color: #fff;  color: #000; }
+#siteNavigation a:active  { text-decoration: none;  background-color: #ccc; }
+
+
+a:link    { text-decoration: underline;  color: #00f; }
+a:visited { text-decoration: underline;  color: #000; }
+a:hover   { text-decoration: underline;  color: #c00; }
+a:active  { text-decoration: underline; }
+
+#pageContent {
+	clear: both;
+	border-bottom: 6px solid #000;
+	padding: 10px;  padding-top: 20px;
+	line-height: 1.65em;
+	background-image: url(backblue.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+	}
+
+#pageContent, #siteNavigation {
+	background-color: #ccd;
+	}
+
+
+.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
+.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
+
+hr { height: 1px;  color: #000;  background-color: #000;  margin-bottom: 15px; }
+
+h1 { margin: 0;  font-weight: bold;  font-size: 2em; }
+h2 { margin: 0;  font-weight: bold;  font-size: 1.6em; }
+h3 { margin: 0;  font-weight: bold;  font-size: 1.3em; }
+h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
+
+.blak { background-color: #000; }
+.hide { display: none; }
+.tableWidth { min-width: 400px; }
+
+.tblRegular       { border-collapse: collapse; }
+.tblRegular td    { padding: 6px;  background-image: url(fade.gif);  border: 2px solid #99c; }
+.tblHeaderColor, .tblHeaderColor td { background: #99c; }
+.tblNoBorder td   { border: 0; }
+
+
+// -->
+</style>
+
+</head>
+
+<body>
+<table width="76%" border="0" align="center" cellspacing="0" cellpadding="3" class="tableWidth">
+	<tr>
+	<td id="subTitle">On this page certificate creation steps are provided in detail. The download link allows you to download certificate bundle</td>
+	</tr>
+</table>
+<table width="76%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
+<tr class="blak">
+<td>
+	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
+	<tr>
+	<td colspan="6"> 
+		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
+		<tr> 
+		<td id="pageContent"> 
+<!-- ==================== End prologue ==================== -->
+
+
+<h1 ALIGN=Center>Project setup for certificate and virtual host with apache2</H1>
+<ol><li>How to setup virtual host with apache, steps are given below</li>
+<li>Creation of self signed certificate, steps are given below</li>
+<li>Creation of chained certificate steps are given below</li></ol>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+  <table border="0" width="100%" cellspacing="1" cellpadding="0">
+		<TH>
+		<BR/>
+			<A HREF="ChainCertificateWithoutPass.com.tar">Certificate bundle download here </A>
+		</TH>
+		<TR>
+		  <TD BACKGROUND="fade.gif">
+                    &middot; <A HREF="https://10.113.195.231:8183/">ChainCertificateWithoutPassword </A>
+   		  </TD>
+		</TR>
+		<TH>
+		<BR/>
+			<A HREF="ChainCertificateWithPass.com.tar">Certificate bundle download here{Passphrase:12345} </A>
+		</TH>
+		<TR>
+		  <TD BACKGROUND="fade.gif">
+                    &middot; <A HREF="https://10.113.195.231:8182/">ChainCertificateWithPassword</A>
+   		  </TD>
+		</TR>
+		<TH>
+		<BR/>
+			<A HREF="LeafCertificateWithoutPass.com.tar">Certificate bundle download here</A>
+		</TH>
+		<TR>
+		  <TD BACKGROUND="fade.gif">
+                    &middot; <A HREF="https://10.113.195.231:8185/">LeafCertificateWithoutPassword</A>
+   		  </TD>
+		</TR>
+		<TH>
+		<BR/>
+			<A HREF="LeafCertificateWithPass.com.tar">Certificate bundle download here{Passphrase:12345} </A>
+		</TH>
+		<TR>
+		  <TD BACKGROUND="fade.gif">
+                    &middot; <A HREF="https://10.113.195.231:8184/">LeafCertificateWithPassword</A>
+   		  </TD>
+		</TR>
+
+              <TH>
+              <BR/>
+        <A HREF="ExpiryCertificate.com.tar">Expiry Certificate bundle download here </A>
+              </TH>
+              <TR>
+                <TD BACKGROUND="fade.gif">
+                 &middot; <A HREF="https://10.113.195.231:8186/"> Expiry Certificate Scenarios </A>
+                </TD>
+              </TR>
+
+         <TH>
+             <BR/>
+             <A HREF="ClientScenario.com.tar">Certificate bundle download here </A>
+         </TH>
+         <TR>
+              <TD BACKGROUND="fade.gif">
+              &middot; <A HREF="https://10.113.195.231:8187/">Client sending chain certificate- CRM-16547</A>
+               </TD>
+         </TR>
+
+	</TABLE>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+	<BR>
+	<H4 ALIGN="CENTER">
+         <b>Download client certificate from above line and Use following CURL command to test connection from your machine</b>
+	</H4>
+<ol>8182
+<li><b>curl -v https://10.113.195.231:8182 --cert /home/mkabule/certificate/ChainCertificateWithPass.com/client.crt --key /home/mkabule/certificate/ChainCertificateWithPass.com/client.key -k</b></ol>
+<ol>8183
+<li><b>curl -v https://10.113.195.231:8183 --cert /home/mkabule/certificate/ChainCertificateWithoutPass.com/client.crt --key /home/mkabule/certificate/ChainCertificateWithoutPass.com/client.key -k</b></ol>
+<ol>8184
+<li><b>curl -v https://10.113.195.231:8184 --cert /home/mkabule/certificate/LeafCertificateWithPass.com/client.crt --key /home/mkabule/certificate/LeafCertificateWithPass.com/client.key -k</b></ol>
+<ol>8185
+<li><b>curl -v https://10.113.195.231:8185 --cert /home/mkabule/certificate/LeafCertificateWithoutPass.com/client.crt --key /home/mkabule/certificate/LeafCertificateWithoutPass.com/client.key -k</b></ol>
+<ol>8186
+<li><b>curl -v https://10.113.195.231:8186 --cert /home/mkabule/certificate/ExpiryCertificate.com/client.crt --key /home/mkabule/certificate/ExpiryCertificate.com/client.key -k</b></ol>
+<ol>8187
+<li><b>curl -v https://10.113.195.231:8187 --cert /home/mkabule/certificate/ClientScenario.com/ClientIntermediate.chain --key /home/mkabule/certificate/ClientScenario.com/client.key -k</b></ol>
+<p>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<br><br>
+<p><h3>Add following lines in your httpd.conf file to setup virtual host</h3></p>
+<pre>
+#Listen 12.34.56.78:80
+Listen 80
+Listen 8182
+Listen 8183
+Listen 8184
+Listen 8185
+.
+.
+.
+
+&lt;VirtualHost *:8182&gt;
+        DocumentRoot /var/www/html/virtualhost/ChainCertificateWithPass.com/public
+            ServerName www.ChainCertificateWithPass.com
+            ErrorLog /var/www/html/virtualhost/ChainCertificateWithPass.com/error.log
+            #CustomLog /var/www/html/ChainCertificateWithPass.com/requets.log
+    #   SSL Engine Switch:
+            SSLEngine on
+   
+    #   SSL Protocol support:
+            SSLProtocol all -SSLv2
+   
+    #   SSL Cipher Suite:
+            SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+   
+    #   Server Certificate:
+            SSLCertificateFile /etc/httpd/ssl/certificate/ChainCertificateWithPass.com/ChainCertificateWithPass.crt
+    #   Server Private Key:
+            SSLCertificateKeyFile /etc/httpd/ssl/certificate/ChainCertificateWithPass.com/ChainCertificateWithPass.key
+   
+    #   Server Certificate Chain:
+            #SSLCertificateKeyFile /etc/httpd/ssl/certificate/ChainCertificateWithPass.com/OnlyCA.chain
+   
+    #   Certificate Authority (CA):
+            SSLCACertificateFile /etc/httpd/ssl/certificate/ChainCertificateWithPass.com/OnlyCA.chain
+   
+    #   Client Authentication (Type):
+            SSLVerifyClient require
+            SSLVerifyDepth  10
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:8183&gt;
+        ServerAdmin webmaster@dummy-host.example.com
+        DocumentRoot /var/www/html/virtualhost/ChainCertificateWithoutPass.com/public
+        ServerName www.ChainCertificateWithoutPass.com
+        ErrorLog /var/www/html/virtualhost/ChainCertificateWithoutPass.com/error.log
+        #CustomLog /var/www/html/ChainCertificateWithPass.com/requets.log
+	#   SSL Engine Switch:
+	#	SSLEngine on
+	#   SSL Protocol support:
+	#	SSLProtocol all -SSLv2
+	#   SSL Cipher Suite:
+	#	SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+	#   Server Certificate:
+	#	SSLCertificateFile /etc/httpd/ssl/certificate/ChainCertificateWithoutPass.com/enduser.crt
+	#   Server Private Key:
+	#	SSLCertificateKeyFile /etc/httpd/ssl/certificate/ChainCertificateWithoutPass.com/enduser.key
+	#   Server Certificate Chain:
+   	        #SSLCertificateKeyFile /etc/httpd/ssl/certificate/ChainCertificateWithoutPass.com/Full.chain
+   
+        #   Certificate Authority (CA):
+                SSLCACertificateFile /etc/httpd/ssl/certificate/ChainCertificateWithoutPass.com/OnlyCA.chain
+	#   Client Authentication (Type):
+	#	SSLVerifyClient require
+	#	SSLVerifyDepth  10
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:8184&gt;
+       ServerAdmin webmaster@dummy-host.example.com
+       DocumentRoot /var/www/html/virtualhost/LeafCertificateWithPass.com/public
+       ServerName www.LeafCertificateWithPass.com
+       ErrorLog /var/www/html/virtualhost/LeafCertificateWithPass.com/error.log
+       #CustomLog /var/www/html/LeafCertificateWithPass.com/requets.log
+#   SSL Engine Switch:
+	#	SSLEngine on
+		#   SSL Protocol support:
+	#	SSLProtocol all -SSLv2
+		#   SSL Cipher Suite:
+	#	SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+		#   Server Certificate:
+	#	SSLCertificateFile /etc/httpd/ssl/certificate/LeafCertificateWithPass.com/LeafCertificateWithPass.crt
+		#   Server Private Key:
+	#	SSLCertificateKeyFile /etc/httpd/ssl/certificate/LeafCertificateWithPass.com/LeafCertificateWithPass.key
+		#   Server Certificate Chain:
+		#SSLCertificateKeyFile /etc/httpd/ssl/chain/apache.key
+		#   Certificate Authority (CA):
+	#	SSLCACertificateFile /etc/httpd/ssl/certificate/LeafCertificateWithPass.com/rootCA.crt
+		#   Client Authentication (Type):
+	#	SSLVerifyClient require
+	#	SSLVerifyDepth  10
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:8185&gt;
+       ServerAdmin webmaster@dummy-host.example.com
+       DocumentRoot /var/www/html/virtualhost/LeafCertificateWithoutPass.com/public
+       ServerName www.LeafCertificateWithoutPass.com
+       ErrorLog /var/www/html/virtualhost/LeafCertificateWithoutPass.com/error.log
+	#CustomLog /var/www/html/LeafCertificateWithoutPass.com/requets.log
+#   SSL Engine Switch:
+		SSLEngine on
+#   SSL Protocol support:
+		SSLProtocol all -SSLv2
+#   SSL Cipher Suite:
+	SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+#   Server Certificate:
+	SSLCertificateFile /etc/httpd/ssl/certificate/LeafCertificateWithoutPass.com/winterfell.crt
+#   Server Private Key:
+	SSLCertificateKeyFile /etc/httpd/ssl/certificate/LeafCertificateWithoutPass.com/LeafCertificateWithoutPass.key
+#   Server Certificate Chain:
+	#SSLCertificateKeyFile /etc/httpd/ssl/chain/apache.key
+#   Certificate Authority (CA):
+	SSLCACertificateFile /etc/httpd/ssl/certificate/LeafCertificateWithoutPass.com/rootCA.crt
+#   Client Authentication (Type):
+	SSLVerifyClient require
+	SSLVerifyDepth  10
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:8186&gt;
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot /var/www/html/virtualhost/ExpiryCertificate.com/public
+    ServerName 10.113.195.231
+    ErrorLog /var/www/html/virtualhost/ExpiryCertificate.com/error.log
+    #CustomLog /var/www/html/ExpiryCertificate.com/requets.log
+	#SSL Engine Switch:
+		SSLEngine on
+	#SSL Protocol support:
+		SSLProtocol all -SSLv2
+	#SSL Cipher Suite:
+		SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+	#Server Certificate:
+		SSLCertificateFile /etc/httpd/ssl/certificate/ExpiryCertificate.com/ChainCertificateWithoutPass.crt
+	#Server Private Key:
+		SSLCertificateKeyFile /etc/httpd/ssl/certificate/ExpiryCertificate.com/ChainCertificateWithoutPass.key
+	#Server Certificate Chain:
+	#SSLCertificateKeyFile /etc/httpd/ssl/chain/apache.key
+	#Certificate Authority (CA):
+		SSLCACertificateFile /etc/httpd/ssl/certificate/ExpiryCertificate.com/OnlyCA.chain
+	#Client Authentication (Type):
+		SSLVerifyClient require
+		SSLVerifyDepth  10
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:8187&gt;
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot /var/www/html/virtualhost/ClientScenario.com/public
+    ServerName 10.113.195.231
+    ErrorLog /var/www/html/virtualhost/ClientScenario.com/error.log
+    #CustomLog /var/www/html/ClientScenario.com/requets.log
+	#SSL Engine Switch:
+		SSLEngine on
+	#SSL Protocol support:
+		SSLProtocol all -SSLv2
+	#SSL Cipher Suite:
+		SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+	#Server Certificate:
+		SSLCertificateFile /etc/httpd/ssl/certificate/ClientScenario.com/ChainCertificateWithoutPass.crt
+	#Server Private Key:
+		SSLCertificateKeyFile /etc/httpd/ssl/certificate/ClientScenario.com/ChainCertificateWithoutPass.key
+	#Server Certificate Chain:
+	#SSLCertificateKeyFile /etc/httpd/ssl/chain/apache.key
+	#Certificate Authority (CA):
+		SSLCACertificateFile /etc/httpd/ssl/certificate/ClientScenario.com/rootCA.crt
+	#Client Authentication (Type):
+		SSLVerifyClient require
+		SSLVerifyDepth  10
+&lt;/VirtualHost&gt;
+
+</pre>
+<pre>-----------------------------------------------------------------------------------------------------------------</pre>
+<p><h3>Here are steps to create certificate chain</h3></p>
+<ol>
+<ol><b>Creating root CA and signing request</b>
+<li>
+openssl genrsa -des3 -passout pass:12345 -out  private/rootCA.key 2048 </li>
+<li>openssl req -config openssl.cnf -new -x509 -subj '/C=DK/L=Aarhus/O=frogger CA/CN=rootca.com' -days 999 -key private/rootCA.key -out certs/rootCA.crt</li>
+</ol><br>
+<ol> <b>Creating intermediate CA, CSR and signing request</b>
+<li>openssl genrsa -des3 -passout pass:12345 -out  private/intermediateCA.key 2048</li>
+<li>openssl req -config openssl.cnf -new -subj '/C=DK/L=Aarhus/O=frogger/CN=intermediateca.com' -key private/intermediateCA.key -out csr/intermediateCA.csr</li>
+<li>openssl ca -batch -config openssl.cnf -days 999 -in csr/intermediateCA.csr -out certs/intermediateCA.crt -keyfile ../private/rootCA.key -cert ../certs/rootCA.crt -policy policy_anything</li>
+</ol><br>
+<ol> <b>Certificate verification step</b>
+<li>openssl verify -CAfile ../certs/rootCA.crt certs/intermediateCA.crt</li></ol><br>
+<ol><b> Server side certification generation</b>
+<li>openssl genrsa -des3 -passout pass:12345 -out private/ChainCertificateWithPass.key 2048</li>
+<li>openssl req -config openssl.cnf -new -subj '/C=DK/L=Aarhus/O=frogger/CN=Server.in' -key private/ChainCertificateWithPass.key -out csr/ChainCertificateWithPass.csr</li>
+<li>openssl ca -batch -config openssl.cnf -days 999 -in csr/ChainCertificateWithPass.csr -out certs/ChainCertificateWithPass.crt -keyfile private/intermediateCA.key -cert certs/intermediateCA.crt -policy policy_anything</li>
+</ol></br>
+<ol><b>Client Side certificate creation and verification</b>
+<li>
+openssl genrsa -des3 -passout pass:12345 -out private/client.key 2048</li>
+<li>openssl req -config openssl.cnf -new -subj '/C=DK/L=Aarhus/O=frogger/CN=Client.in' -key private/client.key -out csr/client.csr</li>
+<li>openssl ca -batch -config openssl.cnf -days 999 -in csr/client.csr -out certs/client.crt -keyfile private/intermediateCA.key -cert certs/intermediateCA.crt -policy policy_anything</li>
+</ol><br>
+<ol><b>Creating chain</b>
+<li>cat  intermediateCA.crt rootCA.crt > Certificate.chain </li> </ol><br>
+
+<ol><b>Verify chain</b> 
+<li>openssl verify -CAfile enduser-certs/enduser-example.com.chain enduser-certs/enduser-example.com.crt</li> </ol><br>
+
+<ol><b>Verify the certificate</b>
+<li>openssl verify -crl_check -CAfile enduser-certs/enduser-example.com.chain enduser-certs/enduser-example.com.crt</li></ol><br>
+</ol>
+<pre>-----------------------------------------------------------------------------------------------------------</pre>
+<p> <h3>Here are steps to create simple self signed certificate</h3> </p>
+<p>Here is a quick way of creating your own CA and issue server and client certificates via OpenSSL.</p>
+<p>I will test the certificates via the Apache HTTP Server by configuring one and two-way SSL.</p>
+<p>I use Oracle Linux 5.</p>
+<p>You should of cause only use this for test scenarios.</p>
+<p>Install OpenSSL if needed.</p>
+<pre class="brush: bash; title: ; notranslate" title="">
+yum install openssl
+</pre>
+<h3>Configuring your CA</h3>
+<pre class="brush: bash; title: ; notranslate" title="">
+mkdir -p /u01/app/myCA/certs
+mkdir /u01/app/myCA/csr
+mkdir /u01/app/myCA/newcerts
+mkdir /u01/app/myCA/private
+cp /etc/pki/tls/openssl.cnf /u01/app/myCA/.
+cd /u01/app/myCA
+echo 00 &gt; serial
+echo 00 &gt; crlnumber
+touch index.txt
+</pre>
+<p>Change the dir parameter in openssl.cnf to /u01/app/myCA.<br />
+Check it.</p>
+<pre class="brush: bash; title: ; notranslate" title="">
+grep &quot;/u01/app/myCA&quot; openssl.cnf
+</pre>
+<h3>Create the CA</h3>
+<pre class="brush: bash; title: ; notranslate" title="">
+# Create CA private key
+openssl genrsa -des3 -passout pass:qwerty -out  private/rootCA.key 2048
+
+# Remove passphrase 
+openssl rsa -passin pass:qwerty -in private/rootCA.key -out private/rootCA.key
+
+# Create CA self-signed certificate
+openssl req -config openssl.cnf -new -x509 -subj '/C=DK/L=Aarhus/O=frogger CA/CN=theheat.dk' -days 999 -key private/rootCA.key -out certs/rootCA.crt
+</pre>
+<h3>Create a SSL Server certificate</h3>
+<pre class="brush: bash; title: ; notranslate" title="">
+# Create private key for the winterfell server
+openssl genrsa -des3 -passout pass:qwerty -out private/winterfell.key 2048
+
+# Remove passphrase 
+openssl rsa -passin pass:qwerty -in private/winterfell.key -out private/winterfell.key
+
+# Create CSR for the winterfell server
+openssl req -config openssl.cnf -new -subj '/C=DK/L=Aarhus/O=frogger/CN=winterfell' -key private/winterfell.key -out csr/winterfell.csr
+
+# Create certificate for the winterfell server
+openssl ca -batch -config openssl.cnf -days 999 -in csr/winterfell.csr -out certs/winterfell.crt -keyfile private/rootCA.key -cert certs/rootCA.crt -policy policy_anything
+</pre>
+<h3>Create a SSL Client certificate</h3>
+<pre class="brush: bash; title: ; notranslate" title="">
+# Create private key for a client
+openssl genrsa -des3 -passout pass:qwerty -out private/client.key 2048
+
+# Remove passphrase 
+openssl rsa -passin pass:qwerty -in private/client.key -out private/client.key
+
+# Create CSR for the client.
+openssl req -config openssl.cnf -new -subj '/C=DK/L=Aarhus/O=frogger/CN=theClient' -key private/client.key -out csr/client.csr
+
+# Create client certificate.
+openssl ca -batch -config openssl.cnf -days 999 -in csr/client.csr -out certs/client.crt -keyfile private/rootCA.key -cert certs/rootCA.crt -policy policy_anything
+</pre>
+<h3>Export the client certificate to pkcs12</h3>
+<pre class="brush: bash; title: ; notranslate" title="">
+# Export the client certificate to pkcs12 for import in the browser
+openssl pkcs12 -export -passout pass:qwerty -in certs/client.crt -inkey private/client.key -certfile certs/rootCA.crt -out certs/clientcert.p12
+</pre>
+</body>
+
+</html>
+
+
