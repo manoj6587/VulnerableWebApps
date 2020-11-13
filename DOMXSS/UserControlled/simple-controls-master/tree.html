@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tree</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Tree">
+	<meta name="author" content="xufei">
+
+	<link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet"/>
+	<link href="css/tree.css" rel="stylesheet"/>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="js/tree.js"></script>
+</head>
+<body>
+	<div class="span12">
+		<div class="header">
+			<h3>Area Management</h3>
+		</div>
+		<div>
+			<div id="tree1" class="span12"></div>
+
+			<div class="row">
+				<div class="header">
+					<h4>Detail</h4>
+				</div>
+				<hr/>
+				<form class="form-horizontal span6">
+					<div class="control-group">
+						<label class="control-label" for="inputName">Name</label>
+						<div class="controls">
+							<input type="text" id="inputName" placeholder="Name">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputCode">Code</label>
+						<div class="controls">
+							<input type="text" id="inputCode" placeholder="Code">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<div id="operateBtns">
+					<button class="btn btn-primary" onclick="newClicked()">New</button>
+					<button class="btn btn-primary" onclick="modifyClicked()"><i class="icon-edit icon-white"></i>Modify</button>
+					<button class="btn btn-primary" onclick="deleteClicked()"><i class="icon-remove icon-white"></i>Delete</button>
+				</div>
+				<div id="confirmBtns">
+					<button class="btn btn-primary" onclick="okClicked()"><i class="icon-ok icon-white"></i>OK</button>
+					<button class="btn btn-primary" onclick="cancelClicked()">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var state = "View";
+
+	var tree = new Tree(document.getElementById("tree1"));
+
+	tree.addEventListener("changed", function (event) {
+		var data;
+		if (event.newNode) {
+			data = event.newNode.data;
+		} 
+		else {
+			data = {};
+		}
+
+		setFormData(data);
+	});
+
+	init();
+
+	function init() {
+		enableForm(false);
+		switchButtons("Operate");
+
+		var data = [
+			{
+				name: "Jiangsu",
+				code: "js",
+				children: [
+					{
+						name: "Nanjing",
+						code: "nj"
+					},
+					{
+						name: "Suzhou",
+						code: "sz",
+						children: [
+							{
+								name: "Wujiang",
+								code: "wj"
+							},
+							{
+								name: "Changshu",
+								code: "cs"
+							}
+						]
+					}
+				]
+			},
+			{
+				name: "Yunnan",
+				code: "yn"
+			},
+			{
+				name: "Fujian",
+				code: "fj"
+			}
+		];
+
+		tree.labelField = "name";
+		tree.loadTreeData(data);
+	}
+
+	function newClicked() {
+		state = "New";
+		switchButtons("Confirm");
+		enableForm(true);
+
+		setFormData({});
+	}
+
+	function modifyClicked() {
+		state = "Modify";
+		switchButtons("Confirm");
+		enableForm(true);
+	}
+
+	function deleteClicked() {
+		if (confirm("Sure?")) {
+			tree.removeNode(tree.selectedNode);
+		}
+	}
+
+	function okClicked() {
+		var data = getFormData();
+
+		if (state === "New") {
+			tree.addNode(data, tree.selectedNode);
+		}
+		else if (state === "Modify") {
+			tree.selectedNode.refreshData(data);
+		}
+		state = "View";
+		switchButtons("Operate");
+		enableForm(false);
+	}
+
+	function cancelClicked() {
+		state = "View";
+		switchButtons("Operate");
+		enableForm(false);
+
+		setFormData(tree.selectedItem.data);
+	}
+
+	function enableForm(flag) {
+		document.getElementById("inputName").disabled = !flag;
+		document.getElementById("inputCode").disabled = !flag;
+	}
+
+	function switchButtons(group) {
+		if (group === "Operate") {
+			document.getElementById("operateBtns").style.display = "";
+			document.getElementById("confirmBtns").style.display = "none";
+		}
+		else if (group === "Confirm") {
+			document.getElementById("operateBtns").style.display = "none";
+			document.getElementById("confirmBtns").style.display = "";
+		}
+	}
+
+	function getFormData() {
+		return {
+			name: document.getElementById("inputName").value,
+			code: document.getElementById("inputCode").value
+		};
+	}
+
+	function setFormData(data) {
+		document.getElementById("inputName").value = data.name || "";
+		document.getElementById("inputCode").value = data.code || "";
+	}
+	</script>
+</body>
+</html>
