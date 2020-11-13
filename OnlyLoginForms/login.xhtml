@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+	<title>TRACES | Login</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Cache-control" content="no-store" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="description" content="CPC TDS Portal, Income Tax Returns Correction" />
+	<meta name="keywords" content="Government of India, Correction, Returns" />	
+	
+	<link rel="stylesheet" type="text/css" href="https://nriservices.tdscpc.gov.in/css/reset.css" media="screen" />
+	
+
+	<link rel="stylesheet" type="text/css" href="https://nriservices.tdscpc.gov.in/css/jquery-ui.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="https://nriservices.tdscpc.gov.in/css/common-blue.css" media="screen" />
+        
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="https://nriservices.tdscpc.gov.in/css/ie.css" media="screen" />
+	<![endif]--></head>
+
+<div class="container">
+	<div class="header">
+	<div id="topheader">
+			<ul id="top_left">
+				<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/home.html" title="Home">Home</a>
+				</li>
+				<li class="separatorLeft"></li>
+				<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/aboutus.html" title="About Us">About Us</a>
+				</li>
+				<li class="separatorLeft"></li>
+				<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/contactus.html" title="Contact Us">Contact Us</a>
+				</li>
+				<li class="separatorLeft"></li>
+				<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/user-manual.html" title="e-Tutorials">e-Tutorials</a>
+				</li>
+				<li class="separatorLeft"></li>
+				<li class="related">
+					<ul id="cssdropdown">	
+						<li class="mainitems marTop-2"><span class="padBottom5">Related Links</span><span class="downarrowclass"></span>
+							<ul class="subuls top20">
+								<li><a href="https://www.tin-nsdl.com/" target="_blank" class="first" title="Repository of nationwide tax related information">Tax Information Network</a>
+								</li>
+								<li><a href="http://www.incometaxindia.gov.in/" target="_blank" title="National website which is a comprehensive database of all ITD data">Income Tax Department</a>
+								</li>
+								<li><a href="https://incometaxindiaefiling.gov.in" target="_blank" class="first" title="This site has been set up as part of the e-governance action plan of the Income Tax Department">Income Tax e-filing</a>
+								</li>
+								<li><a href="http://www.incometaxindiapr.gov.in" target="_blank" title="Complete digest of various ITD related publications">Directorate of Income Tax (PR)</a>
+								</li>
+								<li><a href="http://www.india.gov.in/" target="_blank" title="Single window access to information and services being provided by various Indian Government Entities">National Portal of India</a>
+								</li>
+								<li><a href="http://www.nadt.gov.in/" target="_blank" title="Provides information on latest updates and courses offered by the apex training institution for officers and staff of Direct Taxes Administration ">National Academy of Direct Taxes</a>
+								</li>
+								<li><a href="http://www.irsofficersonline.org/" target="_blank" title="Comprehensive and accurate database of IRS officers">Indian Revenue Service</a>
+								</li>
+								<li><a href="http://www.cvc.nic.in/" target="_blank" class="last" title="Enables lodging of complaints against Ministries or Departments of Government of India ">Central Vigilance Commission</a>
+								</li>
+							</ul>
+				</li>
+				</ul>
+				</li>
+				<li class="separatorLeft"></li>
+				<li class="last_menu">
+						<li class="last_menu"><a href="/nriapp/login.xhtml" title="Login">Login</a>
+						</li>
+				</li>
+			</ul>
+<div class="top_right">
+<form name="headerForm" action="/nriapp/searchresult.xhtml" accept-charset="UTF-8" method="get">
+		<ul class="headerRight search_border" id="cssdropdown">
+			<li class="mainitems searchdown">
+				<a href="#">Search In 
+					<span class="downarrowclass"></span></a>
+					<ul class="subuls">
+								<li><a href="#" class="first" title="All"><input type="checkbox" onclick="g_SearchSelectAll(this);" id="all" name="all" checked="checked" />All</a>
+								</li>
+								<li><a href="#" title="e-Tutorials"><input type="checkbox" name="etutorial" checked="checked" onclick="g_SearchUnselectOne(this);" />e-Tutorials</a>
+								</li>
+								<li><a href="#" title="FAQs"><input type="checkbox" name="faq" checked="checked" onclick="g_SearchUnselectOne(this);" />FAQs</a>
+								</li>
+								<li><a href="#" title="Forms"><input type="checkbox" name="forms" checked="checked" onclick="g_SearchUnselectOne(this);" />Forms</a>
+								</li>
+								<li><a href="#" title="Rates and Tables"><input type="checkbox" name="ratable" checked="checked" onclick="g_SearchUnselectOne(this);" />Rates and Tables</a>
+								</li>
+								<!-- <li><a href="#" class="last"
+									title="Updates Archives"><input type="checkbox"
+										name="updates" checked="checked"
+										onclick="g_SearchUnselectOne(this);" />Updates Archives</a>
+								</li> -->
+				    </ul>
+		   </li>
+		   			
+				<li class="searchInput">
+						<input type="text" class="txtbox" autocomplete="off" onkeypress="return setFieldOnEnterHit(this,event)" name="key" id="key" value="Keyword" onclick="empty(this);" />
+					<a onclick="javascript:convertAndSubmit()" href="#">
+						<span class="lookup"></span>
+					</a>
+				</li>
+				
+		</ul>
+		</form>
+		<ul>
+			<li class="seperatorRight"></li>
+		</ul>
+			<ul class="headerRight" id="textSize">
+			   <li id="smallFont"><span id="font-small"><a href="#" class="styleswitch" rel="style-small" title="Small Font">A</a></span></li>
+			   <li id="largeFont" class="textActive"><span id="font-medium"><a href="#" class="styleswitch" rel="style-medium" title="Medium Font">A</a></span></li>
+			   <li id="largerFont"><span id="font-large"><a href="#" class="styleswitch" rel="style-large" title="Large Font">A</a></span></li>
+			</ul>
+			<ul>
+				<li class="seperatorRight"></li>
+				<li class="headerRightImg"><a id="bookmark" title="Bookmark" href="#">
+					<span class="bookmark" title="Bookmark"></span>
+					</a>
+				</li>
+				<li id="themes" class="headerRightImg">
+					<span id="t-gray"><a title="Gray Theme" rel="common-gray" id="c_digit" class="themeSelect pad0" href="#">
+						<span class="colorpref" title="Theme"></span></a></span>
+					<span id="t-blue" style="display: none;"><a title="Blue Theme" rel="common-blue" id="c_digit" class="themeSelect pad0" href="#">
+						<span class="colorpref" title="Theme"></span> </a></span>
+				</li>
+			</ul><form id="j_id27839938_263b8a84" name="j_id27839938_263b8a84" method="post" action="/nriapp/login.xhtml" enctype="application/x-www-form-urlencoded">
+			<div id="language"><select name="j_id27839938_263b8a84:j_id27839938_263b8aaa" size="1" onchange="submit()">	<option value="en_US">English</option></select>
+			</div><input type="hidden" name="j_id27839938_263b8a84_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="fo5hjn4Mdz2GG/zjdi1F7ngKUbMQb9y+mxe/wTftoiRYXyG5rxR0UAsBVpnF7t9+rifD0GC3Z7FrRJ5SH2gZ5EWrLcr6xSqX+BUafV082uoOUfwGeUbGTPRzYDw=" /></form>
+</div>
+	<script type="text/javascript"><!--
+
+	function empty(obj)
+	{
+         var val = obj.value;
+         if(val == "Keyword"){obj.value='';}
+	}
+	
+//--></script>
+			<div style="clear:both;"></div>
+		</div>	
+
+		<div>
+	         <div class="floatLeft marginLeft10">
+			       <div class="font20 logoArea" title="TRACES - TDS Reconciliation Analysis and Correction Enabling System">
+			       	<a href="/nriapp/redirecturlnoauth.xhtml?url=/home.html" id="home" class="menu"></a>
+			       </div>		  
+	         </div>
+	         <div class="rightFloat">
+               <div class="padLeft37 indianemblem" title="Government of India, Emblem"></div>
+	         </div>
+        </div>
+	
+<div style="clear:both;"></div>
+
+<div class="menuDiv">
+	<ul id="cssdropdown">
+		<li class="mainitems menuleft">
+			<div class="nonactive">
+				<a href="/nriapp/redirecturlnoauth.xhtml?url=/home.html">
+					<span class="menuleftimg"></span>
+					<span class="menutext">Home</span>
+					<span class="menurightimg"></span>
+				</a>
+			</div>
+		</li>
+		
+		<li class="mainitems">
+			<div class="">
+				<a href="/nriapp/redirecturlnoauth.xhtml?url=/taxpayer-home.html">
+					<span class="menuleftimg"></span>
+					<span class="menutext">Tax Payer</span>
+					<span class="menurightimg"></span>
+				</a>
+			</div>
+		</li>
+		
+		<li class="mainitems helpmenu">
+			<div class="nonactive">
+				<a href="#">
+					<span id="pagehelp" title="Help">Help</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+				
+	</div>	
+	<div class="welcomeMenu">
+	 <br />
+  <noscript>
+<div class="jsError">
+<span class="errorImage"></span>
+<span class="infoMsg w775"><p class="mandatory">
+JavaScript is disabled in your browser. This might not allow you to login or perform certain activities on this website</p></span>
+</div>
+</noscript>
+		<!-- <span class="welcomeRight">
+		   	<a href="#" id="pagehelp" title="View Page Help"><span class="pagehelp"></span>	</a> 				
+		</span> -->
+	</div>
+
+<form id="loginForm" action="j_security_check" method="post">
+
+	
+	<div class="clear"></div>
+	<div id="content" class="padLeft10 linkSpace" style="padding-bottom:0px;">
+	<div style="clear:both;"></div>
+	<div id="subcontentlogin">
+	<div class="floarrightimp">
+	<h5 class="fieldLevelInfo clear width340 marginTop-13">
+	<span title="Info" class="infoImage"></span>
+	<span class="boldFont marginLeft20">For Tax Payers:</span>
+	<ul class="bulletUl marginLeft20" style="width:280px !important;text-align: justify;">
+	<li>If you are already registered in TRACES, please login with your registered User Id (PAN), Password &amp; PAN else register as new user</li>					
+	</ul>
+	<span class="boldFont marginLeft20">Common Note:</span>
+	<ul class="bulletUl marginLeft20" style="width:280px !important;text-align: justify;">
+	<li>This website uses cookies to maintain user preference and session information. Disabling cookies in your browser might not allow you to perform certain activities</li>					
+	</ul>
+	</h5> 
+	</div>
+ 	<div class="loginLeft marginTop-13">
+	<div class="main_marquee marBottom0 marginLeft0 w640">
+		<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollDelay="100" direction="left" scrollAmount="5">
+			<ul class="bulletUl marquee30 boldFont w640">
+				<li class="redFont">26QB Correction functionality has been enabled on Tax Payer login.</li>
+				<li class="redFont">Please install TRACES WebSocket Esigner setup to use Digital Signature functionality on Google Chrome browser.</li>
+				<li class="redFont">Attention Taxpayers: You are accessing TRACES from outside India and therefore, you will require a User ID with Password. The website provides access to the PAN holders to view the details of tax credits in form 26AS. If you are not registered with TRACES, please refer to our e-tutorial.</li>
+				<li class="redFont">Buyer of immovable property can download Form 16B after registering on TRACES as Tax Payer</li>
+				<li class="redFont">To receive Email intimations from TRACES, please add  <div class="emailImg1 emailDisplay"></div>to the address book / contact list of your registered Email Id</li>
+			</ul>
+		</marquee>
+	</div>
+	<h1 class="tableList  marginTop5 ">Login</h1>
+	<div id="step3">
+	
+	 <div class="clear"></div>
+	 <p class="mandatory floatLeft">	
+	 <span class="mandatory" id="err_Summary">		
+		</span> 
+	</p>
+	<div class="clear"></div>
+	
+		<div class="spaceBox w635">
+			<p class="floatLeft">User Id<span class="mandatory">*</span></p>
+			<p class="marRight100 marginLeft180">
+			<a class="tooltip" border="0">
+     			 <span class="custom help">
+            		 User Id for Tax Payer will be PAN
+      			</span>
+      		</a>
+			<input id="userId" type="text" class="frmtxtbox" autocomplete="off" name="username" maxlength="11" onchange="javascript:showCaptcha();" tabindex="1" />	
+			</p>			
+		</div>
+		<input type="hidden" name="j_username" id="hidUserId" class="frmtxtbox" maxlength="22" />
+		<div class="clear"></div>
+		<div>
+			<p class="floatLeft">Password<span class="mandatory">*</span></p>
+			<p class="marginLeft180">
+			<input id="psw" type="password" name="j_password" autocomplete="off" class="frmtxtbox" onchange="javascript:showCaptcha();" tabindex="2" /></p>	
+		</div>
+		<div class="clear"></div>
+		<div>
+			<p class="floatLeft">PAN for Tax Payer<span class="mandatory">*</span></p>
+			<p class="marginLeft180">
+			<input id="tanpan" type="text" class="frmtxtbox" autocomplete="off" name="j_tanPan" maxlength="10" tabindex="3" />
+			</p>
+		</div>
+		<br />
+				<div class="clear"></div>
+				<div id="captchaDiv" style="display:none">
+					<div class="spaceBox w635">
+						<p class="floatLeft margintop22">Verification Code<span class="mandatory">*</span></p>
+						<p class="marginLeft180">
+						<img id="captchaImg" class="captchaimg1" alt="Captcha" />
+						<a href="#" onClick="document.getElementById('captchaImg').src = '/nriapp/srv/GetCaptchaImg?'+Math.random();" class="refreshimg" title="Refresh image"></a>
+						<span class="captchaLabel">Click to refresh image</span></p>
+					</div>
+					<div class="clear"></div>
+					<br />
+					<div class="spaceBox w635">
+						<p class="floatLeft"><label>Enter text as in above image</label><span class="mandatory">*</span>
+						</p>
+						<p class="marginLeft180">
+							<input autocomplete="off" id="captcha" name="j_captcha" class="frmtxtbox" maxlength="5" required="true" requiredMessage="Fields marked with ‘*‘ are mandatory" tabindex="4" />
+							
+						</p>
+					</div>
+					<br />
+				</div>
+		<div class="clear"></div>
+		<div>
+			<p class="floatLeft"></p>
+			<p class="marginLeft180">
+				<input type="submit" value="Login" class="button" id="clickLogin" />
+			</p>
+		</div>
+		<br />
+		<div>
+			<p class="floatLeft"></p>
+			
+			<a href="/nriapp/tapreg1.xhtml" id="register" title="Register as New User" class="underline padRight20">Register as New User</a>
+			<a href="/nriapp/tpforgotpwds1.xhtml" id="forgot" title="Forgot Password?" class="underline padRight20">Forgot Password?</a>
+		</div>
+ 	<h5 class="fieldLevelInfo floatLeft" style="display:none">
+	<span class="infoMsg w775">Release:1.4.140; Last Modified:21-Jun-2013 11:00AM</span>
+	</h5>	
+	</div>
+	</div>
+	</div>
+	</div>
+</form>
+	<div id="footer">
+		<ul>
+			<li class="marginLeft80">Copyright © 2012 Income Tax Department</li>
+			<li class="separator"></li>
+					<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/termsnconditions.html" title="Terms and Conditions">Terms and Conditions</a></li>
+					<li class="separator"></li>
+					<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/privacypolicy.html" title="Privacy Policy">Privacy Policy</a></li>
+					<li class="separator"></li>
+					<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/hyperlinkingpolicy.html" title="Hyperlinking Policy">Hyperlinking Policy</a></li>
+					<li class="separator"></li>
+					<li><a href="/nriapp/redirecturlnoauth.xhtml?url=/sitemap.html" title="Sitemap">Sitemap</a></li>		
+		</ul>
+	</div>
+	<div id="helpRemoteId" title="Help" style="display: none">Loading...</div>
+	<div id="sessionTimeoutWarning" title="Session Expiration Warning" style="display: none">
+		<div id="subcontent">
+		<p>Time left for session to expire (in seconds):  <span id="sessionTimeoutCountdown"></span></p>
+		<p><br />
+		Click OK to continue your session.
+		</p>		
+		</div>
+	</div>	
+</div>
+
+<script type="text/javascript"><!--
+
+	var g_ContextPath = '/nriapp';
+	var g_PageHelper = "defaulthelp.html";
+
+//--></script>
+<script type="text/javascript" src="https://nriservices.tdscpc.gov.in/js/jquery.min.static1.js"><!--
+
+//--></script>
+<script type="text/javascript" src="https://nriservices.tdscpc.gov.in/js/common.min2.js"><!--
+
+//--></script>
+<script type="text/javascript" src="https://nriservices.tdscpc.gov.in/js/app.min.js"><!--
+
+//--></script>
+<script type="text/javascript" src="https://nriservices.tdscpc.gov.in/js/jquery.min.app.js"><!--
+
+//--></script>
+<script type="text/javascript"><!--
+
+var msg_err_mandatory = 'Fields marked with ‘*‘ are mandatory';
+var msg_err_invalid = 'Invalid details';
+var msg_err_tanformat = 'TAN / PAN is not as per specified format';
+var msg_err_userId = 'User Id is not as per specified format';
+var msg_userId_mandatory = 'User Id is mandatory';
+var msg_pwd_mandatory = 'Password is mandatory';
+var msg_code_mandatory = 'Verification Code is mandatory';
+var msg_tanPan_mandatory = 'TAN / PAN is mandatory';
+g_PageHelper="help-dl-nri.html";
+var  isCaptchaLoaded = false;
+$(document).ready( function() {
+
+document.getElementById('userId').focus();			
+	$("#clickLogin").click(function() {
+		g_ClearErrorMessage();
+		 $.validator.addMethod("checkTANPAN", function(value, element) {
+                  var tp= document.getElementById("tanpan").value;
+                  //PAN check
+                  var Pattern1= /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/;
+                  //TAN check
+                  var Pattern2= /^([a-zA-Z]){4}([0-9]){5}([a-zA-Z]){1}?$/;
+                   //AIN check
+                  var Pattern3= /^[0-9]{7}$/;
+
+                  if(tp.match(Pattern1) || tp.match(Pattern2)|| tp.match(Pattern3)){
+	                  		return true;
+                  }
+                  else{return false; }
+             });	
+		jQuery.validator.addMethod('alphanumericsomespecial',function(em1, element) {
+		return this.optional(element)|| em1
+		.match(/^[a-zA-Z0-9^$.|?*+()\\{}@#$%*:`]+$/);
+		});
+		$("#loginForm").validate({	
+		   onfocusout: function(element, event) { },
+			onkeyup: function(element, event) { },
+			rules : {
+				'username' : {required : true,alphanumericsomespecial : true, minlength: 6},
+				'j_password' : {required : true},
+				'j_tanPan' : {required : true,checkTANPAN: true},
+				'j_captcha' : {required : true}
+			},
+			messages : {
+				'username' : {required : msg_userId_mandatory,alphanumericsomespecial : msg_err_userId, minlength: msg_err_userId},
+				'j_password' : {required : msg_pwd_mandatory},
+				'j_tanPan' : {required : msg_tanPan_mandatory,checkTANPAN : msg_err_tanformat},
+				'j_captcha' : {required : msg_code_mandatory}
+			},
+			 submitHandler: function(){
+			 document.getElementById("hidUserId").value = document.getElementById("userId").value+'^'+document.getElementById("tanpan").value;
+	         document.getElementById('loginForm').submit(); 
+	         document.getElementById('clickLogin').disabled = true;       
+	         document.getElementById('loginForm').disabled = true;     
+          } 
+	  });
+	  document.getElementById("hidUserId").value = document.getElementById("userId").value+'^'+document.getElementById("tanpan").value;
+	});
+	  
+	  $(function() {                                         
+        $('input[id$=psw]').bind('cut copy paste', function(e) {
+        e.preventDefault();
+        });     
+      });           
+	
+});
+
+function showCaptcha(){
+	$('#captchaDiv').show();
+		if(!isCaptchaLoaded){
+		isCaptchaLoaded = true;
+		document.getElementById("captchaImg").src= "/nriapp/srv/GetCaptchaImg";
+	}
+}
+
+//--></script>
+<script type="text/javascript"><!--
+
+  $.idleTimer(5*60*1000);
+  autocomplete("/nriapp/srv/SearchServlet?");
+  $('#pagehelp').click(function(){	
+		$('#helpRemoteId').dialog({
+			bigframe: true,show:"blind",width:750,height:550,modal: true, title: "Help",
+	        open: function () {
+	        	$(this).load( "/en/notes/" + g_PageHelper);
+	         },
+	         buttons: {
+	           Cancel: function () {  $(this).dialog("close");
+	         }
+	       }
+ 		});
+ 		return false;
+	});
+
+//--></script>
+</html>

@@ -1,0 +1,1549 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Login |&nbsp;JiveWorks</title><meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><!--[if IE]><link rel="stylesheet" href="/9.0.1.1597bde/styles/jive.ie.css" type="text/css" media="all"/><![endif]--><!--[if !IE]> --><link rel="stylesheet" href="/9.0.1.1597bde/styles/jive.css" type="text/css" media="all"/><!-- <![endif]--><!--[if lt IE 9]><link rel="stylesheet" href="/9.0.1.1597bde/styles/jive-onboarding-ie-legacy.css" type="text/css" media="all"/><![endif]--><link rel="stylesheet" href="/9.0.1.1597bde/styles/jive-visor.css" type="text/css" media="all"/><link rel="search" href="/opensearch.xml" title="JiveWorks" type="application/opensearchdescription+xml"/><link rel="shortcut icon" type="image/x-icon" href="/resources/images/palette-1025/faviconImage-1481075490166-favicon.ico" /><!--[if lt IE 9]><script src="/9.0.1.1597bde/resources/scripts/vendor/html5shiv.min.js"></script><![endif]--><script src="/9.0.1.1597bde/resources/scripts/lib/tAMD/tamd.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/tAMD/reg.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/tAMD/sync_hooks.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.define.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.pushStackChromeFix.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/viewport.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/namespace.js"></script>
+
+    
+    <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="nouserbar" content="true"/>
+    <meta name="nofooter" content="true"/>
+    <meta name="excludecommoncontainer" content="true"/>
+
+
+
+
+
+    <style type="text/css">
+        a.tooltip {
+            text-decoration: none;
+            border-bottom: dotted 1px;
+            font-size: 11px;
+        }
+        #tooltip {
+            position:absolute;
+            border:1px solid #dadada;
+            background:#ffc;
+            padding:8px 12px;
+            color:#333;
+            display:none;
+            border-radius: 4px;
+            z-index: 99;
+            width: 180px;
+            text-align: left;
+            font-size: 11px;
+        }
+    </style>
+<link rel="stylesheet" href="/9.0.1.1597bde/styles/jive-responsive.css" type="text/css" media="all" /><link rel="stylesheet" href="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/styles/n4jive.concat.css" type="text/css" media="all"/><link rel="stylesheet" href="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/styles/supportal.css?version=80000001" type="text/css" media="all"/><link class="j-custom-theme" rel="stylesheet" href="/resources/styles/palette-1025/1491353741363.css" type="text/css"  media="all"/><link rel="stylesheet" href="/9.0.1.1597bde/resources/styles/exobjects-icons/jive-exobjects-icons.css" type="text/css" media="all"/><link rel="stylesheet" href="/themes/design2016/styles/override.css?20032017"><link rel="stylesheet" href="/themes/design2016/styles/slickDefault.css?117"><script src="/themes/design2016/scripts/navBarLogic.js?103"></script><script src="/themes/design2016/scripts/custom.js?11112016"></script><script src="/themes/design2016/scripts/anchor-fix.js?02272017"></script><script src="/themes/design2016/scripts/satNavPopupFix.js?02162017"></script><script src="/themes/design2016/scripts/newsStreamNavFix.js?3222017"></script>
+    <style type="text/css">
+
+/* Hide CRM link added to Create menu */
+#menuCreate li a[data-view="createCase"], #menuCreate.j-small-view li a[data-view="createCase"] {display:none}
+
+    </style>
+    <script>window._jc_custom = {customersPlaceTag: "jcustomers", employeesPlaceTag: "jemployees", partnersPlaceTag: "jpartners",}</script></head><body class="guest jive-body-formpage jive-body-formpage-login j-no-header  j-simple-homepage" data-auth-token="no-user" data-browser-event-query="{&quot;providers&quot;:[&quot;activityStream.poll&quot;,&quot;appAlert.create&quot;,&quot;inboxCount.poll&quot;],&quot;since&quot;:1491546228131}" data-browser-events-polling-delay="300000" data-container-id="1" data-container-type="14" data-current-user="{&quot;type&quot;:3,&quot;link&quot;:&quot;/people/ANONYMOUS&quot;,&quot;subject&quot;:&quot;ANONYMOUS&quot;,&quot;iconCss&quot;:&quot;jive-icon-profile&quot;,&quot;archetype&quot;:&quot;people&quot;,&quot;thumbnailTemplate&quot;:&quot;jive.browse.user.thumbnailUserItem&quot;,&quot;detailTemplate&quot;:&quot;jive.browse.user.detailUserItem&quot;,&quot;objectTypeName&quot;:null,&quot;objectTypeCodeName&quot;:null,&quot;objectTypeFeatureName&quot;:null,&quot;displayExternallyVisibleVisualCue&quot;:false,&quot;prop&quot;:{&quot;isVisibleToPartner&quot;:false,&quot;search&quot;:{&quot;defaultEnabled&quot;:true},&quot;avatarID&quot;:&quot;-1&quot;,&quot;profile&quot;:{&quot;faxNumber&quot;:null,&quot;homePhoneNumber&quot;:null,&quot;alternateEmailAddress&quot;:null,&quot;pagerNumber&quot;:null,&quot;strictJoinDate&quot;:null,&quot;primaryEmailAddressVisible&quot;:false,&quot;joinDate&quot;:null,&quot;primaryEmailAddress&quot;:null,&quot;biography&quot;:null,&quot;mobilePhoneNumber&quot;:null,&quot;primaryPhoneNumber&quot;:null,&quot;initialLoginDate&quot;:null,&quot;title&quot;:null,&quot;alternatePhoneNumber&quot;:null,&quot;hireOrJoinDate&quot;:null,&quot;expertise&quot;:null,&quot;occupation&quot;:null,&quot;primaryURL&quot;:null,&quot;homeAddress&quot;:null,&quot;company&quot;:null,&quot;lastLoggedInDate&quot;:null,&quot;department&quot;:null,&quot;address&quot;:null,&quot;location&quot;:null,&quot;url&quot;:null,&quot;timeZone&quot;:null},&quot;profileImage&quot;:{&quot;url&quot;:&quot;/images/jive-profile-default-portrait.png&quot;,&quot;viewingSelf&quot;:false,&quot;default&quot;:true},&quot;presence&quot;:{&quot;userExternalID&quot;:null,&quot;online&quot;:false,&quot;jsObject&quot;:&quot;null&quot;}},&quot;username&quot;:&quot;ANONYMOUS&quot;,&quot;displayName&quot;:&quot;ANONYMOUS&quot;,&quot;initialLoginDate&quot;:null,&quot;anonymous&quot;:true,&quot;enabled&quot;:true,&quot;external&quot;:false,&quot;partner&quot;:false,&quot;email&quot;:null,&quot;entitled&quot;:true,&quot;visible&quot;:true,&quot;avatarID&quot;:&quot;-1&quot;,&quot;id&quot;:&quot;-1&quot;,&quot;objectType&quot;:3,&quot;modificationTime&quot;:null,&quot;unmodified&quot;:true,&quot;modificationDate&quot;:null,&quot;creationTime&quot;:null,&quot;creationDate&quot;:null}" data-instance-id="0431cf4a-0ddd-44d9-9789-186854495808" data-locale="en_US" data-realtime-communications-enabled="false" data-realtime-push-enabled="false" data-realtime-stats-enabled="false" data-socket-events="{&quot;socketEvents&quot;:[&quot;activityStream.push&quot;,&quot;tiledata.push&quot;]}" data-timezone-offset="-7" data-translation-language="en" data-clean="true"data-base-url="/" data-absolute-base-url="https://community.jivesoftware.com" data-resource-url="/9.0.1.1597bde/" ><script>
+
+        $j(document).ready(function(){
+
+          var jFooterLoginPage = $j('.j-footer-login-page');
+
+          var isLoginOrRegistration  = /(.*?)create-account.jspa/.test(location.href) || /(.*?)login.jspa/.test(location.href)
+
+          $j(jFooterLoginPage).css('visibility', 'hidden');
+          $j(jFooterLoginPage).css('display', 'none');
+
+          if(isLoginOrRegistration){
+             $j('#j-footer-wrap').insertAfter('#j-main-wrapper');
+             $j(jFooterLoginPage).css('visibility', 'visible');
+             $j(jFooterLoginPage).css('display', 'inline-block');
+          }
+
+//          if(/(.*?)login.jspa/.test(location.href)){
+//            var domBody = $j('body');
+//            domBody.className = domBody.className + 'enable-footer';
+//          }
+//
+//            if($j(domBody).hasClass('enable-footer')){
+//             $j('#j-main-wrapper').css('height', '81%');
+//             $j('#j-footer-wrap').css({
+//               'position' :'absolute',
+//               'bottom':'0',
+//               'right':'0',
+//               'left':'0'
+//             })
+//
+//           }else{
+//             $j(jFooterLoginPage).css('visibility', 'hidden');
+//             $j(jFooterLoginPage).css('display', 'none');
+//
+//           }
+//
+//
+//            if(/(.*?)create-account.jspa/.test(location.href)){
+//              var domBody = $j('body');
+//              domBody.className = domBody.className + 'enable-footer-ca';
+//            }
+//
+//            if($j(domBody).hasClass('enable-footer-ca')){
+//
+//            }else{
+//              $j(jFooterLoginPage).css('visibility', 'hidden');
+//               $j(jFooterLoginPage).css('display', 'none');
+//            }
+        });
+
+         </script><a id="top"></a><a href="#j-main" class="j-508-label">Skip navigation</a><div id="j-header-wrap" data-company-name="" data-no-user-bar="true" role="banner" ><header id="j-compact-header" class="clearfix"><!-- Customer generated HTML --><div id="j-cust-head" class="clearfix"><nav class="off-canvas trials-menu SL_opaque hide-for-medium">
+    <div class="trials-buttons-wrapper">
+      <a href="https://www.jivesoftware.com/products/jive-n/try-jive/" id="global-try-jive-n" target="_blank" title="Try Jive-n">
+        <span class="center-text dark-blue pad-both">
+          <img alt="Jive-n" height="60" src="https://www.jivesoftware.com/wp-content/uploads/2014/08/jiven_logo_white_220x60_88pct.svg" width="220"></img>  
+          <span class="hide-for-medium-and-small">Interactive Intranet</span>  
+          <span class="button pseudo-link">Start your 30-day trial now</span>
+        </span>
+      </a>  
+      <a href="https://www.jivesoftware.com/products/jive-x/customer-community-software-demo/" id="global-demo-jive-x" target="_blank" title="Get a Live Product Demo of Jive-x">
+        <span class="center-text dark-blue pad-both">
+          <img alt="Jive-x" height="60" src="https://www.jivesoftware.com/wp-content/uploads/2014/08/jivex_logo_white_220x60_88pct.svg" width="220"></img>  
+          <span class="hide-for-medium-and-small">Customer &amp; Partner Communities</span>  
+          <span class="button pseudo-link">Start your 30-day trial now</span>
+        </span>
+      </a>
+    </div>
+    <div class="center-text" id="global-demo-request">
+      <p class="hide-for-medium-and-small">Interested in a personalized demo?
+        <a class="cta" href="https://www.jivesoftware.com/products/collaboration-software-demo" target="_blank">Get a Free Jive Demonstration</a>
+      </p>
+    </div>
+  </nav>
+  <ul class="clearfix" id="ext-nav">
+    <li class="custom-1">
+      <a href="https://www.jivesoftware.com/" target="_blank" title="JiveSoftware.com">JiveSoftware.com</a>
+    </li>
+    <li class="custom-2">
+      <a href="https://community.jivesoftware.com/" target="_blank" title="Community">Community</a>
+    </li>
+    <li class="custom-3">
+      <a href="https://developer.jivesoftware.com/" target="_blank" title="Developers">Developers</a>
+    </li>
+    <li class="custom-4">
+      <a href="https://jiveworld.jivesoftware.com/" target="_blank" title="JiveWorld">JiveWorld</a>
+    </li>
+    <li class="custom-5">
+      <a href="https://docs.jivesoftware.com/" target="_blank" title="Documentation">Documentation</a>
+    </li>
+    <li class="menu-item hide-for-medium">
+      <a href="https://www.jivesoftware.com/products/collaboration-software-demo" target="_blank" title="Get a Demo">Get a Demo</a>
+    </li>
+    <li class="menu-item try-jive-link hide-for-medium">
+      <a class="drawer-open" href="#" title="Try Jive Now">Try Jive</a>
+    </li>
+    <li id="contact">
+      <a class="contact" href="https://www.jivesoftware.com/about-jive/contact/" target="_blank" title="Contact Jive">Contact</a>
+    </li>
+  </ul>
+  <a href="/welcome" id="logo">
+    <img alt="JiveWorks" src="/themes/design2016/images/JiveWorks/jiveworks-logo.svg"></img>
+  </a></div></header><noscript><div style="color:red" align="center">Error: You don't have JavaScript enabled. This tool uses JavaScript and much of it will not work correctly without it enabled. Please turn JavaScript back on and reload this page.</div></noscript></div><div id="mobile-overlay"></div><div id="j-main-wrapper"><section id="j-main" class="clearfix"><div id="jive-body" class="clearfix">
+
+<script type="text/javascript">
+    $j(function () {
+
+        $j("input#login-submit").prop('disabled', false);
+        $j("form#loginform").submit( function() {
+            $j("input#login-submit").val("Authenticating");
+            $j("input#login-submit").prop('disabled', true);
+        });
+        $j("input#register-submit").prop('disabled', false);
+        $j("form#registerform").submit( function() {
+            $j("input#register-submit").val("Authenticating");
+            $j("input#register-submit").prop('disabled', true);
+        });
+
+        var $successURL = $j("input#success_url");
+        if ($successURL.size() > 0) {
+            if (window.location.hash) {
+                $successURL.val($successURL.val() + window.location.hash);
+            }
+        }
+
+
+    });
+
+</script>
+
+<!-- BEGIN layout -->
+<div class="j-layout j-layout-l clearfix">
+
+    <!-- BEGIN large column -->
+    <div class="j-column-wrap-l">
+        <div class="j-column j-column-l">
+
+            <div id="intro-div" >
+                    
+            </div>
+
+            <!-- BEGIN login form -->
+
+
+            <div id="regular-auth-login-block" class="j-box jive-standard-formblock-container
+                jive-login-reg-formblock clearfix"
+            > 
+
+
+                <div class="jive-box-body jive-standard-formblock clearfix">
+
+
+
+                    <div id="jive-login-formblock" >
+
+                        <h1>Login</h1>
+
+
+                        <form action="/cs_login" id="loginform" method="post" class="j-form" name="loginform01" autocomplete="off">
+                                <input type="hidden" name="successURL" value="" id="success_url"/>
+
+                            <div id="jive-login-username" class="clearfix">
+                                    <label for="username01" class="font-color-meta">Username</label>
+                                <input type="text" name="username" size="30" maxlength="150" value="" id="username01"/>
+                            </div>
+
+                            <div id="jive-login-password" class="clearfix">
+                                <label for="password01" class="font-color-meta">Password</label>
+                                <input type="password" name="password" size="30" maxlength="150" value="" id="password01" autocomplete="off" />
+                            </div>
+
+
+                                <div id="jive-login-rememberme" class="clearfix">
+                                    <input type="checkbox" name="autoLogin" id="autoLoginCb" value="true"/>
+                                    <label for="autoLoginCb">Keep me logged in</label>
+                                </div>
+
+                            <div id="jive-login-button" class="clearfix">
+                                <input type="submit" name="login" id="login-submit"
+                                       class="jive-form-button-submit j-btn-callout"  value="Log in"/>
+                            </div>
+
+                            <div>
+                                    <div id="jive-login-forgotpwd" class="jive-login-forgotpwd login-reset-link">
+                                        <a href="/emailPasswordToken!input.jspa">I forgot my password</a>
+                                    </div>
+
+                                    <div id="jive-login-forgot-username" class="jive-login-forgot-username login-reset-link">
+                                        <a href="/forgot-username!input.jspa">I forgot my username</a>
+                                    </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+
+
+                            <div id="jive-validate-formblock">
+ 
+                                    <h2>Don't have an account?</h2>
+                                    <p>
+
+After confirming your email address, you'll be able to create an account and access the site.                                    </p>
+                                    <form action="/login.jspa" method="post" id="registerform" class="j-form j-form-domaincheck" name="registerform01" autocomplete="off">
+                                        <label for="emailAddress" class="font-color-meta">
+Your email address                                        </label>
+                                        <input type="text" name="emailAddress" id="emailAddress" value="" class="jive-validate-email"/>
+                                        <input type="submit" id="register-submit" name="regsubmit" value="Confirm address"  class="jive-validate-confirm"/>
+                                        <input type="hidden" name="method:register" value="true" />
+                                            <input type="hidden" name="registerOnly" value= "false"  />
+                                    </form>
+
+                                 
+                            </div>
+
+                         
+                     
+
+ 
+                 
+
+                    <script type="text/javascript" language="JavaScript">
+                        $j('#username01').focus();
+                    </script>
+
+                </div>
+            </div>
+            <!-- END login form -->
+
+
+        </div>
+    </div>
+    <!-- END large column -->
+
+</div>
+<!-- END layout -->
+
+
+</div></section><!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T5CS94"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5CS94');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript" src="//munchkin.marketo.net/munchkin.js"></script>
+<script type="text/javascript">$j(function(){ try { Munchkin.init('174-ZGE-941'); } catch (err) { console.log(err); } });</script>
+<script type="text/javascript" src="/plugins/marketo/resources/script/marketo.js"></script>
+                    
+                    
+                    </div><div id="jiveTT-note" class="jive-tooltip2 notedefault snp-mouseoffset" role="tooltip"><div class="jive-tooltip2-mid j-mini-modal j-mini-modal-place"><div class="jive-tooltip2-mid-padding j-modal-content clearfix j-js-note-body" id="jive-note-body"></div></div></div><div id="jiveTT-note-additems" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content clearfix" id="jive-note-additems-body"></div></div></div><div id="jiveTT-note-checkpoint" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-checkpoint-body"></div></div></div><div id="jiveTT-note-tasks" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-tasks-body"></div></div></div><div class="j-alert-container" role="alert" aria-live="polite" aria-atomic="true"></div><span id="j-speak-accessibility" class="j-508-label" role="status" aria-live="polite" aria-relevant="all" aria-atomic="true"></span><script>(function() {var prepareUrl = function(url) {if (url.indexOf(";") > 0) {url = url.substring(0, url.indexOf(";"));}if (url.charAt(url.length - 1) == '/') {url = url.substring(0, url.length - 1);}return url}; if (typeof(window._jive_base_url) == "undefined") {window._jive_base_url = prepareUrl("\/")}if (typeof(window._jive_base_absolute_url) == "undefined") {window._jive_base_absolute_url = prepareUrl("https:\/\/community.jivesoftware.com")}if (typeof(window._jive_resource_url) == "undefined") {window._jive_resource_url = prepareUrl("\/9.0.1.1597bde\/")}if (typeof(window._jive_theme_url) == "undefined") {window._jive_theme_url = prepareUrl("\/themes\/design2016\/")}if (typeof(window._jive_current_user) == "undefined") {window._jive_current_user = {anonymous: true, partner: false, visible: true, username: 'ANONYMOUS', ID: '-1', enabled: true, avatarID: '-1', displayName: 'ANONYMOUS'};}})(); var _jive_effective_user_id = "-1"; var _jive_auth_token ="no-user"; var _jive_locale = "en_US"; var _jive_translation_language = "en"; var _jive_browser_event = {"providers":["activityStream.poll","appAlert.create","inboxCount.poll"],"since":1491546228131}; var _jive_browser_event_polling_delay =  300000.0 ; var _jive_socket_events = {"socketEvents":["activityStream.push","tiledata.push"]}; var _jive_realtime_push_enabled =  false ; var _jive_allstream_counts_enabled =  false ;var _jive_timezoneoffset =  -7.0 ; var _jive_server_timezoneoffset =  -7.0 ; var _jive_enable_browserdb =  false ; var _jive_i18n_should_minify =  true ; var _jive_nitro_call_delay =  0.0 ; var jive = jive || {}; jive.global = jive.global || {}; jive.global.instanceID = '0431cf4a-0ddd-44d9-9789-186854495808'; jive.global.containerType = '14'; jive.global.containerID = '1';jive.global.containerBrowseId = '86268';jive.global.subdomain = {}; jive.global.subdomain.mode = 'single'; jive.global.subdomain.template = 'https:\/\/apps.community.jivesoftware.com%path%'; jive.global.extensions = {"d691a1d8-127a-4db9-9938-7700cbca6a1e":"789d68d177","386db4e0-3957-4e32-938d-197261c9d0b4":"cae257ecf6","152ed45d-e9cc-41bb-a374-518f20f01ed8":"5e0bde7472","ddec7848-302f-4087-8884-8430a8a6515f":"82ddf78a8e","d2d23dd3-74aa-4621-996c-528e719d2024":"efe0ccc8de","eb09bb4c-32f5-4f1e-8dd5-8d3ca5b5beff":"1e8034ce3b","e1c7ad6b-26fc-490d-9bff-9414c4eea973":"5e3bc544c0","9ca6a14d-d606-46d8-a89b-309ef5314799":"7b7c33b682","01cf962c-6b2f-430e-a3f1-853981d6e34f":"5122eb32c4","2de98f32-89c5-430f-8038-cbbd28757de8":"9b1f8d6bda","62fedb3e-948e-4588-a1ef-e76e52e67187":"f5e5b44afe","a859195e-fd2d-40d6-8ad0-57a2cd8f7a9b":"310082a56d"}; window.SPELL_LANGS = "English (Canada)\x3den_ca,English (United Kingdom)\x3den_gb,+English (United States)\x3den_us,French\x3dfr,French (Canada)\x3dfr_ca,German\x3dde,Italian\x3dit,Spanish\x3des"; window.CS_BASE_URL = ""; window.CS_RESOURCE_BASE_URL = "\/9.0.1.1597bde"; window.tinyMCEPreInit = {suffix : "_src", base : CS_BASE_URL + "/resources/scripts/tiny_mce3"}; if (typeof(_jive_project_i18n) == "undefined") {var _jive_project_i18n = new Array(); _jive_project_i18n['project.calendar.task'] = "Task"; _jive_project_i18n['project.calendar.tasks'] = "Tasks"; _jive_project_i18n['project.calendar.checkpoint'] = "Checkpoint"; _jive_project_i18n['project.calendar.checkpoints'] = "Checkpoints"; _jive_project_i18n['global.edit'] = "Edit"; _jive_project_i18n['global.delete'] = "Delete"; _jive_project_i18n['project.task.mark.complete'] = "Mark complete"; _jive_project_i18n['project.task.assign.to.me'] = "Assign to me"; _jive_project_i18n['task.incomplete.link'] = "Incomplete"; _jive_project_i18n['project.checkPoint.create.link'] = "Create a checkpoint"; _jive_project_i18n['project.task.create.link'] = "Create a task";}</script><script>$j(function() {require(['jive/responsive'], function(responsive) { responsive.init(); });});</script><script>var containerShortUrl = "\/container-short.jspa"; var videoShortUrl = "\/view-video-short.jspa"; var profileShortUrl = "\/profile-short.jspa"; var profileLoadingTooltip = "Loading user profile"; var profileErrorTooltip = "There was an error loading that profile information."; var followErrorMessage = "An internal error occurred while following the object."; var ajaxErrorMessage = "An unexpected error has occurred. Please make sure that your session did not expire while viewing this page."; var ajaxNotFoundMessage = "The specified item was not found.";; var ajaxUnauthorizedMessage = "You are not authorized to perform this operation. If you are not logged in please log in and try again.";
+        (function() {
+            var originalWrite = document.write;
+            document.write = function() {
+                if(typeof $j != 'undefined' && $j.isReady) {
+                    console.warn("document.write called after document was loaded: ", arguments);
+                }
+                else {
+                    // In IE before version 8 `document.write()` does not
+                    // implement Function methods, like `apply()`.
+                    return Function.prototype.apply.call(originalWrite, document, arguments);
+                }
+            }
+        })();
+        </script><script>
+reg(["osapi","shindig","gadgets"], ["/9.0.1.1597bde/resources/scripts/jive/app/app-feature-disabled.js"],function() {
+
+});
+</script><script type="text/javascript">window.appsMarketEnabled =  false ; window.anyAppsEnabled =  true ; window.appUUIDs = ""; $j(document).ready(function() {require(['appContainer'], function(appContainer) {});});</script><script>
+reg(["JAF","appContainer","syntheticAppContainer"], [],function() {
+define('JAF', ['osapi'], function(osapi) {return {};});
+
+$j(document).ready(function() {define('appContainer', ['jive/app/core_container/'+'main', 'jive/app/core_container/'+'common_container'], function(C) {var c = new C(); c.initActionLinkContext({coreAPIType: '', id: -1  }); return c;}); define('syntheticAppContainer', ['appContainer'], function(c) {return c;});});
+
+
+});
+</script><script type="text/javascript">if (window.jQuery) window.jQuery.migrateMute = true;</script><script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/conc/next_tick.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/conc/observable.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/conc/promise.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/controllers/localexchange.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/controllers/switchboard.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/core_container/event_relay.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/backbone/backbone.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/backbone/backbone-super.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/backbone/backbone.radio.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/native_shims.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/config.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/json-security.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/requirejs/plugins/asyncTmpl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/requirejs/plugins/channel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/amd_shims.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/view_loader.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/default_click_handler.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/constants.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/base_page_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rest.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.serializeObject.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/util.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/base_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/core_ext/array.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/core_ext/function.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/core_ext/object.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/core_ext/string.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/oo/class.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/oo/compose.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/conc/synchronize.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/application/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/tAMD/soy.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/soy/goog_shim.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/soy/soyutils.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/i18nHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/moment/moment.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/moment/langs.min.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/model/date.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/soy_functions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/i18n.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/JSAjaxCachePreFilter.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery-mobile/jquery.mobile.vmouse.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/dispatcher.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/urlcleaner.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/ext/x/x_core.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/ext/x/x_event.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/ext/x/x_timer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/ext/y/y_core.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/ext/y/y_ajax.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/settings.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/paramset.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.core.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/accessibility.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/promise_util.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/core_deferred.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/DiscussionApp/soy/rteMsgQuote.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/rte_quote_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/rte.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/rte_layout.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/bootstrap/bootstrap-affix.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/rte_wrap.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/macro.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/emote.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/rte_list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/globalClose.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.safeRemove.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/loader_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/spinner_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/abstract_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/loading.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.lightbox_media.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.tablesorter.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/renderedContent.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/externalLinkModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/modernizr.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/underscore/underscore.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/underscore/extensions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.asyncReady.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.purgeFrame.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.exists.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.form.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.jivefilebutton.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.delayedObserver.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.history.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/overlay/lightbox.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.lightbox_me.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/a11yBoundary.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.pop.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.effect.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.popover.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.swfobject.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.metadata.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.media.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.oo.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.utils.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.template.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.templates.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/plugin_utils.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.position.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.tooltip.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.widget.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.mouse.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.slider.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.effect-bounce.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.effect-highlight.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.accordion.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.safelyLoad.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.suggest.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.jsonp-1.0.4.min.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.scrollTo.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.label.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.localscroll_me.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/close.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/messagePopup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.message.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.placeheld.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/utils.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/autoscroll.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/xhr_stack.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.hovercard.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/hovercard/cardError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/hovercard/cardUnauth.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/cardLoading.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/card.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ajax_error_handler.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/zapatec/utils/calendar-title-utils.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/zapatec/zpcal/src/calendar-bootstrap.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/rest/soy/errorSaving.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/rest/soy/errorFinding.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/rest/soy/errorUpdating.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/rest/soy/errorDestroying.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/rest_service.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/attachErrTooManyAttchmtsText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/attachErrBadContentTypeText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/attachErrFileTooLargeText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/attachErrUploadErrorsText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/FormAttachmentService.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/ImageService.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/LinkService.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/FormService.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/rte/EntitlementService.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/models/userpicker_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/placeholderEmail.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/placeholderPlace.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/inputPlaceholder.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderModalBrowseButton.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderModalPlaceBrowseButton.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/userDisplayNameLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/avatarLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/avatarImage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/avatar.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderedUser.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderedContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderSelectedUsersList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderSelectedUser.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/models/result_store.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/searching.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderModalLoading.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderUserPickerModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/views/select_people_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/limitMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/views/userpicker_message_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderUserList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/pleaseEnterEmail.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/domainMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/pleaseEnterValidDomain.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/pleaseEnterValidEmail.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/noUsersMatchMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/views/result_list_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/containerLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/containerListEntry.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/containerList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/recentPlaces.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/browseContainers.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/searchResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/moreContainers.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/browsePlacesEmptyMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/typeahead_input.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/views/container_search_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.endless-scroll-1.3.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/views/container_browse_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.typeAhead.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/views/userpicker_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/models/search_containers_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/models/browse_containers_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/models/place_picker_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userpicker/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.ba-bbq.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/activity_stream_builder/models/builder_services.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/activity_stream/activity_notifier.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/controllers/user_activity_monitor.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/user_relationship_list_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/user_relationship_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/follows/models/follow_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/eaeActivitystreamBuilderFollowlinkRemoveall.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/builder/streamSelector.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/builder/followInStreamsMenu.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/builder/jsI18nHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/follows/views/follow_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/follows/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/people/profile/friendListChooserLabel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/people/profile/followingAssociatedStreamCount.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/profileFriendsRemoveLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/follows/user/views/follow_user_link.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/user/labelDot.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/follows/user/views/labels_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/follows/user/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/places-autocomplete.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/drawCaptcha.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/humanValidationInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/authentication/loginForm.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/sso/external-login.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/authentication/externalLogin.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/authentication/loginModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/authentication/views/login_modal_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/authentication/sourceForm.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/authentication/models/authentication_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/authentication/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordStrengthMessageUnknown.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordStrengthMessageHigh.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordStrengthMessageMediumHigh.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordStrengthMessageMedium.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordStrengthMessageLow.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userregistration/views/password_strength_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/generalErrors.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/formFieldLabel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/textInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/errorsContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/termsAndConditionsInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/readOnly.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/hidden.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/largeTextInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordStrength.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/resourceInlineJs.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/form/datepickerHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/form/datepicker.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/dateInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/addressInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/selectInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/booleanInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/formField.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/formFields.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/modal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/localizedFieldError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/keyedFieldError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/errors.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/accountPendingApproval.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/accountRejected.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/user/registration/passwordMatchErrorMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userregistration/detect_timezone.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userregistration/views/user_registration_form_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userregistration/models/user_registration_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/userregistration/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/model/i18n/en.js"></script>
+<script>
+jive.rte.defaultStyles = ["\/9.0.1.1597bde\/plugins\/gamification_9.0.1.0\/resources\/styles\/n4jive.concat.css","\/9.0.1.1597bde\/plugins\/supportal_9.0.1.1\/resources\/styles\/supportal.css?version\x3d80000001"];
+
+jive.observable = jive.conc.observable; jive.rte.mobileUI = false;
+
+jive.global.typeToNumeric = {"embedded_video":1100,"webhook":1224013431,"placeTemplateEntity":1567134318,"casethread":80583366,"dm":109016030,"project":600,"discussion":1,"poll":18,"profileImage":501,"blog":37,"space":14,"post":38,"announcement":22,"group":700,"2901":2901,"image":111,"placeTemplateCategory":955999628,"static":1140061448,"securityGroup":4,"externalStreamInstance":1094237539,"task":602,"system":-2,"slide":1606291040,"person":3,"extprop":-1840153649,"extStreamActivity":-960826044,"page":-2106121635,"contentVersion":120,"favorite":800,"remoteDocument":9876,"streamEntry":1501,"idea":3227383,"document":102,"update":1464927464,"video":1100,"carousel":1527402675,"mention":550,"file":102,"attachment":13,"stream":-891990144,"share":109400031,"tileInstance":1094237539,"profileField":500,"event":96891546,"outcome":2700,"tileDefinition":1803367074,"message":2,"url":801,"collaboration":2800,"privateprop":987082157,"interaction":2801,"comment":105,"invite":350,"user":2020,"extStreamDefinition":1803367074}; jive.global.typeToMacroName = {"embedded_video":"videolink","idea":"idea","document":"document","casethread":"casethread","project":"project","update":"microblog","discussion":"thread","poll":"polls","video":"videolink","blog":"blog","message":"message","space":"community","url":"external-site","task":"task","file":"document","post":"blogpost","person":"user","extStreamActivity":"tilestream","event":"event","group":"group"};
+
+$j.ajaxSettings.traditional = true;
+
+$j(function(){define('documentReady',document);});
+
+require(['tAMD/hooks'], function(h) {h.on('define', 'Zapatec.Calendar', function(id, deps, factory, next) {reg(['Zapatec.Calendar.translations'], ['\/9.0.1.1597bde\/resources\/scripts\/zapatec\/zpcal\/lang\/calendar-en.js'], function() {define('Zapatec.Calendar.translations', {});}); require(['Zapatec.Calendar.translations'], $j.noop); next(id, deps.concat('Zapatec.Calendar.translations'), factory);}); h.on('publish', 'Zapatec.Calendar', function(id, Calendar, next) {Calendar._TT["DEF_DATE_FORMAT"] = "%m\/%d\/%Y"; next(id, Calendar);});});
+
+$j(document).ready(function() {var followView = new jive.FollowUserApp.ProfileFollowView({i18n: {startFollowingMessage: '<p>You are now following {0}.</p>', stopFollowingMessage:  '<p>You have stopped following {0}.</p>', pendingConnectionMessage: '<p>Note: {0} will need to approve your request</p>'}, bidirectional: false}); var jiveUserFollow = new jive.FollowUserApp.Main({followView: followView}); $j("input[placeholder]").placeHeld();});
+
+</script>
+<script>var containerType = '14'; var containerID = '1';var spotlightSearchURL = "spotlight-search";</script><script>window._jive_images_enabled = true; window._jive_video_module_enabled = false;</script><script>
+reg(["jive.rte"], ["/9.0.1.1597bde/resources/scripts/jquery/jquery.spinbox.js","/9.0.1.1597bde/resources/scripts/jquery/jquery.json.js","/9.0.1.1597bde/resources/scripts/jquery/jquery.autosize.js","/9.0.1.1597bde/resources/scripts/jive/ext/y/y_slide.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/tiny_mce_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/langs/en.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_core_i18n_custom.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivelists/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivelists_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivestyle/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivestyle_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivemacros/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivemacros_i18n.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivemacros_i18n_dlg.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveattachment/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jiveattachment_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveemoticons/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivemention/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jiveapps_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveapps/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivemention_i18n.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivetable_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivetable/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivetablecontrols/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivetablecontrols_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivescroll/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveblackout/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivecontextmenu/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveresize/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jiveemoticons_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivebuttons/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivekeyboard/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivelink/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivelink_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveimage/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jiveimage_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivequote/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivequote_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveutil/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jiveselection/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivemouse/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivevideo/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivevideo_i18n.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivevideo_i18n_dlg.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/jivetablebutton/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_jivetablebutton_i18n.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_tabletoolbar_i18n.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/style/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/table/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/table/langs/en_dlg.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_table_i18n_dlg_custom.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/html/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_html_i18n_dlg.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/save/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/advimage/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/advimage/langs/en_dlg.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_advimage_i18n_dlg_custom.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/advlink/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/advlink/langs/en_dlg.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/inlinepopups/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/paste/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/plugins/spellchecker/editor_plugin_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/themes/advanced/editor_template_src.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/themes/advanced/langs/en.js","/9.0.1.1597bde/resources/scripts/tinymce/i18n/en_advanced_i18n_custom.js","/9.0.1.1597bde/resources/scripts/tiny_mce3/themes/advanced/langs/en_dlg.js","/9.0.1.1597bde/resources/scripts/jive/rte/syntax/syntaxhighlightmacro.js","/9.0.1.1597bde/resources/scripts/post.js","/9.0.1.1597bde/resources/scripts/posteditor.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/attachment/formatSize.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/attachment/restrictions.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/attachment/attachmentHeader.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/attachment/attachmentList.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/attachment/attachmentBlock.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/dropdown/ddNoAppInstalled.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/dropdown/ddNoAppContent.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/dropdown/ddOutputMarketAction.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/dropdown/ddOutputIconImage.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/dropdown/ddOutputAppActions.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/dropdown/ddAppContent.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/tableProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/headerCellProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/cellProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/allTableProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/columnProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/allColumnProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/rowProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/allRowProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/allCellProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/mergeCellProperties.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/propertiesChooserTable.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/propertiesChooserColumn.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/propertiesChooserRow.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/propertiesChooserCell.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/propertiesChooserMergeCells.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/deleteText.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/table/editText.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/video/tBodyVideoList.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/rte/video/noMoreVideosMessage.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/actionMessageList.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/actionErrors.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/rteToggleDisplay.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/postAlwaysUseThisEditorTab.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/rteEditDisabled.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/rteEditDisabledDesc.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/globalUnsavedChangesText.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/forumPostSaveAndEditText.js","/9.0.1.1597bde/resources/scripts/form2object.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/content/draftRecoverButtonLabel.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/content/draftDeleteButtonLabel.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/content/draft.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/content/drafts.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/content/draftlastsaved.js","/9.0.1.1597bde/resources/scripts/apps/content/draft/view.js","/9.0.1.1597bde/resources/scripts/apps/content/draft/source.js","/9.0.1.1597bde/resources/scripts/apps/content/draft/main.js","/9.0.1.1597bde/resources/scripts/apps/content/common/content_rte.js","/9.0.1.1597bde/resources/scripts/application/messaging.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/fieldError.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/fieldErrors.js","/9.0.1.1597bde/resources/scripts/jquery/jquery.validator.js","/9.0.1.1597bde/resources/scripts/apps/content/common/validator.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/content/progressbar.js","/9.0.1.1597bde/resources/scripts/apps/content/common/multipart/view.js","/9.0.1.1597bde/resources/scripts/apps/content/common/multipart/source.js","/9.0.1.1597bde/resources/scripts/apps/content/common/multipart/main.js","/9.0.1.1597bde/resources/scripts/apps/content/common/view.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/docUploadErrFileRequired.js","/9.0.1.1597bde/resources/scripts/apps/shared/models/file_uploader.js","/9.0.1.1597bde/resources/scripts/apps/content/common/source.js","/9.0.1.1597bde/resources/scripts/apps/content/common/main.js","/9.0.1.1597bde/resources/scripts/apps/content/videos/edit/video_edit.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/videos/embedVideoView.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/videos/i18n/keys/videoEmbedLoadingMsg.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/videos/i18n/keys/videoEmbedImportAction.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/videos/i18n/keys/videoEmbedServiceUnavailable.js","/9.0.1.1597bde/resources/scripts/gen//soy/jive/videos/i18n/keys/videoEmbedLinkInvalid.js","/9.0.1.1597bde/resources/scripts/apps/content/videos/view/video_options_view.js","/9.0.1.1597bde/resources/scripts/apps/content/videos/model/video_status.js","/9.0.1.1597bde/resources/scripts/apps/content/videos/model/video_model.js","/9.0.1.1597bde/resources/scripts/apps/content/videos/main.js"],function() {
+window.errorHandlerMessage = "An error occurred:";
+            window.editorErrorHandler = function(message, exception) {
+              // if the message is something other than a timeout, show the message plus the error code
+              if (message.indexOf('Timeout') == -1) {
+                  $j('#dwr-error-text').text(errorHandlerMessage + ' Error Code: ' + message);
+                  $j('#dwr-error-table').fadeIn();
+                  setTimeout(function() {
+                      $j('#dwr-error-table').fadeOut();
+                  }, 10000);
+              }
+            };
+            if(typeof(tinyMCE) != "undefined"){tinyMCE.addI18n('en.jivemacros',{"unused.jive.key" : "nothing."});}
+          window.RawHTMLSaveFunction = function(element_id, html, body){
+              var text = $j('#'+element_id);
+              if (text.is(':not(:visible)')) {
+                  return html;
+              }else{
+                  return text.val();
+              }
+          }
+          jive.rte.multiRTE = new Array();
+  
+          //Not used by RTEWrap, but we need this for backward compatibility; see CS-23883
+          window.refreshLinks = function() {
+              jive.rte.multiRTE.forEach(function(rteID) {
+                  if ($j('#' + rteID + '_parent').length < 1) {
+                      // safari 2, text only
+                      $j('#' + rteID + '_toggle_html').hide();
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                      return;
+                  }
+  
+                  if(currentMode == 'rawhtml') {
+                      $j('#' + rteID + '_toggle_html').css('display', 'block');
+                  }else{
+                      $j('#' + rteID + '_toggle_html').hide();
+                  }
+  
+                  if (preferredMode == currentMode) {
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                  } else {
+                      $j('#jivePreferredEditorModeLinkHREF').css('display', 'block');
+                  }
+              });
+          }
+  
+          window.editor = new jive.ext.y.HashTable();
+          
+
+
+jive.rte.macros.push(new jive.rte.Macro("color","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("size","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("font","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("toc","","IMAGE", true, true, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("code","","TEXT", false, true, [{ name: "java", deleteAll: true, params: [{ name: "__default_attr", value :"java"} ]},{ name: "plain", deleteAll: true, params: [{ name: "__default_attr", value :"plain"} ]},{ name: "xml", deleteAll: true, params: [{ name: "__default_attr", value :"xml"} ]},{ name: "html", deleteAll: true, params: [{ name: "__default_attr", value :"html"} ]},{ name: "sql", deleteAll: true, params: [{ name: "__default_attr", value :"sql"} ]}], [{name: "__default_attr",value: ["java","plain","xml","html","sql"]}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("noformat","","TEXT", true, false, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("thread","thread/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("message","message/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("external-site","bookmarks/","INLINE", false, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("document","docs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tag","tags/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "tag",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("microblog","status/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("polls","polls/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blogpost","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blog","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "name",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("community","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("space","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("user","people/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "username",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("project","project/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("task","view-task.jspa?task=","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("group","groups/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("quote","","TEXT", false, true, [], [{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("alert","","TEXT", false, true, [{ name: "success", deleteAll: true, params: [{ name: "__default_attr", value :"success"} ,{ name: "alert", value :"success"} ]},{ name: "info", deleteAll: true, params: [{ name: "__default_attr", value :"info"} ,{ name: "alert", value :"info"} ]},{ name: "warning", deleteAll: true, params: [{ name: "__default_attr", value :"warning"} ,{ name: "alert", value :"warning"} ]},{ name: "danger", deleteAll: true, params: [{ name: "__default_attr", value :"danger"} ,{ name: "alert", value :"danger"} ]}], [{name: "__default_attr",value: ""},{name: "alert",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("flag","","INLINE", false, true, [{ name: "new", deleteAll: true, params: [{ name: "flag", value :"new"} ]},{ name: "updated", deleteAll: true, params: [{ name: "flag", value :"updated"} ]}], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("vimeo","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("veoh","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("dailymotion","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("youtube","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("kaltura","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""},{name: "partnerID",value: ""},{name: "playerColor",value: "#FFFFFF"},{name: "sourcedomain",value: ""}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("brightcove","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("showandshare","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerColor",value: "#000000"},{name: "sourcedomain",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("application","","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "__title",value: ""},{name: "__view",value: ""},{name: "__params",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("appEmbeddedView","","INLINE", true, false, [], [{name: "_default_attr",value: ""},{name: "_appuuid",value: ""},{name: "_title",value: ""},{name: "_view",value: ""},{name: "_context",value: ""},{name: "_url",value: ""},{name: "_previewimage",value: ""},{name: "_icon",value: ""},{name: "_action_id",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tilestream","external/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("videomacro","","IMAGE", true, false, [], [{name: "__default_attr",value: ""},{name: "videoid",value: ""},{name: "imageURL",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("videolink","thread/","INLINE", true, false, [], [{name: "id",value: ""},{name: "0",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("event","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("idea","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("casethread","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+define('jive.rte', jive.rte);
+
+
+});
+</script><script src="/9.0.1.1597bde/resources/scripts/i18n/keys/en/bundle_en.js?h=c62fe7c228f197b0be201b56940a22ca"></script><script src="/9.0.1.1597bde/resources/scripts/gen/gen-plugins/gamification//resources/soy/nitro-admin.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/apps/admin/models/admin_source.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/apps/admin/views/admin_view.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/apps/admin/main.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/nitroAdmin.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen/gen-plugins/event-type-plugin//resources/soy/attendance.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen/gen-plugins/event-type-plugin//resources/soy/event-calendar.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/jsInit.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/backgroundImage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/author-by-email.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/responsive_tile.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/views/attachment_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/getCountTextByType.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/file/fileTypeIconClass.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/icon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/tagInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/fresh_action_queue.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.suggestBox.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/tab_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tags/model/tag_input_model.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tags/model/tag_service.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tags/model/tag_suggestions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/tagCloud.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tags/view/tag_cloud.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/tagBadge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tags/view/tag_badges.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/tagListItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/tagList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/completions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/popularTags.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tags/tags_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/menu_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/theme/widget/colorInput.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/theme/widget/fileDefault.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/theme/widget/fileUploading.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/theme/widget/fileComplete.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/theme/widget/file.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/theme/widget/backgroundRepeatWidget.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/bgheader/customBackgrounds.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/bgheader/presetBackgrounds.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/bgheader/backgroundMenu.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/url.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/static_files/static_file_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/socialgroups/soy/joinConfirmation.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/socialgroups/soy/leaveGroup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/socialgroups/soy/leaveConfirmation.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/socialgroups/soy/renderError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/socialgroup/membership/views/membership_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/socialgroup/membership/models/membership_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/socialgroup/membership/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/share.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/email_notification/common.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/email_notification/commonInSocialButton.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/email_notification/stop.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/email_notification/start.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/email_notification/message.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/email_notification/model/source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/email_notification/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/modalizer/views/modal_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/modalizer/models/modal_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/modalizer/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/theme/lib/inputs.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/models/place_images_model.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/manage/views/header_settings.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/fileForm.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/errorMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/theme/lib/plugins/single_file_upload.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/manage/views/header_background.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/create/quick.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/places/modal/modalLoading.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/manage/views/abstract_controls.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/manage/views/custom_controls.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/manage/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/head.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/actionLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/announcements/buildEditLinkByIds.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/announcements/action/views/announcement_action_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/announcements/announcement_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/announcements/action/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/announcements/list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/containerDisplayNameLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/movecontent/successMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/breadcrumbIntroText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/contextPopover.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/placeLinkPopover.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/placeLinkBreadcrumb.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/placeLinkBreadcrumbContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/placeLinkPopoverResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/contentplace_relationship.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/placeLinkRemoveConfirm.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/breadcrumb.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/contextMenu.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/legacyBreadcrumbs.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/breadcrumb/placeHeaderLegacyBreadcrumbs.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/control.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/legacyBreadcrumbs.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/actionsLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/manageLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/_appActionIcon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/appActionLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/placeMainNavMenuItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/placeMainNavMenuPopover.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/places/nav/place_nav_main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/header.js"></script>
+<script src="/9.0.1.1597bde/plugins/event-type-plugin_9.0.1.0/resources/script/apps/eventCalendar/models/calendar_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/event/calendar/moveConfirmation.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/event/calendar/resizeConfirmation.js"></script>
+<script src="/9.0.1.1597bde/plugins/event-type-plugin_9.0.1.0/resources/script/fullcalendar/fullcalendar.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.draggable.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.resizable.js"></script>
+<script src="/9.0.1.1597bde/plugins/event-type-plugin_9.0.1.0/resources/script/apps/eventCalendar/views/calendar_view.js"></script>
+<script src="/9.0.1.1597bde/plugins/event-type-plugin_9.0.1.0/resources/script/apps/eventCalendar/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen/gen-plugins/event-type-plugin//resources/soy/event-invite.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen/gen-plugins/event-type-plugin//resources/soy/event-invite-action.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actionqueue/actionQueueItemAction.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen/gen-plugins/event-type-plugin//resources/soy/event-update-action.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/spotlight/define.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/define.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/noResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/controls.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/slide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/slideList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/carouselbody.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.effect-slide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/slick.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeRaw.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/commaItemList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/plainItemList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/itemList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/outcomesErrorMissing.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/promise_cache.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/outcomesModel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/shareModel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/shareMain.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/outcomesMain.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/history/showLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/history/item.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/history/showPopup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.id.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/itemListMore.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/itemList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/historyView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/people/profile/friendListChooser.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/people/profile/followCounts.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/people/profile/followLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/displayUserRow.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/renderEmptyListText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/renderUserList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/renderUserNotesList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/renderAcclaimModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/privateBookmarkNotification.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/acclaim/guestsWithSameQuestionNotShownNotification.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/browse/activity/info/views/activity_info_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/browse/activity/model/activity_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/browse/activity/info/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/acclaim.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/count.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/render.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/video/models/video_render_model.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/content/videos/view/config.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/content/videos/view/view_utils.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/videos/common/encodingWarning.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/action.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/meta_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/video/views/video_render_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/video/video_render_main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/init.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/navbar.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/parserFilters.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/resultMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/placeholder.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/placeholderSmall.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/resultContent.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/resultPerson.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/resultPlace.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/topResultPerson.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/search/topResultPlace.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/suggestion/content.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/suggestion/person.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/suggestion/place.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/views/bookmarks.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/views/defaultView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/views/exception.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/views/history.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/views/search.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/spotlight/visor.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/ydn/ydn.db-is-crud.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/async/lib/async.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/jquery.outsideevents/jquery.ba-outside-events.min.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/jquery.scrolled/jquery.scrolled.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/jsurl/url.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/vendor/amd-querystring/index.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/search/search-metrics.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/tools.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/parsers/constants.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/parsers/simple.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/parsers/languages/en.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/constants.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/log.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/tools/html.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/config.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/browserdb.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/scheduler.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/cache.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/query.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/visor/apis.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/visor/suggestions/ingress.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/visor/suggestions/index.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/visor/search.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/globalClear.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchSpotlightParserOr.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchSpotlightResultError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchSpotlightResultNoMoreResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchSpotlightResultNoResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchSpotlightViewsSearchFiltersContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/visor/ui.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/welcome/updateIndicator.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ios-iframe-touchevents-fix/touchevents-fix.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/edit/errorEditing.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/tile.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/template.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/image_gallery.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/columnPlaceholder.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/statusIcon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/status.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/disabled.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/authorLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/bannerImage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/actionLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/footer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/banner.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/byline.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/header.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/eventLocation.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/eventList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/calendar.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/carousel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/commentControl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/outcomeBadge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badges.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadgeRaw.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerOutcomeBadge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadges.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadgeByline.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadgeOutdatedLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadgeActionLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/headerBadgePopup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/fakeOutcomeBadge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeByline.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeComment.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeAlertedNames.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeShareLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeOutdatedLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeActionLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgePopup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/viewUtil.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/summary/avatar.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/mostLiked/reply.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/mostLiked/rollup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/mostLiked/pseudoBadge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/mostLikedView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/badgeHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/badgeView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/summary/summaryCount.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/summary/detailsLinks.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/helpful/msgHelpfulCount.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/summary/rollupReply.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/summary/rollup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/badge/badgeDetails.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/summaryView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/actionMenuItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/actionMenu.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/createdMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/deletedMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/updatedMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/confirmModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/markAlertModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/tloExclusionModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/pendingAssigneeModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/pendingAlertPermissionWarning.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/unknownError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/action/actionTooltip.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/actionView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/outcomes/helpful/displayHelpfulCounts.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/helpfulModel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/helpfulMain.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/helpfulView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/discussion_app/models/question_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/correctAnswerHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/outcomes/eventShim.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/outcomes.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/userLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/titleAndAuthor.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/header.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentBody.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/renderIcon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/getAcclaimTextByType.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/expressLike.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/acclaimContainerMedium.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/activityAcclaimLinkContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/activityAcclaimLinkContainerNews.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/acclaim/acclaimControl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/core_acclaim/models/core_acclaim_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/core_acclaim/core_acclaim_main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/socialActions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/content.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentIcon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/icon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/common/activityContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/tileActivity/renderOnBehalfOModified.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/tileActivity/extModified.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/tileActivity/parentPreviewLinks.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/tileActivity/renderOnBehalfOf.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/tileActivity/renderUser.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/renderUser.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentListItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentSectionClasses.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentUlClasses.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/emptyDefault.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/emptyDefaultWide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/frequentlyViewed.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/frequentlyViewedWide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/noContent.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/recentBlog.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/recentBlogWide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/recentlyViewed.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/recentlyViewedWide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/trendingContent.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/trendingContentWide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/defaults/trendingPeople.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentlistnarrow.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/contentlistwide.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/customViewError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/custom_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/custom_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/galleryImage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/overlay/imageGallery.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.imagesloaded.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.gallery.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/gallery.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/raphael/raphael.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/raphael/graphael.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/raphael/g.pie-min.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/gauge_view_basic.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/gauge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/gauge.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/hero.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/video/embedded/showandshareplayer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/video/embedded/kalturaplayer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/video/embedded/externalplayertriage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/iframe.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/image_grid.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/link.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/sectionClasses.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/ulClasses.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/listItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/listItem_2.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/list_2.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/ask_a_question/views/question_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/ask_a_question/models/question_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/questionResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/ask_a_question/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/question.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/rowItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/section.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/guided_navigation/helper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tile/integrations/accordion.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/sectionlist.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/table.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/tileVideoInfo.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/video/videomacro.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/viewstyle/video.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/crypto/md5.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/render.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/tile.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/addMarker.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/wideTileLayout.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/narrowTileLayout.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/narrowWideTileLayout.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/narrowWideNarrowTileLayout.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/wideNarrowTileLayout.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/place/layout/columns.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tilepage/mobile/homePageDynamicPane.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/responsive.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/ui-modules/spotlight/scripts/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/alerts/renderDevError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/alerts/renderAppHalt.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/configure/views/validate.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/configure/renderAppDataErrorMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/configure/views/error.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/renderMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/appframeworkAppConfigureSuccess.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/appframeworkAppConfigureFailure.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/blockingAlertView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/appframeworkAppDevelopmentRefresh.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/appframeworkAppConfigureCancel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/errorGeneral.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/configure/renderConfigureAppNotNeeded.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/configure/renderServicesSection.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/configure/renderConfigureApp.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/configure/views/serviceblocks.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/configure/views/configure_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/configure/models/configure_model.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/configure/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/placepicker/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/alert/views/blocking_alert_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/alert/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/contentItemDetail.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/contentItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/peopleItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/placeItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/resultList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/showMoreAccessibleLabel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/resultSection.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/appscontainer_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/appModalHeader.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/canvasConfigurationModal.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/core_container/site_data.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/core_container/navigate_app.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/rte/artifacts.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/globalAjaxError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/activity_stream/models/rtc_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/tinymceJivementionSecretGroup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/tinymceJivementionRestrictedContent.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/wall/charLenErrors.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/wall/submitErrors.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/attachments/renderCommonAttachment.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/attachments/renderLinkThumbnails.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/attachments/renderLinkAttachment.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/attachments/renderAttachment.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/attachments/renderAttachments.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/containers/renderAttachmentsContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/containers/microbloggingStatusInputSuccess.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/containers/microbloggingStatusInputLastUpdate.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/weFormAddimage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/formwaiting/formWaitingOverlay.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/views/form_waiting_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/userWithoutPermission.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/listWithoutPermission.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/visibility.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/creatorVisibilityInfo.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/uiExtensions/box/render_social_group_extra_info.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/storage/render_container_exstorage_info.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/placeView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/autocomplete/tags.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/tagSets.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/organize.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/authorPolicyOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/documentAuthors.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/documentApprovers.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/commentOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/commentOptions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/blogPostPublishDate.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteStartImmediatelyOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteStartLaterOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteStart.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteEndsNowOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteEndsNeverOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteEndsRelativeOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteEndsLaterOption.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/polls/voteEnd.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/pollOptions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/collaborationOptions.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/guestInvited.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/publishbar-tagsets.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/containerLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/containerList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/publishbar/placeSearchResults.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/publish_bar/views/place_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/publish_bar/models/search_places_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/publish_bar/models/suggested_places_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/publish_bar/place_main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/publish_bar/models/publish_bar_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/publish_bar/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/status_input/data_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/libRange.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/status_input/status_input.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddCreateTag.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddOutputTags.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddTagsContent.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddTags.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddOutputEntries.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddDefault.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/dropdown/ddSearch.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/status_input_drop_down.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/link_builder.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/status_input.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/views/status_input_common_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/mention_warnings/jsI18nHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/status_input_common_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/models/microblogging_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/activity_stream/models/fill_in_the_gap_request.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/activity_stream/models/full_replies_request.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/activity_stream/models/activity_stream_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/home/inbox.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/browse/user/model/user_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tips/models/tip_group_state.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/tips/renderTip.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/compat/array.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.effectiveZIndex.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tips/views/tip_view_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tips/views/tip_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tips/views/tip_group_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tips/views/page_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/tips/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/trial/views/trial_help_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/user/userProfileImage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/userRoleBadgeImage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/people/profile/statusLevel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/create/appActionLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/create/contentTypeHref.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/create/contentTypeLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/create/contentTypeLinkItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/oo/abstract.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.slideMenu.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/view/abstract_list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/lib/jiverscripts/src/oo/resolve.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/controllers/abstract_flow_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/controllers/create_flow_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/create/contentTypes.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/views/type_chooser_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/containers/microbloggingStatusInputModalSuccess.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/views/microblogging_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/microblogging/status_input_mb_create_modal_controller.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/views/quick_create_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/placepicker/containers.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/views/container_chooser_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/models/create_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/placepicker/models/suggested_containers_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/models/quick_create_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/create/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/link.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/generic.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/custom/views/custom_view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/custom/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/appframeworkAppInstalled.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/apps/instances/computeWidthIcon.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/apps/instances/renderAppInstanceLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/apps/instances/appList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/app/app-launch-market.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/apps/instances/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/apps/instances/content.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.path.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/quicksilver/quicksilver.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.quickSilverFilter.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/apps/instances/views/instance_list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/app_instance_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/read_tracking/models/read_tracking_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actions/markedItemBadgeContainer.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actions/markedContentItemInner.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actions/markedContentItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/userDisplayName.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actions/markedItemInnerText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actions/markedItemInner.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/actions/markedItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/home/overdueTask.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/home/moderationItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/home/content.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/menu/home/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/containerStart.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/containerEnd.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/announcement.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/renderGuestDisplayName.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/defaults/deleted.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/discussion/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/soy/escapeHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/comment/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/discussion/reply.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/outcome/comment.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/outcome/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/share/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/we/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/project/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/relationship/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/tile_activity/external.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/tile_activity/tile.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/rtc/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/bookmarked/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/item/activity_verb/defaults/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/activitystream/include/activityVerbPhrase.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/common/activityAuthor.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/renderIconElementAttrs.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/renderIconElement.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/app.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/bookmark.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/casethread.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/collaboratorNotification.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/discussion.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/document.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/event.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/generic.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/idea.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/latestAcclaim.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/mention.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/notifications.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/remotedocument.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/rtc/xPeopleLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/common/groupedUsers.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/rtc/defaultSubject.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/rtc/subjectText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/rtc.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/share.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/statusUpdate.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/tileActivity.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/video.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/home/nav/drop/down/welcome.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/navbar/menu/home/navbar_menu_home_main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/overlay.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/spotlightPopup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/spotlightView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/results.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchViewDefaultTitle.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/searchViewSearchTitle.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/popup.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/progressmeter.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jquery/jquery.view.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/list.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/deferred_rest_service.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/search_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/activity_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/content_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/people_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/place_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/bookmark_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/jive/search/search.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/autosearch/autosearch.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/onboarding/onboardingProgress.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/onboarding/postHideViewTip.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/renderProgressTip.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/startStep/completedAriaLabel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/browse/container/model/container_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/onboarding/models/onboarding_source.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/maxPageReached.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/user/flippable.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/user/flipperControl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/user/thumbnailUserItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/flippable.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/cardBack.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/detailContainerHeader.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/projectStatusMessage.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/displayutil/renderAttachmentLink.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/detailContainerItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/flipperControl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/hierarchyContainerItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/thumbnailBlogItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/thumbnailProjectItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/thumbnailSocialGroupItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/container/thumbnailSpaceItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/removeContentPlaceLinkControl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/content/detailActionPanel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/bookmark/detailBookmarkedItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/bookmark/detailBookmarksHeader.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/bookmark/popularBookmarkText.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/content/flippable.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/content/activityInfoBlock.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/content/flipperControl.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/content/thumbnailActionPanel.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/bookmark/thumbnailBookmarkedItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/thumbGrid.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/hierarchyItems.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/hierarchyView.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/user/detailUserItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/contentplacerel/detailContentItem.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/listGrid.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/itemGrid.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/onboarding/msgFormatHelper.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/shared/models/location_state.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_group/pageTips.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_group.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/wistia/E-v1.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/apps/onboarding/onboarding_main.js"></script>
+<script>
+reg(["apps/userpicker/views/select_skill_view"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/skillSearchEmptyList.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/skillSearch.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/skillSearchResult.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/skillSearchResultList.js", "/9.0.1.1597bde/resources/scripts/apps/userpicker/models/select_skill_source.js", "/9.0.1.1597bde/resources/scripts/apps/userpicker/views/select_skill_view.js"]);
+
+reg(["apps/static_files/static_file_modal"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/copiedConfirmation.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/deleteFileConfirmation.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/errorMessage.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/staticFile.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/staticFileList.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/replaceFileConfirmation.js", "/9.0.1.1597bde/resources/scripts/zenorocha/clipboard.js", "/9.0.1.1597bde/resources/scripts/application/messaging.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/copyToClipboardSuccessMsg.js", "/9.0.1.1597bde/resources/scripts/jive/jiveClipboard.js", "/9.0.1.1597bde/resources/scripts/apps/static_files/static_file_upload_view.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/staticFileBody.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/staticFileStore/soy/modal.js", "/9.0.1.1597bde/resources/scripts/apps/static_files/static_file_modal.js"]);
+
+reg(["apps/shared/views/date_picker_view"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/globalDatepickerPrev.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/globalDatepickerNext.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangSunday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangMonday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangTuesday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangWednesday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangThursday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangFriday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangSaturday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShSunday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShMonday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShTuesday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShWednesday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShThursday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShFriday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShSaturday.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangJanuary.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangFebruary.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangMarch.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangApril.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangMay.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangJune.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangJuly.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangAugust.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangSeptember.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangOctober.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangNovember.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangDecember.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShJanuary.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShFebruary.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShMarch.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShApril.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShMay.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShJune.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShJuly.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShAugust.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShSeptember.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShOctober.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShNovember.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/jiveModelLangShDecember.js", "/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.datepicker.js", "/9.0.1.1597bde/resources/scripts/apps/shared/views/date_picker_view.js"]);
+
+reg(["apps/places/actions/main"],["/9.0.1.1597bde/resources/scripts/apps/places/actions/main.js"]);
+
+reg(["soy!jive.UserPicker.soy.renderModalSkillSearchButton"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/UserPicker/soy/renderModalSkillSearchButton.js"]);
+
+reg(["apps/places/manage/views/archive_controls"],["/9.0.1.1597bde/resources/scripts/apps/places/manage/views/archive_controls.js"]);
+
+reg(["soy!jive.extended_invitation.warn_bar"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/extended_invitation/warn_bar.js"]);
+
+reg(["apps/contentplace_relationship/main"],["/9.0.1.1597bde/resources/scripts/apps/contentplace_relationship/models/contentplace_relationship_source.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/removeContentPlaceLinkSuccess.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/removeContentPlaceLinkFailure.js", "/9.0.1.1597bde/resources/scripts/apps/contentplace_relationship/views/contentplace_relationship_view.js", "/9.0.1.1597bde/resources/scripts/apps/contentplace_relationship/main.js"]);
+
+reg(["apps/shared/models/lazy_corev3"],["/9.0.1.1597bde/../api/core/v3/js/core.js?h=d6018083adc6d350663f7288d556a06b", "/9.0.1.1597bde/resources/scripts/apps/shared/models/lazy_corev3.js"]);
+
+reg(["apps/invitation/main"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/create.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/error/localizedFieldError.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/errors.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/status.js", "/9.0.1.1597bde/resources/scripts/apps/invitation/views/invitee_view.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/maxInvitationsError.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/requiredRecipientsError.js", "/9.0.1.1597bde/resources/scripts/apps/invitation/views/invite_view.js", "/9.0.1.1597bde/resources/scripts/apps/invitation/models/invite_source.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/error.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/invite/success.js", "/9.0.1.1597bde/resources/scripts/apps/invitation/main.js"]);
+
+reg(["apps/movecontent/main"],["/9.0.1.1597bde/resources/scripts/apps/shared/models/nested_rest_service.js", "/9.0.1.1597bde/resources/scripts/apps/browse/content/model/content_source.js", "/9.0.1.1597bde/resources/scripts/apps/movecontent/models/move_content_item_source.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/movecontent/confirm.js", "/9.0.1.1597bde/resources/scripts/apps/movecontent/views/move_view.js", "/9.0.1.1597bde/resources/scripts/apps/movecontent/models/move_content_source.js", "/9.0.1.1597bde/resources/scripts/apps/movecontent/models/move_container_source.js", "/9.0.1.1597bde/resources/scripts/apps/movecontent/main.js"]);
+
+reg(["apps/share/main"],["/9.0.1.1597bde/resources/scripts/apps/share/models/share_source.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/share.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/shareConfirmation.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/secretGroupMessage.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/usersNotRelated.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/attachmentLinks.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/emailLinks.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/extendedShare.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/userWithoutPermission.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/listWithoutPermission.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/alreadySharedToPlace.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/share/shareToPlaceAccessInfo.js", "/9.0.1.1597bde/resources/scripts/apps/share/views/share_view.js", "/9.0.1.1597bde/resources/scripts/apps/share/main.js"]);
+
+reg(["apps/places/manage/views/author_by_email_controls"],["/9.0.1.1597bde/resources/scripts/apps/places/manage/views/author_by_email_controls.js"]);
+
+reg(["apps/places/manage/views/category_controls"],["/9.0.1.1597bde/resources/scripts/jquery/ui/jquery.ui.sortable.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/confirmDeletion.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/introTextAdd.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/globalErrorMessage.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/renderPopulateTagsetListItem.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/renderCategory.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/buildCategoryDisplay.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/remainingMessage.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/tags/soy/introTextEdit.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/fieldError.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/fieldErrors.js", "/9.0.1.1597bde/resources/scripts/jquery/jquery.validator.js", "/9.0.1.1597bde/resources/scripts/apps/content/common/validator.js", "/9.0.1.1597bde/resources/scripts/apps/places/manage/views/category_controls.js"]);
+
+reg(["soy!jive.integration.tiles.view.embeddedExperience"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/integration/tiles/view/embeddedExperience.js"]);
+
+reg(["soy!jive.nav.menu.home.inbox"],[]);
+
+reg(["apps/direct_messaging/factory"],["/9.0.1.1597bde/resources/scripts/apps/direct_messaging/main.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/weDirectMessagingNotEnoughRecipients.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/weDirectMessagingCannotBeEmptyText.js", "/9.0.1.1597bde/resources/scripts/apps/direct_messaging/models/message_source.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/tinymceJivementionNoNotification.js", "/9.0.1.1597bde/resources/scripts/apps/direct_messaging/views/micro_blogging_view.js", "/9.0.1.1597bde/resources/scripts/apps/direct_messaging/controllers/micro_blogging_controller.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/eae/common/jsI18nHelper.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/direct_messaging/successMessage.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/statusinput/containers/statusInputActionContainer.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/direct_messaging/modal.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/direct_messaging/notRelated.js", "/9.0.1.1597bde/resources/scripts/apps/direct_messaging/views/create_message_view.js", "/9.0.1.1597bde/resources/scripts/apps/direct_messaging/factory.js"]);
+
+reg(["apps/tile/integrations/carousel"],["/9.0.1.1597bde/resources/scripts/apps/tile/integrations/carousel.js"]);
+
+reg(["apps/tile/embedded_view"],["/9.0.1.1597bde/resources/scripts/apps/tile/embedded_view.js"]);
+
+reg(["apps/onboarding/views/add_document_collaborator"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/add_document_collaborator/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/add_document_collaborator.js"]);
+
+reg(["apps/onboarding/views/fill_out_profile"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/fill_out_profile/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/fill_out_profile.js"]);
+
+reg(["apps/onboarding/views/like_content"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/like_content/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/like_content.js"]);
+
+reg(["apps/onboarding/views/about_you"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/about_you/placeholderItem.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/about_you/noSuggestions.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/about_you/stepModal.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/about_you.js"]);
+
+reg(["apps/navbar/menu/satellite/main"],["/9.0.1.1597bde/resources/scripts/apps/navbar/menu/satellite/models/satellite_source.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/nav/profileMenu.js", "/9.0.1.1597bde/resources/scripts/apps/navbar/menu/satellite/views/sat_nav_view.js", "/9.0.1.1597bde/resources/scripts/apps/navbar/menu/satellite/main.js"]);
+
+reg(["apps/onboarding/views/learn_system"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/learn_system/stepModal.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/learn_system.js"]);
+
+reg(["apps/metric/models/metric_source"],["/9.0.1.1597bde/resources/scripts/apps/metric/models/metric_source.js"]);
+
+reg(["apps/onboarding/views/create_blogpost"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_blogpost/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_blogpost.js"]);
+
+reg(["apps/onboarding/views/jive_for_outlook"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/jive_for_outlook/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/jive_for_outlook.js"]);
+
+reg(["apps/trial/views/trial_tip_helper"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/quests/fewerMeetings/tips.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/quests/lessEmail/tips.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/quests/stayInTouch/tips.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/quests/communityFeedback/tips.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/quests/teamwork/tips.js", "/9.0.1.1597bde/resources/scripts/apps/trial/views/trial_tip_helper.js"]);
+
+reg(["apps/onboarding/views/create_or_set_shared_group"],["/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_or_set_shared_group.js"]);
+
+reg(["jive/rte/syntax/SyntaxHighlighter"],["/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shCore.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushCpp.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushCSharp.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushCss.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushDelphi.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushJava.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushJScript.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushPhp.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushPython.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushRuby.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushSql.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushVb.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushXml.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/shBrushPlain.js", "/9.0.1.1597bde/resources/scripts/jive/rte/syntax/SyntaxHighlighter.js"]);
+
+reg(["apps/shared/controllers/browser_events"],["/9.0.1.1597bde/resources/scripts/apps/shared/controllers/browser_events.js"]);
+
+reg(["apps/onboarding/views/create_or_join_group"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_or_join_group/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_or_join_group.js"]);
+
+reg(["jive/app/core_container/views/rtc_view"],["/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/rtc_view.js"]);
+
+reg(["ui-modules/spotlight/scripts/main"],[]);
+
+reg(["apps/social_sharing/main"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/social_sharing/socialpeek.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/social_sharing/displayForTopicWidget.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/social_sharing/displayForTopic.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/social_sharing/displayForContent.js", "/9.0.1.1597bde/resources/scripts/apps/social_sharing/main.js"]);
+
+reg(["jive/app/core_container/mock"],["/9.0.1.1597bde/resources/scripts/jive/app/core_container/mock.js"]);
+
+reg(["apps/shared/controllers/socket_holder"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/soy/realtime/realtime.js", "/9.0.1.1597bde/resources/scripts/apps/realtime/models/realtime_stats_source.js", "/9.0.1.1597bde/resources/scripts/apps/realtime/realtime_stats_controller.js", "/9.0.1.1597bde/resources/scripts/apps/shared/controllers/portal.js", "/9.0.1.1597bde/resources/scripts/apps/shared/controllers/socket_holder.js"]);
+
+reg(["apps/microblogging/status_input_mb_controller"],["/9.0.1.1597bde/resources/scripts/apps/microblogging/status_input_mb_controller.js"]);
+
+reg(["apps/onboarding/views/create_wall_entry"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_wall_entry/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_wall_entry.js"]);
+
+reg(["apps/onboarding/views/create_comment_or_message"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_comment_or_message/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_comment_or_message.js"]);
+
+reg(["apps/onboarding/views/jive_anywhere"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/jive_anywhere/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/jive_anywhere.js"]);
+
+reg(["apps/onboarding/views/create_private_group"],["/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_private_group.js"]);
+
+reg(["apps/onboarding/views/create_project"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_project/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_project.js"]);
+
+reg(["apps/onboarding/views/invite_to_group"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/invite_to_group/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/invite_to_group.js"]);
+
+reg(["apps/filters/view/item_grid_view"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/moreSearchResultsAvailableBody.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/browse/grid/moreSearchResultsAvailable.js", "/9.0.1.1597bde/resources/scripts/jquery/jquery.vgrid.js", "/9.0.1.1597bde/resources/scripts/apps/filters/view/item_grid_view.js"]);
+
+reg(["apps/onboarding/views/jive_for_office"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/jive_for_office/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/jive_for_office.js"]);
+
+reg(["apps/onboarding/views/connect_colleagues"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/connect_colleagues/stepModal.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/i18n/keys/onboardingBasicsColleaguesFollowallApprovalText.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/connect_colleagues.js"]);
+
+reg(["apps/onboarding/views/mobile_login"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/mobile_login/mobileModal.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/mobile_login.js"]);
+
+reg(["apps/onboarding/views/create_thread"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_thread/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_thread.js"]);
+
+reg(["jive/app/core_container/main"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/base/renderAppDataUploadPopup.js", "/9.0.1.1597bde/resources/scripts/jive/app/app-file-uploader.js", "/9.0.1.1597bde/resources/scripts/jive/app/oauth/views/oauthoverlay.js", "/9.0.1.1597bde/resources/scripts/jive/app/oauth/views/gadgets-oauth-popup.js", "/9.0.1.1597bde/resources/scripts/jive/app/oauth/views/oauthpopup.js", "/9.0.1.1597bde/resources/scripts/jive/app/oauth/main.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/credentialsView.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/configure/renderCredentials.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/configure/renderConfigureCredentialBlocks.js", "/9.0.1.1597bde/resources/scripts/jive/app/configure/views/msgposter.js", "/9.0.1.1597bde/resources/scripts/jive/app/credentials/views/credentials_form.js", "/9.0.1.1597bde/resources/scripts/jive/app/credentials/models/credentials_model.js", "/9.0.1.1597bde/resources/scripts/jive/app/credentials/main.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/credentials_view.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/servicesView.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/preferences/renderAppDataErrorMessage.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/preferences/prefSelect.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/preferences/prefBool.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/preferences/renderPreferences.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/preferences/renderNoPreferences.js", "/9.0.1.1597bde/resources/scripts/jive/app/preferences/views/preferences_view_default.js", "/9.0.1.1597bde/resources/scripts/jive/app/preferences/models/preferences_model.js", "/9.0.1.1597bde/resources/scripts/jive/app/preferences/main.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/services_view.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/canvas_view.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/market_events.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/models/appscontainer_model.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/main.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/chromeApp.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/apps/container/unavailableAppView.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/modal_comment_provider.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/modal_view.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/views/embedded_view.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/shared.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/models/rtc_model.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/tile_app.js"]);
+
+reg(["apps/autosearch/lightbox"],["/9.0.1.1597bde/resources/scripts/gen//gen-themes/design2016/soy/jive/nav/searchForm.js", "/9.0.1.1597bde/resources/scripts/gen//soy/jive/autosearch/lightbox.js", "/9.0.1.1597bde/resources/scripts/apps/autosearch/lightbox.js"]);
+
+reg(["apps/trial/models/trial_panel_source"],["/9.0.1.1597bde/resources/scripts/apps/trial/models/trial_panel_source.js"]);
+
+reg(["apps/onboarding/views/create_document"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/create_document/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/create_document.js"]);
+
+reg(["jive/app/core_container/common_container"],["/9.0.1.1597bde/resources/scripts/jive/app/core_container/token_provider.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/models/coreapi_model.js", "/9.0.1.1597bde/resources/scripts/jive/app/core_container/common_container.js"]);
+
+reg(["Zapatec.Calendar"],["/9.0.1.1597bde/resources/scripts/zapatec/utils/zapatec.js", "/9.0.1.1597bde/resources/scripts/zapatec/zpcal/src/calendar.js", "/9.0.1.1597bde/resources/scripts/zapatec/zpcal/src/calendar-post-bootstrap.js", "/9.0.1.1597bde/resources/scripts/zapatec/zpcal/calendar-lazy-loader.js"]);
+
+reg(["apps/onboarding/views/invite_users"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/invite_users/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/invite_users.js"]);
+
+reg(["apps/onboarding/views/invite_external_users"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/invite_external_users/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/invite_external_users.js"]);
+
+reg(["apps/onboarding/views/follow_user"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/follow_user/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/follow_user.js"]);
+
+reg(["apps/onboarding/views/upload_or_move_file"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/upload_or_move_file/pageTips.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/upload_or_move_file.js"]);
+
+reg(["apps/trial/views/trial_view"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/trial/quests/stayInTouch/mobileModal.js", "/9.0.1.1597bde/resources/scripts/apps/trial/views/trial_view.js"]);
+
+reg(["apps/onboarding/views/tour_ui"],["/9.0.1.1597bde/resources/scripts/gen//soy/jive/onbStep/tour_ui/tourTip.js", "/9.0.1.1597bde/resources/scripts/apps/onboarding/views/tour_ui.js"]);
+
+$j(function() {require(['apps/google_oidc_login/main'], function(Main) {window.jiveGoogleOidcLogin = new Main({jiveTokenName: "jive.googleoidc.login", jiveTokenGUID: "1491546228111-Q511FAKCLJA5G9IGC7W80FQH041E5YY5", clientID: "null", openIDRealm: "null", redirectURI: "https://community.jivesoftware.com/googleoidc/sso"});});});
+
+$j(function() {require(['apps/tips/main'], function(Tips) {var tipsApp = new Tips({tipGroups:[], skippedTipGroupIDs: []});});});
+
+require([ 'apps/activity_stream/activity_notifier', 'apps/activity_stream/models/activity_stream_source', 'apps/shared/controllers/switchboard', 'documentReady', 'jive/responsive' ], function(ActivityNotifier, ActivityStreamSource) {}); require([ 'documentReady' ], function() {jive.onLoadEventComplete = true;});
+
+var authSource = new jive.Authentication.Source({forceSecure: false});var loginApp = new jive.Authentication.Main({authenticationSource: authSource, rememberMe: true, passwordReset: true, forgotUsername: true, externalLoginEnabled: false, showRegisterForm: true, externalLogins: [], facebookEnabled: false, facebookApplicationID: '184199741655307', usernameIsEmail: false});
+
+require(['apps/social_sharing/main'], function(SocialSharing) {var SocialSharing = new SocialSharing();});
+
+require(['apps/onboarding/onboarding_main'], function(OnboardingMain) {$j(function(){jive.Onboarding.Controller = new OnboardingMain({trialBean: {"trialActive":false,"trialAdmin":false,"showTrialBanner":false,"showTrialModal":false,"showTrialPanelImmediately":false,"daysRemaining":0,"showDaysRemaining":true,"trialProgress":{"currentProgress":0,"newProgress":0,"newestItemTime":"0","questCompletionTips":{"userTips":[],"questCompletionData":[]}},"trialAdminData":null,"chat":{"showLiveChat":false,"chatKey":"4086-225-10-3770"}}, instanceInfoView: {"instanceURL":"https://community.jivesoftware.com","instanceID":"0431cf4a-0ddd-44d9-9789-186854495808","rootCommunityName":"JiveWorks","licenseName":"Jive SBS","licenseVersion":"9.0.1.0 ","currentYear":"2017","revision":"20170227131330.1597bde.stable_9.0.1.x","howToBuyLink":"http://www.jiveon.com/purchase","telephoneNumber":"1-855-Itz-Jive (1-855-489-5483)","securityAndScalingLink":"http://www.jiveon.com/security","jiveForTeamsLink":"https://community.jivesoftware.com/welcome","documentationLink":"http://docs.jivesoftware.com/9.0_on_prem_int/end_user/jive.help.core","adminDocumentationLink":"http://docs.jivesoftware.com/9.0_on_prem_int/sys_admin","supportCommunityLink":"https://community.jivesoftware.com/community/support/jive","trialActive":false}});});});
+
+reg(["apps/microblogging/status_input_drop_down"],[]);
+
+reg(["apps/microblogging/link_builder"],[]);
+
+reg(["jive/fresh_action_queue"],[]);
+
+reg(["jive/app/rte/artifacts"],[]);
+
+reg(["apps/shared/models/meta_source"],[]);
+
+window.tinyMCE_GZ = { loaded: true };
+
+</script>
+<!-- plugin javascript --><!-- end plugin javascript --><script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/token/jiveToken.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/googleoidc/login/form.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/sso/google-oidc-login.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/googleoidc/login/head.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/lib/nitro/nitro-noload.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/lib/nitro/NitroCookies-noload.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/lib/nitro/NitroJSConnector-noload.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/lib/n4jive/n4jive.libs.js"></script>
+<script src="/9.0.1.1597bde/plugins/gamification_9.0.1.0/resources/script/lib/n4jive/n4jive.core.js"></script>
+<script src="/9.0.1.1597bde/plugins/marketo_9.0.1.0-1/resources/script/beacon.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/global_move_case_action_link.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/actionMessageList.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/actionErrors.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/fieldError.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/error/form/fieldErrors.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/chosen/chosen.jquery.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/shared/error/localizedFieldError.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/apps/itar/views/configure_itar_view.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/apps/itar/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/support/itar/main.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/apps/rca/views/rca_view.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/apps/rca/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/support/rca/main.js"></script>
+<script src="/9.0.1.1597bde/resources/scripts/gen//soy/jive/support/manage/instances/main.js"></script>
+<script src="/9.0.1.1597bde/plugins/supportal_9.0.1.1/resources/scripts/supportal_modals.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"e1336a1f47","agent":"","beacon":"bam.nr-data.net","applicationTime":26,"applicationID":"37838693","transactionName":"b1xUN0YHXEVRWxIMWFYWYxFdSV5ZV1EIS11LSVc=","queueTime":0}</script></body></html>

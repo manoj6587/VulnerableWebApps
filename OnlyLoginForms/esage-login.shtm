@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="Sage Parts Plus, Inc. 2014">
+<meta name="description" content="Login to your eSage accaount to search millions of gse and automotive parts.">
+<meta name="keywords" content="Stevens Aircraft Ground Equipment, GSE, Spares, Spare Parts, JBT parts, JBT, JBT loader, parts, FMC parts, FMC loader parts, FMC deicer parts, FMC pushback tractor parts, FMC replacement parts, FMC GSE, FMC ground support equipment parts, Jetway replacement parts, Jetway, FMC, S&S Tug parts, S&S Tug pushback tractor, parts, S&S Tug replacement parts, S&S Tug GSE, S&S Tug ground support equipment parts, TUG, TLD, Lantis, Lantis replacement parts, Lantis parts, Lantis loader parts, ACE replacement parts, Air-A-Plane replacement parts, Trilectron replacement parts, WASP, WASP replacement parts, Ramp Tech, RAMPTECH, Lavatory, Fill Couplings, Break-Away Couplings, Fittings, Potable Water Hose, Tires, Tow Bars, Parts & Accessories For GSE, Sage, Sage Parts, Sage Parts Plus, GSE Supply Chain Management, solid tires, casters, baggage cart parts, cargo dolly parts, airline cargo, Clyde, Wasp, hubs, spindles, GSE Tires, eSage, air start hose, Ford C6, Ford 300, Motorcraft Carburetor, Perkins Engines, Rockwell Axles, Funk Transmissions, ZF Axles, Deutz Diesel Engines, Detroit Diesel Engines, NewAge Axles">
+<meta name="author" content="Sage Parts">
+
+<title>Sage Parts | eSage Login</title>
+<meta name="description=" content="With the eSage online ordering system, you can log on to search and order millions of GSE parts.">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<link href="reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="lytebox.css" type="text/css" media="screen" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40360786-1', 'sageparts.com');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="scripts/lytebox.js"></script>
+</head>
+
+<body>
+
+<!-- START OF CONTAINER -->
+<div id="container"> 
+  
+  <!-- START OF HEADER -->
+  
+<div id="header"><a href="index.shtm"><img src="images/Sage_Parts_Banner_LG.jpg" width="925" height="150" alt="Sage Parts" /></a>
+    </div>
+
+
+  <!-- END OF HEADER --> 
+  
+<!-- START OF MENU -->
+  <div id="menu">
+    <ul>
+      <li> <a href='index.shtm'>Home <span>Our Home Page</span> </a></li>
+      <li> <a href='about.shtm'>About Sage<span>Our Company</span> </a>
+      <ul>
+      <li><a href="careers.shtm">Careers</a></li>
+      <li><a href="engineering.shtm">Engineering</a></li>
+        <li><a href="one-stop-shop.shtm">One Stop Shopping</a></li>
+         <li><a href="our-team.shtm">Our Team</a></li>
+        <li><a href="parts-plus-auto.shtm">Parts Plus Auto</a></li>
+          <li><a href="supply-chain.shtm">Supply Chain</a></li>
+        </ul>
+      </li>
+      <li> <a href='https://esage.sageparts.com' target="new">eSage Store<span>Online Store</span> </a>
+      </li>
+      <li> <a href='products.shtm'>Featured Products <span>Specials, Sheets</span> </a>
+      <ul>
+        <li><a href="aircraft-connections.shtm">Aircraft Connections</a>
+<ul>
+  <li><a href="jet-air-start.shtm">Jet Air Start</a></li>
+  <li><a href="lavatory-potable-water.shtm">Lavatory &amp; Potable Water</a></li>
+          <li><a href="acu-parts.shtm">Pre-Conditioned Air</a></li>
+      </ul>
+        </li>
+        <li><a href="auto-parts.shtm">Automotive Parts</a></li>
+        <li><a href="#">Chassis &amp; Powertrain</a>
+<ul>
+  <li><a href="chassis-parts.shtm">Chassis Parts</a></li>
+          <li><a href="diesel-engines.shtm">Diesel Engines</a></li>
+          <li><a href="engine-compartment-parts.shtm">Engine Compartment Parts</a></li>
+          <li><a href="ford-300-engines.shtm">Ford 300 Engines</a></li>
+          <li><a href="transmissions.shtm">Transmissions</a></li>
+      </ul>
+        </li>
+        <li><a href="deicer-parts.shtm">Deicer &amp; Winter</a></li>
+        <li><a href="#">GSE Parts</a>
+<ul>
+  <li><a href="acu-parts.shtm">AC Unit Parts</a></li>
+          <li><a href="belt-loader-parts.shtm">Belt Loader Parts</a></li>
+          <li><a href="cargo-loader-parts.shtm">Cargo Loader Parts</a></li>
+          <li><a href="dollie-parts.shtm">Cart, Trailer, &amp; Dolly Parts</a></li>
+          <li><a href="power-unit-parts.shtm">Power Unit Parts</a></li>
+          <li><a href="tractor-parts.shtm">Tractor Parts</a></li>
+      </ul>
+        </li>
+        <li><a href="hooks-hitches-towbars.shtm">Hooks, Hitches, &amp; Towbars</a></li>
+        <li><a href="safety-caution.shtm">Safety &amp; Caution</a></li>
+        <li><a href="service-maintenance.shtm">Service &amp; Maintenance</a></li>
+        <li><a href="wheels-tires.shtm">Wheels &amp; Tires</a></li>
+        </ul>
+</li>
+      <li><a href=''>Media <span>News, Information</span></a>
+        <ul>
+        <li><a href="blog.shtm">Speaking GSE</a></li>
+        <li><a href="news.shtm">Press Releases</a></li>  
+        <li><a href="sage-graphics.shtm">Sage Graphics</a></li>
+        <li><a href="downloads-page.shtm">Downloads</a></li>
+        </ul>
+</li>
+      <li> <a href='contact.shtm'>Contact <span>Where to Find Us</span> </a></li>
+    </ul>
+    <div id="call-us"> <a href="/CustomerService.html" class= "lytebox"data-lyte-options="width:700 height:500 scrollbars:no">Call Us Right Now</a> <span>+1-877-SAGE-877</span> </div>
+  </div>
+
+
+  <!-- END OF MENU --> 
+  
+  <!-- START OF PAGE BAR -->
+  <div id="page-bar">
+    <div id="page-description">
+      <h1>eSage Login</h1>
+      <ul id="breadcrumbs">
+        <li><a href="index.shtm">Home</a></li>
+        <li>eSage Login</a></li>
+      </ul>
+    </div>
+    <div id="search-box">
+  <script>
+  (function() {
+    var cx = '005110652070262874772:cx9rqtgjg0k';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+  </div>
+  <!-- END OF PAGE BAR --> 
+  
+  <!-- START OF CONTENT -->
+  <div id="content">
+  <div align="center">
+    <p><img src="images/eSageLoginLogo.jpg" width="300" height="128" alt="eSage Login" /></p>
+    <p>
+      <script language="JavaScript">
+<!-- Hide from non-javascript browsers
+
+function trim(strText) {
+    // this will get rid of leading spaces
+    while (strText.substring(0,1) == ' ')
+        strText = strText.substring(1, strText.length);
+
+    // this will get rid of trailing spaces
+    while (strText.substring(strText.length-1,strText.length) == ' ')
+        strText = strText.substring(0, strText.length-1);
+   return strText;
+}
+//Logs you in when you click the login button
+function login(form){
+	if ( (trim(form.userid.value) == "") || (trim(form.password.value) == "") ) {
+		alert(_("Please enter your user ID and password."));
+	} else {
+		form.submit();
+	}
+}
+
+IE4 = (document.all);
+NS4 = (document.layers);
+if (NS4){
+	document.captureEvents(Event.KEYPRESS);
+	document.onkeypress = doKey;
+}
+//Logs you in when you hit enter key
+function doKey(e){
+	whichASC = (NS4) ? e.which : event.keyCode;
+    if (whichASC == 13){
+		if (e.target.name == "userid" || e.target.name == "password") {
+			login(document.LogonForm);
+		}
+	}
+}
+
+// finish hiding from other browsers -->
+      </script>
+    </p>
+    
+    
+    
+  </div>
+  <form action="https://esage.sageparts.com/login.asp?CheckLogin=true" method="post" align="center" name="LogonForm" onKeyPress="doKey(document.LogonForm)">
+    <div align="center">
+    <table bgcolor="#c0c0c0" border="5" cellpadding="5" bordercolordark="Gray" bordercolorlight="Silver" bordercolor="Gray" cellspacing="0" align="center">
+      <tbody><tr class="tdLabel">
+        <td align="center">
+          User ID:&nbsp;</td>
+        <td><input maxlength="15" name="userid" id="userid" size="15"></td>
+        <td>&nbsp;</td>
+        </tr>
+        <tr class="tdLabel">
+          <td align="center">Password:&nbsp;</td>
+          <td><input name="password" id="password" size="15" type="password" maxlength="8"></td>
+          <td align="center"><input id="LOGIN" name="LOGIN" type="button" value="Login" onClick="login(document.LogonForm);" title="Login"></td>
+          </tr>
+      </tbody></table>
+ 
+  </div>
+  <p align="center"><a href="https://esage.sageparts.com/RequestPassword.asp">
+  Forgot User ID or Password?</a>&nbsp;&nbsp;&nbsp;<a href="https://esage.sageparts.com/NewUser.asp">
+ Register New User</a></p>
+</form>
+
+<p align="center">You are leaving Sage Parts' public website and entering the 
+eSage Web Store.<br /> 
+Please log in to your account here to search millions of other GSE parts.
+</p>
+<p align="center">eSage is currently optimized for Internet Explorer 7 and higher.<br />
+If you are using another browser, certain features may not be available.
+</p>
+  </div>
+  <!-- END OF CONTENT --> 
+  
+  <!-- START OF FOOTER -->
+ <div id="footer">
+    <div id="footer-content">
+      <div class="box-one-of-four">
+        <h4>Product Specials Categories</h4>
+        <ul>
+          <li>
+         <p>
+         <a href="/acu-parts.shtm">AC Unit Parts</a><br />
+         <a href="aircraft-connections.shtm">Aircraft Connections</a><br />
+           <a href="auto-parts.shtm">Automotive Parts</a><br />
+        <a href="/belt-loader-parts.shtm">Belt Loader Parts</a><br />
+        <a href="/cargo-loader-parts.shtm">Cargo Loader Parts</a><br />
+          </p>
+          </li>
+        </ul>
+      </div>
+      <div class="box-one-of-four">
+       <h4>&nbsp;</h4>
+       <ul>
+          <li>
+            <p>
+            <a href="dollie-parts.shtm">Cart, Trailer, &amp; Dolly Parts</a><br />
+            <a href="/chassis-parts.shtm">Chassis Parts</a><br />
+          <a href="deicer-parts.shtm">Deicer & Winter</a><br />
+          <a href="diesel-engines.shtm">Diesel Engines</a><br />
+          <a href="/engine-compartment-parts.shtm">Engine Compartment Parts</a><br />    
+          </li>
+        </ul>
+      </div>
+      <div class="box-one-of-four">
+      <h4>&nbsp;</h4>
+      <ul>
+          <li>
+        <p>
+        <a href="ford-300-engines.shtm">Ford 300 Engines</a><br />
+           <a href="/hooks-hitches-towbars.shtm">Hooks, Hitches, & Towbars</a><br />
+        <a href="/lavatory-potable-water.shtm">Lavatory & Potable Water</a><br />
+        <a href="/power-unit-parts.shtm">Power Unit Parts</a><br />
+          <a href="/safety-caution.shtm">Safety & Caution</a><br />
+          
+         </p>
+          </li>
+        </ul>
+      </div>
+      <div class="box-one-of-four nomargin-right">
+      <h4>&nbsp;</h4>
+      <ul>
+          <li>
+            <p>
+            <a href="/seating-cab-parts.shtm">Seating & Cab Parts</a><br />
+              <a href="/service-maintenance.shtm">Service & Maintenance</a><br />
+               <a href="/transmissions.shtm">Transmissions</a><br />
+               <a href="/tractor-parts.shtm">Tractor Parts</a><br />
+              <a href="/wheels-tires.shtm">Wheels & Tires</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="footer-copyright">
+    
+    Copyright© 1998-2015 Sage Parts Plus, Inc. All rights reserved.
+      <p>Prices and availability are  subject to change without notice. The prices listed are for items shipped  directly from Sage Parts warehouses located in the United States. All prices  shown are in United States dollars.  If a  product is not in stock when you place your order, we will do our best to let  you know and to let you know when we anticipate the product will be available.  Anticipated delivery dates are dependent upon vendor supplies and other factors  and are subject to change.  Sage Parts  reserves the right to substitute brands of product. Please read our Terms and  Conditions carefully. The Trademarks shown on this web site may be registered  trademarks of their respective companies.</p>
+      <table width="100%" border="0" cellspacing="20">
+  <tr>
+    <th scope="col"><img src="images/Sage-Footer-Logo.png" alt="" width="150" height="50" /></th>
+    <th scope="col"><p text align="center"><a href="careers.shtm">Careers</a> | <a href="terms-conditions.shtm">Terms & Conditions</a> | <a href="privacy-policy.shtm">Privacy Policy</a> | <a href="contact.shtm">Contact</a></p></th>
+    <th scope="col"><p text align="right"><img src="images/eSage-Footer-Logo.png" alt="" width="150" height="50" /></p></th>
+  </tr>
+</table>
+ <table width="100%" border="0" cellspacing="20">
+  <tr>
+    <th scope="col"><img src="images/blank.gif" alt="" width="200" height="50" /></th>
+<th scope="col"><div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-40360786-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></th>
+ <th scope="col"><p text align="right"><a href="https://www.facebook.com/SageParts" target="new"><img src="images/social media/facebook.png" alt="" width="32" height="32" /></a></p></th>
+ <th scope="col"><p text align="right"><a href="https://twitter.com/sagepartsplus" target="new"><img src="images/social media/twitter_alt.png" alt="" width="32" height="32" /></a></p></th>
+ <th scope="col"><p text align="right"><a href="https://www.linkedin.com/company/sage-parts?trk=top_nav_home" target="new"><img src="images/social media/linkedin.png" alt="" width="32" height="32" /></a></p></th>
+  </tr>
+</table>
+    </div>
+  </div>
+ 
+
+  <!-- END OF FOOTER -->
+  <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script> 
+ 
+  <script type="text/javascript" src="scripts/general.js"></script> 
+</div>
+<!-- END OF CONTAINER -->
+</body>
+</html>
