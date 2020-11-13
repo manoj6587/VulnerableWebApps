@@ -1,0 +1,7 @@
+[2016-04-13 11:23:40 +0000] [19988] [INFO] Starting gunicorn 19.4.5
+[2016-04-13 11:23:40 +0000] [19988] [INFO] Listening at: http://10.113.195.231:5000 (19988)
+[2016-04-13 11:23:40 +0000] [19988] [INFO] Using worker: sync
+[2016-04-13 11:23:40 +0000] [19993] [INFO] Booting worker with pid: 19993
+[2016-04-13 13:37:43 +0000] [19988] [INFO] Handling signal: hup
+[2016-04-13 13:37:43 +0000] [19988] [INFO] Hang up: Master
+[2016-04-13 13:37:43 +0000] [20303] [INFO] Booting worker with pid: 20303
