@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://ent62-uat.participantportal.com/benefits/logindisplay.jsp" />
+<title>CRM18214</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CRM18214</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://ent62-uat.participantportal.com/benefits/servlets/LoginServlet?_y_=cfc8dc58a581ab46ddfb4bd82d28b6d504ef21b42ea702d83a80ba3889dc8841462abfb00fbd28f8705e6dbc829940057e346e9fb9653293edf2a7a7d6bce5923c293634d657708f</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//html/body/div/div[4]/div[2]/div/div/div[1]/form/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//html/body/div/div[4]/div[2]/div/div/div[1]/form/div/input</td>
+	<td>tst567002344new</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//html/body/div/div[4]/div[2]/div/div/div[1]/form/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//html/body/div/div[4]/div[2]/form/div[1]/div[5]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//html/body/div/div[4]/div[2]/form/div[1]/div[5]/input</td>
+	<td>Xyz@abcd1#</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//html/body/div/div[4]/div[2]/form/div[2]/input[1]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
