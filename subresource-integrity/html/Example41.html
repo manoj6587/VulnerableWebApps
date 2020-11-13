@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Jvascript Loading from Another Host and Integrity attribute Present</h2>
+<p id="demo"></p>
+
+<script>
+function addScript(attribute, text, callback) {
+    var s = document.createElement('script');
+    for (var attr in attribute) {
+        s.setAttribute(attr, attribute[attr] ? attribute[attr] : null)
+    }
+   // s.innerHTML = text;
+   // s.onload = callback;
+    document.body.appendChild(s);
+}
+
+addScript({
+    src: 'https://10.113.195.232/subresource-integrity/script.js?6e7188a7-e098-404c-b194-674c3f4d2cae',
+    type: 'text/javascript'
+}, '<div>innerHTML</div>', function(){});
+
+</script>
+<p>
+<a href="../" >Back</a>
+</body>
+</html>

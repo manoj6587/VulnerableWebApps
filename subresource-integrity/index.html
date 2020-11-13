@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Subresource Integrity</title>
+      <style>html {    font-family:DejaVu Sans, Bitstream Vera Sans, Arial, Sans;}#log .warning,#log .warning a {  color: black;  background: yellow;}#log .error,#log .error a {  color: white;  background: red;}section#summary {    margin-bottom:1em;}table#results {    border-collapse:collapse;    table-layout:fixed;    width:100%;}table#results th:first-child,table#results td:first-child {    width:8em;}table#results th:last-child,table#results td:last-child {    width:50%;}table#results.assertions th:last-child,table#results.assertions td:last-child {    width:35%;}table#results th {    padding:0;    padding-bottom:0.5em;    border-bottom:medium solid black;}table#results td {    padding:1em;    padding-bottom:0.5em;    border-bottom:thin solid black;}tr.pass > td:first-child {    color:green;}tr.fail > td:first-child {    color:red;}tr.timeout > td:first-child {    color:red;}tr.notrun > td:first-child {    color:blue;}tr.preconditionfailed > td:first-child {    color:blue;}.pass > td:first-child, .fail > td:first-child, .timeout > td:first-child, .notrun > td:first-child, .preconditionfailed > td:first-child {    font-variant:small-caps;}table#results span {    display:block;}table#results span.expected {    font-family:DejaVu Sans Mono, Bitstream Vera Sans Mono, Monospace;    white-space:pre;}table#results span.actual {    font-family:DejaVu Sans Mono, Bitstream Vera Sans Mono, Monospace;    white-space:pre;}span.ok {    color:green;}tr.error {    color:red;}span.timeout {    color:red;}span.ok, span.timeout, span.error {    font-variant:small-caps;}</style>
+   </head>
+   <body>
+<center><font color="red"><h1>Sub Resource Intigrity Target</h1></font></center> 
+<hr><center><b>Intigrity attribute present</b></center><hr>
+    <div>
+	<a href="/subresource-integrity/html/Example1.html">1) Script loaded from same Host and intigrity attribute present-Example1.html </a><p>
+	<a href="https://10.113.195.231/subresource-integrity/html/Example2.html">2) Script loaded from Another Host and intigrity attribute present-Example2.html </a><p>
+	<a href="/subresource-integrity/html/Example3.html">3) Script loaded from relative path and intigrity attribute present-Example3.html </a><p>
+	<a href="http://cent6-6-lamp-bala-195-231.rdlab.in01.qualys.com/subresource-integrity/html/Example4.html">4) Script loaded from Subdomain and intigrity attribute present-Example4.html </a><p>Example-4 link is only accessible over <b>http</b> and from India Scanner Only</p> 
+	<a href="https://10.113.195.231/subresource-integrity/html/Example5.html">5) More than 10 Links and script tag present and intigrity attribute for All-Example5.html </a><p>
+	<a href="https://10.113.195.231/subresource-integrity/html/Example6.html">6) Intigrity attribute value is wrong for <b>script</b> and blank for <b>link</b> -Example6.html </a><p>
+	<a href="https://10.113.195.231/subresource-integrity/html/Example7.html">7) Script loaded from Another Host(&#x3C;script src=//cdn.) and intigrity attribute present-Example7.html </a><p>
+	<a href="https://10.113.195.231/subresource-integrity/html/Example8.html">8) Script loaded from local Host(&#x3C;script src=file://cdn.) and intigrity attribute present-Example8.html </a><p>
+	</div>
+<hr><center><b>Intigrity attribute missing</b></center><hr>
+<div>
+    <a href="/subresource-integrity/html/Example9.html"> 9) Script loaded from same Host and intigrity attribute absent-Example9.html </a><p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example10.html"> 10) Script loaded from Another Host and intigrity attribute absent-Example10.html </a><p>
+    <a href="/subresource-integrity/html/Example11.html"> 11) Script loaded from relative path and intigrity attribute absent-Example11.html </a><p>
+    <a href="http://cent6-6-lamp-bala-195-231.rdlab.in01.qualys.com/subresource-integrity/html/Example12.html"> 12) Script loaded from Subdomain and intigrity attribute absent-Example12.html </a><p>Example-12 link is only accessible over <b>http</b> and from India Scanner Only</p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example13.html"> 13) More than 10 Links and script tag present and intigrity attribute missing for All-Example13.html </a><p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example15.html"> 15) Script loaded from Another Host(&#x3C;script src=//cdn.) and intigrity attribute missing-Example15.html </a><p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example16.html"> 16) Script loaded from Local Host(&#x3C;script src=file://cdn.) and intigrity attribute missing-Example16.html </a><p>
+</div>
+<hr><center><b>Javascript and stylesheet having diffent response code</b></center><hr>
+<div>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example31.html"> 31) Script loaded from External Host and Ststus code is 404-Example31.html </a><p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example32.html"> 32) Script loaded from External Host and Ststus code is 302-Example32.html </a><p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example33.html"> 33) Link tag not used for stylesheet </a><p>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example34.html"> 34) Preload and AS Scenario </a><p>
+</div> 
+<hr><center><b>Script and Link tag created dynamically</b></center><hr>
+<div>
+    <a href="https://10.113.195.231/subresource-integrity/html/Example41.html"> 41) Script tag created dynamically-Example41.html </a><p>
+</div>
+  </body>
+</html>
