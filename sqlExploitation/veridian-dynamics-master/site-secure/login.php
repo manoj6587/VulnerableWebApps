@@ -1,0 +1,174 @@
+<?php
+	session_start();
+	// dBase file
+	include "dbConfig.php";
+	$login_successful = true;
+	//$troll_login = false;
+	
+	if ($_GET["op"] == "login")
+	{
+		$user = mysql_real_escape_string(htmlentities($_POST["username"]));
+		$pass = mysql_real_escape_string(htmlentities($_POST["password"]));
+		
+	 	if (!$user || !$pass)
+		{
+			//echo "You need to provide a username and password.";
+		}
+		else
+		{
+			// Create query
+			$query = "SELECT * FROM users WHERE username = '{$user}' AND password = '{$pass}' Limit 1";
+					
+			// Run query
+			$result = mysql_query($query);
+
+			if ( $obj = @mysql_fetch_object($result) )
+			{
+				// if invalid admin, send to wannabe admin page
+				/*if ($obj->admin == 1 && $obj->username != "BrickTamland")
+				{
+					//Header("Location: http://www.youtube.com/watch?v=QH2-TGUlwu4");
+					$troll_login = true;
+				}
+				else
+				{*/
+					// Login good, create session variables
+					$_SESSION["valid_id"] = $obj->id;
+					$_SESSION["valid_user"] = $obj->firstname . " " . $obj->lastname;
+					$_SESSION["valid_admin"] = $obj->admin;
+					$_SESSION["valid_time"] = time();
+	
+					// Redirect to member page
+					Header("Location: employees.php");
+				//}
+			}
+			else
+			{
+				// Login not successful
+				$login_successful = false;
+				//echo "Sorry, could not log you in. Wrong login information.";
+			}
+		}
+	}	
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 3.0 License
+
+Name       : Big Business
+Description: A two-column, fixed-width design with a bright color scheme.
+Version    : 1.0
+Released   : 20120210
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Veridian Dynamics</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+                        <img id="toplogo" src="images/Veridian.png" alt="" />
+		</div>
+		<div id="slogan">
+			<h2>Greening our world.</h2>
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="first current_page_item"><a href="index.php">Home</a></li>
+			<li><a href="products.php">Products</a></li>
+			<li><a href="employee_list.php">Employees</a></li>
+			<li><a href="support.php">Support</a></li>
+			<li><a href="about.php">About</a></li>
+			<li class="last"><a href="contact.php">Contact</a></li>
+		</ul>
+		<br class="clearfix" />
+	</div>
+	<div id="page">
+		<div id="content">
+			<div class="box" id="content-box1">
+				<?php
+
+				if ($_GET["op"] == "login")
+				{
+					if (!$user || !$pass)
+					{
+						echo "You need to provide a username and password.";
+					}
+					elseif ($login_successful == false)
+					{
+						// Login not successful
+						echo "Sorry, could not log you in. Wrong login information.";
+					}
+					elseif ($troll_login)
+					{
+						echo "Fake admin?! Unleash the nyan cats!<br />";
+						echo "<iframe width=\"420\" height=\"315\" src=\"http://www.youtube.com/v/AA5DsLzSVrk&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>";
+					}
+				}
+				elseif ($_GET["op"] == "registered")
+				{
+					echo "Registration successful!<br />";
+				}
+				?>
+				 
+				<form action="?op=login" method="POST">
+				<table border="0">
+					 <tr><td>Username:</td><td><input name="username" size="16"></td></tr>
+					 <tr><td>Password:</td><td><input type="password" name="password" size="16"></td></tr>
+				</table>
+				<input type="submit" value="Login">
+				</form>
+				
+			</div>
+			<!--<div class="box" id="content-box2">
+				content 2
+			</div>-->
+			<br class="clearfix" />
+		</div>
+		<div id="sidebar">
+			<div class="box">
+				<h3>Employees</h3>
+				<ol>
+				<?php
+				//session_start();
+				
+				if (isset($_SESSION["valid_admin"]) && $_SESSION["valid_admin"] == 1)
+				{
+					echo "<li><a href=\"add_products.php\">Add Products</a></li>";
+					echo "<li><a href=\"edit_products.php\">Edit Products</a></li>";
+				}
+				
+				if (isset($_SESSION["valid_id"]))
+				{
+					echo "<li><a href=\"employees.php\">Profile</a></li>";
+					echo "<li><a href=\"logout.php\">Logout</a></li>";
+				}
+				else
+				{
+					echo "<li><a href=\"login.php\">Login</a></li>";
+					//echo "<li><a href=\"register.php\">Register</a></li>";
+				}
+				?>
+				</ol>
+			</div>
+			<!--<div class="box">
+				side box 2
+			</div>-->
+		</div>
+		<br class="clearfix" />
+	</div>
+</div>
+<div id="footer">
+	Copyright (c) 2012 Veridian Dynamics. All rights reserved.
+</div>
+</body>
+</html>		
