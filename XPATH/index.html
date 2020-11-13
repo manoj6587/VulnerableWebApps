@@ -1,0 +1,42 @@
+<HTML>
+<BODY>
+<B>Single quoted:</B>
+<BR><A href="./single_quote/filterby_state.php?state=MH">Filter by state</A>
+<BR><A href="./single_quote/searchby_name.php?name=Pune">Search by name</A>
+<BR><A href="./single_quote/searchby_pincode.php?pincode=411001">Search by pincode</A>
+<BR><A href="./single_quote/searchby_nameNState.php?name=Pune&state=MH">Search by name and state</A>
+<BR><A href="./single_quote/filterby_stateNPopulation.php?state=MH&population=10000000">Filter by state and population</A>
+<BR>
+<BR>
+<B>Double quoted</B>
+<BR><A href="./double_quote/filterby_state.php?state=MH">Filter by state</A>
+<BR><A href="./double_quote/searchby_name.php?name=Pune">Search by name</A>
+<BR><A href="./double_quote/searchby_pincode.php?pincode=411001">Search by pincode</A>
+<BR><A href="./double_quote/searchby_nameNState.php?name=Pune&state=MH">Search by name and state</A>
+<BR><A href="./double_quote/filterby_stateNPopulation.php?state=MH&population=10000000">Filter by state and population</A>
+<BR>
+<BR>
+<BR>
+<button type="button" onclick="searchby_name_ajax()">Search by name(AJAX)</button>
+<BR>
+<div>AJAX Search result:</div><div id="ajax_search_result"></div>
+<script>
+function searchby_name_ajax() {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("ajax_search_result").innerHTML = xhttp.responseText;
+    }
+  };
+
+  var searchReq = new Object();
+  searchReq.name_ajax =  "Pune";
+
+  xhttp.open("POST", "./single_quote/searchby_name_ajax.php", true);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.send(JSON.stringify(searchReq));
+}
+</script>
+</BODY>
+</HTML>

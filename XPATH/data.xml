@@ -1,0 +1,73 @@
+<cities>
+
+  <city>
+    <name>Pune</name>
+    <pincode>411001</pincode>
+    <state>MH</state>
+    <population>3124458</population>
+  </city>
+
+  <city>
+    <name>Mumbai</name>
+    <pincode>400001</pincode>
+    <state>MH</state>
+    <population>12442373</population>
+  </city>
+
+  <city>
+    <name>Delhi</name>
+    <pincode>100001</pincode>
+    <state>DL</state>
+    <population>11034555</population>
+  </city>
+
+  <city>
+    <name>Banglore</name>
+    <pincode>560001</pincode>
+    <state>KN</state>
+    <population>8443675</population>
+  </city>
+
+  <city>
+    <name>Hyderabad</name>
+    <pincode>500002</pincode>
+    <state>TL</state>
+    <population>7000000</population>
+  </city>
+
+  <city>
+    <name>Ahmedabad</name>
+    <pincode>320001</pincode>
+    <state>GJ</state>
+    <population>5577940</population>
+  </city>
+
+  <city>
+    <name>Chennai</name>
+    <pincode>600001</pincode>
+    <state>TN</state>
+    <population>4646732</population>
+  </city>
+
+  <city>
+    <name>Kolkata</name>
+    <pincode>700001</pincode>
+    <state>WB</state>
+    <population>4496694</population>
+  </city>
+
+  <city>
+    <name>Surat</name>
+    <pincode></pincode>
+    <state>GJ</state>
+    <population>4467797</population>
+  </city>
+
+  <city>
+    <name>Jaipur</name>
+    <pincode>302001</pincode>
+    <state>RJ</state>
+    <population>3046163</population>
+  </city>
+
+</cities>
