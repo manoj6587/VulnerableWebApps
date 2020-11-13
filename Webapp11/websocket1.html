@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html>
+   <head>
+	
+      <script type="text/javascript">
+         function WebSocketTest()
+         {
+            if ("WebSocket" in window)
+            {
+               alert("WebSocket is supported by your Browser!");
+               
+               // Let us open a web socket
+               var ws = new WebSocket("wss://10.113.195.231:8888/echo");
+               var ws = new WebSocket("wss://127.0.0.1:8888/echo");
+               var ws = new WebSocket("wss://localhost:8888/echo");
+			
+		var ws = new WebSocket("ws://10.113.195.231:8888/echo");
+               	var ws = new WebSocket("ws://127.0.0.1:8888/echo");
+               	var ws = new WebSocket("ws://localhost:8888/echo");
+	
+               ws.onopen = function()
+               {
+                  // Web Socket is connected, send data using send()
+                  ws.send("Message to send");
+                  alert("Message is sent...");
+               };
+				
+               ws.onmessage = function (evt) 
+               { 
+                  var received_msg = evt.data;
+                  alert("Message is received...");
+               };
+				
+               ws.onclose = function()
+               { 
+                  // websocket is closed.
+                  alert("Connection is closed..."); 
+               };
+            }
+            
+            else
+            {
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+            }
+         }
+      </script>
+		
+   </head>
+   <body>
+   
+      <div id="sse">
+         <a href="javascript:WebSocketTest()">Run WebSocket</a>
+      </div>
+     <ol>
+<li>ws://example.com
+<li>wss://example1.com
+</ol> 
+<a href="ws://abc.com"> Click me====>WS </a><br>
+<a href="wss://abc.com"> Click me====>WSS </a><br>
+
+   </body>
+</html>
+
