@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Cookieuse example</title>
+    <link rel="stylesheet" type="text/css" href="example.css" />
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="../cookieuse.js"></script>
+    <script src="example.js"></script>
+    <script>
+    $(function () {
+        // This just manages reset and reload in the example
+        // The code which triggers cookieuse is in example.js
+        $('#reset').click(function (e) {
+            e.preventDefault();
+            $.cookieuse.clear('__cookieuse');
+            $('#status')
+                .css({background:'#444', color:'#eee', padding:'0.6em'})
+                .text('Cookie reset - click here to reload the page and see the overlay again.')
+                .click(function (e) { window.location.reload(); })
+            ;
+        });
+    });
+    </script>
+</head>
+<body>
+
+<h1>Cookieuse</h1>
+
+<p>Cookieuse relies on <a href="http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx">implicit consent</a>, by ensuring that all visitors have seen a note about cookies.</p>
+
+<p>Visitors are shown a message overlay (styled by CSS) which tells them that the site uses cookies; the message can be customised, but should have a link to your cookie policy.</p>
+
+<p>It can be configured to allows users to refuse the use of non-essential cookies; in this example, that is managed by the <a href="cookiepolicy.html">cookie policy</a> page.</p>
+
+<p>For more details on how this works, see the <a href="http://radiac.net/projects/cookieuse/">cookieuse website</a>, or browse the code <a href="https://github.com/radiac/cookieuse">on github</a>.
+
+<ul>
+<li><a href="#" id="reset">Reset the cookie</a> to show the popup on refresh</li>
+</ul>
+
+<p id="status"></p>
+
+</body>
+</html>
+
